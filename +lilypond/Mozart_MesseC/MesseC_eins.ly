@@ -1,4 +1,4 @@
-MesseCEinsKyrie = \new Voice \relative c'' {
+MesseCEinsKyrie = \new Voice \transpose bes c' \relative c'' {
 \time 3/4
 \key c \major
 e2. \f^\markup{\large {Andante maestoso}}
@@ -44,7 +44,7 @@ c4 r r2\fermata\bar"|."
 }
 
 
-MesseCEinsGloria = \new Voice \relative c'{
+MesseCEinsGloria = \new Voice \transpose bes c' \relative c'{
 \time 4/4
 \key c \major
 e1 \f^\markup{\large {Allegro assai}}
@@ -146,7 +146,7 @@ c'1
 ~c4 r r2^\fermata \bar"|."
 }
 
-MesseCEinsCredo = \new Voice \relative c''{
+MesseCEinsCredo = \new Voice \transpose bes c' \relative c''{
 \time 3/4
 \key c \major
 g4-! \f^\markup{\large {Molto allegro}} e-! r
@@ -405,7 +405,7 @@ c4 r d
 e r r\fermata \bar"|."
 }
 
-MesseCEinsSanctus = \new Voice \relative c''{
+MesseCEinsSanctus = \new Voice \transpose bes c' \relative c''{
 \time 4/4
 \key c \major
 e2\f^\markup{\large Allegretto} d
@@ -440,7 +440,7 @@ f2 e4 d
 c4 r r2\fermata \bar"|."
 }
 
-MesseCEinsBenedictus = \new Voice \relative c'''{
+MesseCEinsBenedictus = \new Voice \transpose bes c' \relative c'''{
 \time 4/4
 \key f \major
 <<
@@ -539,7 +539,7 @@ f2 e4 d
 c4 r r2\fermata \bar"|."
 }
 
-MesseCEinsAgnusdei = \new Voice \relative c'{
+MesseCEinsAgnusdei = \new Voice \transpose bes c' \relative c'{
 \time 3/4
 \key c \major
 c4\f^\markup{\large {Andante maestoso}} e g

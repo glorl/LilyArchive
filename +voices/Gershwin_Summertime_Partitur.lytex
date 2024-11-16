@@ -8,16 +8,18 @@
     }
     \markup{
         \column{ 
-            \fill-line {\line{\abs-fontsize #18 { \sans {Wachet auf, ruft uns die Stimme, BWV 140} }} }
+            \fill-line {\line{\abs-fontsize #18 { \sans {Porgy and Bess} }} }
             \fill-line {\line{\abs-fontsize #30 { {\null} }} }
-\fill-line {\line{\abs-fontsize #16 { \sans {4. Choral: Zion hört die Wächter singen} }} } 
-            \fill-line {\line {} \line{\abs-fontsize #12 { \sans {J.S. Bach, arr. I. Patscheck} }} } 
+\fill-line {\line{\abs-fontsize #16 { \sans {Summertime} }} } 
+            \fill-line {\line {} \line{\abs-fontsize #12 { \sans {G. Gershwin, arr. I. Patscheck} }} } 
         } 
     } 
     \score{ 
         \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 0.1)) } 
         \new StaffGroup <<
-            \new Staff << \globalWachetAuf \WachetAufBass >>   
+            \new Staff << \globalSummertime \SummertimeSolo >> 
+            \new Staff << \globalSummertime \SummertimePianoSolo >>   
+            \new ChordNames << \SummertimePianoChords >>   
         >> 
     }
     \markup {

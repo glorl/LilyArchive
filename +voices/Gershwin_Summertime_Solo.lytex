@@ -1,0 +1,28 @@
+\bookpart{
+    \header{tagline = ""}
+    \paper{
+        paper-height=#280
+        paper-width=#230
+        horizontal-shift=-15\mm
+        print-page-number=##f
+    }
+    \markup{
+        \column{ 
+            \fill-line {\line{\abs-fontsize #18 { \sans {Porgy and Bess} }} }
+            \fill-line {\line{\abs-fontsize #30 { {\null} }} }
+\fill-line {\line{\abs-fontsize #16 { \sans {Summertime} }} } 
+            \fill-line {\line {} \line{\abs-fontsize #12 { \sans {G. Gershwin, arr. I. Patscheck} }} } 
+        } 
+    } 
+    \score{ 
+        \layout{ system-system-spacing = #'((padding . 3.2) (basic-distance . 2)) } 
+        \new StaffGroup <<
+            \new Staff << \globalSummertime \SummertimeSolo >>   
+        >> 
+    }
+    \markup {
+        \column{
+
+        }
+    }
+}

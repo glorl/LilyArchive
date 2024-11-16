@@ -1,7 +1,7 @@
 {
     "Stuecke":
     {
-        "voices": ["Partitur"],
+        "voices": ["Eins","Zwei"],
         "pieces": ["Mozart_MesseC"]
     },
     "Abreu_TicoTico":
@@ -635,6 +635,27 @@
             "instrumentname":"Partitur"
         }
     },
+    "Gershwin_Summertime":
+    {
+        "base":{
+            "title": "Summertime",
+            "title_long": "Porgy and Bess", 
+            "subtitle": "Summertime", 
+            "composer": "Gershwin",
+            "composer_long": "G. Gershwin, arr. I. Patscheck"
+        },
+        "Solo":{
+            "padding": "3.2",
+            "basicdistance": "2",
+            "instrumentname":"Klarinette 1"
+        },
+        "Partitur":{
+            "padding": "5",
+            "basicdistance": "0.1",
+            "partvoices":["Solo","PianoSolo"],
+            "instrumentname":"Partitur"
+        }
+    },    
     "Haendel_Feuerwerksmusik":
     {
         "base":{

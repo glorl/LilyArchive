@@ -19,7 +19,7 @@
     \score{ 
         \layout{ system-system-spacing = #'((padding . 3.2) (basic-distance . 2)) } 
         \new StaffGroup <<
-            \new Staff << \globalMesseC \MesseCEinsKyrie >>   
+            \new Staff << \globalMesseC \MesseCZweiKyrie >>   
         >> 
     }
     \markup{
@@ -29,7 +29,7 @@
     \score{ 
         \layout{ system-system-spacing = #'((padding . 3.2) (basic-distance . 2)) } 
         \new StaffGroup <<
-            \new Staff << \globalMesseC \MesseCEinsGloria >>   
+            \new Staff << \globalMesseC \MesseCZweiGloria >>   
         >> 
     }
     \markup{
@@ -39,7 +39,7 @@
     \score{ 
         \layout{ system-system-spacing = #'((padding . 3.2) (basic-distance . 2)) } 
         \new StaffGroup <<
-            \new Staff << \globalMesseC \MesseCEinsCredo >>   
+            \new Staff << \globalMesseC \MesseCZweiCredo >>   
         >> 
     }
     \markup{
@@ -49,7 +49,7 @@
     \score{ 
         \layout{ system-system-spacing = #'((padding . 3.2) (basic-distance . 2)) } 
         \new StaffGroup <<
-            \new Staff << \globalMesseC \MesseCEinsSanctus >>   
+            \new Staff << \globalMesseC \MesseCZweiSanctus >>   
         >> 
     }
     \markup{
@@ -59,7 +59,7 @@
     \score{ 
         \layout{ system-system-spacing = #'((padding . 3.2) (basic-distance . 2)) } 
         \new StaffGroup <<
-            \new Staff << \globalMesseC \MesseCEinsBenedictus >>   
+            \new Staff << \globalMesseC \MesseCZweiBenedictus >>   
         >> 
     }
     \markup{
@@ -69,7 +69,7 @@
     \score{ 
         \layout{ system-system-spacing = #'((padding . 3.2) (basic-distance . 2)) } 
         \new StaffGroup <<
-            \new Staff << \globalMesseC \MesseCEinsAgnusdei >>   
+            \new Staff << \globalMesseC \MesseCZweiAgnusdei >>   
         >> 
     }
     \markup {

@@ -29,10 +29,10 @@
     
 
 \begin{lilypond}
-    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseC/MesseC.ly"
+    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Gershwin_Summertime/Summertime.ly"
 
     \book{
-        \include "/home/georg/Dokumente/LilyArchive/+voices/Mozart_MesseC_Partitur.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+voices/Gershwin_Summertime_Partitur.lytex"
 
     }
 
