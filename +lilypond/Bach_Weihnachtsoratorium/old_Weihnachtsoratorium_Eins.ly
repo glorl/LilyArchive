@@ -124,7 +124,7 @@ tempoPrimo = ^\markup { \italic { "Tempo I" } }
 
 % ---------------------------------------------------------
 
-clarinet_I = {
+WeihnachtsoratoriumEinsCoro = {
   \set Score.markFormatter = #format-mark-alphabet
 %   \accidentalStyle Score.modern-cautionary
   \compressEmptyMeasures
