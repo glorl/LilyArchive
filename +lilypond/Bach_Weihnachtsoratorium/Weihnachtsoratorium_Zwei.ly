@@ -3,7 +3,7 @@ mBreak = {  }
 WeihnachtsoratoriumZweiCoro = {
   \set Score.markFormatter = #format-mark-alphabet
   \compressEmptyMeasures
-  \relative c {
+  \transpose bes c' \relative c {
     <<
       { \override MultiMeasureRest.staff-position = #-6 R4.
         \override MultiMeasureRest.staff-position = #-8 R4.
