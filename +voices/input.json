@@ -1,8 +1,8 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins","Zwei"],
-        "pieces": ["Bach_Weihnachtsoratorium"]
+        "voices": ["Partitur"],
+        "pieces": ["Traditional_AufmWasa","Traditional_SchwaebscheEisebahne","Silcher_MussIDenn","Traditional_SegelnOhneWind"]
     },
     "Abreu_TicoTico":
     {
@@ -254,6 +254,7 @@
         "base":{
             "title": "Weihnachtsoratorium",
             "title_long": "Weihnachts-Oratorium", 
+            "subtitle": "1. Teil / Am 1. Weihnachtstag / Jauchzet, frohlocket, auf, preiset die Tage", 
             "subpieces": ["Coro"], 
             "subpieces_long": ["1. Coro"], 
             "composer": "Bach",
@@ -268,6 +269,12 @@
             "padding": "3.2",
             "basicdistance": "2",
             "instrumentname":"Klarinette 2"
+        },
+        "Partitur":{
+            "padding": "5",
+            "basicdistance": "0.1",
+            "partvoices":["Eins","Zwei"],
+            "instrumentname":"Partitur"
         }
     },    
     "Beethoven_EhreGottes":
@@ -1142,7 +1149,7 @@
             "subpieces": ["Kyrie","Gloria","Credo","Sanctus","Benedictus","Agnusdei"], 
             "subpieces_long": ["1. Kyrie","2. Gloria","3. Credo","4. Sanctus","5. Benedictus","6. Agnus Dei"], 
             "composer": "Mozart",
-            "composer_long": "W.A. Mozart, arr. I. Patscheck"
+            "composer_long": "W.A. Mozart"
         },
         "Eins":{
             "padding": "3.2",
@@ -1637,6 +1644,26 @@
             "instrumentname":"Partitur"
         }
     },
+    "Silcher_MussIDenn":
+    {
+        "base":{
+            "title": "MussIDenn",
+            "title_long": "Muss i denn, muss i denn", 
+            "composer": "Silcher",
+            "composer_long": "Friedrich Silcher"
+        },
+        "Eins":{
+            "padding": "3.2",
+            "basicdistance": "2",
+            "instrumentname":"Klarinette 1"
+        },
+        "Partitur":{
+            "padding": "5",
+            "basicdistance": "5",
+            "partvoices":["Eins"],
+            "instrumentname":"Partitur"
+        }
+    },
     "Torres_Reminiscencias":
     {
         "base":{
@@ -1654,6 +1681,66 @@
             "padding": "3.2",
             "basicdistance": "2",
             "partvoices":["Eins","Bass"],
+            "instrumentname":"Partitur"
+        }
+    },
+    "Traditional_AufmWasa":
+    {
+        "base":{
+            "title": "AufmWasa",
+            "title_long": "Auf'm Wasa graset d'Hasa", 
+            "composer": "Traditional",
+            "composer_long": "traditional"
+        },
+        "Eins":{
+            "padding": "3.2",
+            "basicdistance": "2",
+            "instrumentname":"Klarinette 1"
+        },
+        "Partitur":{
+            "padding": "5",
+            "basicdistance": "5",
+            "partvoices":["Eins"],
+            "instrumentname":"Partitur"
+        }
+    },
+    "Traditional_SchwaebscheEisebahne":
+    {
+        "base":{
+            "title": "SchwaebscheEisebahne",
+            "title_long": "Auf der schwäb'sche Eisebahne", 
+            "composer": "Traditional",
+            "composer_long": "traditional"
+        },
+        "Eins":{
+            "padding": "3.2",
+            "basicdistance": "2",
+            "instrumentname":"Klarinette 1"
+        },
+        "Partitur":{
+            "padding": "5",
+            "basicdistance": "5",
+            "partvoices":["Eins"],
+            "instrumentname":"Partitur"
+        }
+    },
+    "Traditional_SegelnOhneWind":
+    {
+        "base":{
+            "title": "SegelnOhneWind",
+            "title_long": "Wer kann segeln ohne Wind", 
+            "composer": "Traditional",
+            "composer_long": "Aus Schweden"
+        },
+        "Eins":{
+            "padding": "3.2",
+            "basicdistance": "2",
+            "instrumentname":"Klarinette 1"
+        },
+        "Partitur":{
+            "padding": "5",
+            "basicdistance": "5",
+            "partvoices":["Eins","Zwei"],
             "instrumentname":"Partitur"
         }
     },
@@ -1822,6 +1909,13 @@
             "title_long": "Sir Duke",
             "composer": "Wonder",
             "composer_long": "S. Wonder, arr. G. Jehle"
+        },
+        "Vocal":{
+            "padding": "3.2",
+            "basicdistance": "1",
+            "partvoices":["Vocal"],
+            "lyrics":["Vocal"],
+            "instrumentname":"Voice"
         },
         "Eins":{
             "padding": "3.2",

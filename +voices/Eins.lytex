@@ -29,9 +29,11 @@
     
 
 \begin{lilypond}
+    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseC/MesseC.ly"
     \include "/home/georg/Dokumente/LilyArchive/+lilypond/Bach_Weihnachtsoratorium/Weihnachtsoratorium.ly"
 
     \book{
+        \include "/home/georg/Dokumente/LilyArchive/+voices/Mozart_MesseC_Eins.lytex"
         \include "/home/georg/Dokumente/LilyArchive/+voices/Bach_Weihnachtsoratorium_Eins.lytex"
 
     }

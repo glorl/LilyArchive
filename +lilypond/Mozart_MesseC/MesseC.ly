@@ -1,5 +1,6 @@
 globalMesseC = {
 \compressEmptyMeasures
+\override DynamicTextSpanner.style = #'none
 }
 
 \include "MesseC_eins.ly"

@@ -26,7 +26,7 @@ WeihnachtsoratoriumZweiCoro = {
     r8 r e
     a,16 b cis8 d
     cis4 cis8
-    c8 (c c )
+    c!8 (c c )
     fis,8 ( fis fis)
     e8 (e' dis)  \mBreak
     e8 (b) b
@@ -123,7 +123,7 @@ WeihnachtsoratoriumZweiCoro = {
     d8 b' cis\mBreak
     d8 fis, b
     e,8 a cis
-    c8 (c c)
+    c!8 (c c)
     fis,8 (fis fis)
     e8 e'8 (dis)
     e8 b b

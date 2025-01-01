@@ -17,7 +17,7 @@ c4. e8 d4 c
 b8 d4 f8 e f e d
 c8 (e) g\p g g2~
 g1
-~g4 r8 cis,\f d8 (cis d c)
+~g4 r8 cis,\f d8 (cis d cis)
 d8 a'4 g8 f e d c!
 c8\trill b r4 r2
 R1
@@ -444,9 +444,9 @@ MesseCEinsBenedictus = \new Voice \transpose bes c' \relative c'''{
 \time 4/4
 \key f \major
 <<
-    { b1\rest^\markup{\large Allegro} }
+    { b,,1\rest^\markup{\large Allegro} }
   \new CueVoice {
-    \stemUp c,4_"Vl. I" c c8 (f4) es8
+    \stemUp c'4_"Vl. I" c c8 (f4) es8
   }
 >>
 r2 r8 d\p (bes a )

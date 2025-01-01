@@ -1,0 +1,26 @@
+\bookpart{
+    \header{tagline = ""}
+    \paper{
+        paper-height=#280
+        paper-width=#230
+        horizontal-shift=-15\mm
+        print-page-number=##f
+    }
+    \markup{
+        \column{ 
+            \fill-line {\line{\abs-fontsize #18 { \sans {Auf der schwäb'sche Eisebahne} }} } 
+            \fill-line {\line {} \line{\abs-fontsize #12 { \sans {traditional} }} } 
+        } 
+    } 
+    \score{ 
+        \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 5)) } 
+        \new StaffGroup <<
+            \new Staff << \globalSchwaebscheEisebahne \SchwaebscheEisebahneEins >>   
+        >> 
+    }
+    \markup {
+        \column{
+
+        }
+    }
+}

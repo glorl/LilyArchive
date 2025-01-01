@@ -9,7 +9,7 @@
     \markup{
         \column{ 
             \fill-line {\line{\abs-fontsize #18 { \sans {Messe in C} }} } 
-            \fill-line {\line {} \line{\abs-fontsize #12 { \sans {W.A. Mozart, arr. I. Patscheck} }} } 
+            \fill-line {\line {} \line{\abs-fontsize #12 { \sans {W.A. Mozart} }} } 
         } 
     } 
     \markup{

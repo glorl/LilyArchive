@@ -8,7 +8,9 @@
     }
     \markup{
         \column{ 
-            \fill-line {\line{\abs-fontsize #18 { \sans {Weihnachts-Oratorium} }} } 
+            \fill-line {\line{\abs-fontsize #18 { \sans {Weihnachts-Oratorium} }} }
+            \fill-line {\line{\abs-fontsize #30 { {\null} }} }
+\fill-line {\line{\abs-fontsize #16 { \sans {1. Teil / Am 1. Weihnachtstag / Jauchzet, frohlocket, auf, preiset die Tage} }} } 
             \fill-line {\line {} \line{\abs-fontsize #12 { \sans {Johann Sebastian Bach} }} } 
         } 
     } 

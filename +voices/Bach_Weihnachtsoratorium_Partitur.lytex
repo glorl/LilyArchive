@@ -19,9 +19,10 @@
         \fill-line {\line{\abs-fontsize #14 { \sans {1. Coro} }} \line {} } }
     } 
     \score{ 
-        \layout{ system-system-spacing = #'((padding . 3.2) (basic-distance . 2)) } 
+        \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 0.1)) } 
         \new StaffGroup <<
-            \new Staff << \globalWeihnachtsoratorium \WeihnachtsoratoriumEinsCoro >>   
+            \new Staff << \globalWeihnachtsoratorium \WeihnachtsoratoriumEinsCoro >> 
+            \new Staff << \globalWeihnachtsoratorium \WeihnachtsoratoriumZweiCoro >>   
         >> 
     }
     \markup {

@@ -125,7 +125,7 @@ es2 d
 g,4\f r r2
 b1
 cis4 (e) d a
-b4 (e) c! g
+b4 (d) c! g
 f2. d'4
 c1
 ~c1
