@@ -1740,7 +1740,7 @@
         "Partitur":{
             "padding": "5",
             "basicdistance": "5",
-            "partvoices":["Eins","Zwei"],
+            "partvoices":["Eins","Zwei","Drei","Bass"],
             "instrumentname":"Partitur"
         }
     },

@@ -5,6 +5,5 @@ globalSegelnOhneWind= {
 }
 \include "SegelnOhneWind_eins.ly"
 \include "SegelnOhneWind_zwei.ly"
-% \include "SirDuke_drei.ly"
-% \include "SirDuke_vier.ly"
-% \include "SirDuke_bass.ly"
+\include "SegelnOhneWind_drei.ly"
+\include "SegelnOhneWind_bass.ly"

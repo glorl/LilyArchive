@@ -16,7 +16,9 @@
         \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 5)) } 
         \new StaffGroup <<
             \new Staff << \globalSegelnOhneWind \SegelnOhneWindEins >> 
-            \new Staff << \globalSegelnOhneWind \SegelnOhneWindZwei >>   
+            \new Staff << \globalSegelnOhneWind \SegelnOhneWindZwei >> 
+            \new Staff << \globalSegelnOhneWind \SegelnOhneWindDrei >> 
+            \new Staff << \globalSegelnOhneWind \SegelnOhneWindBass >>   
         >> 
     }
     \markup {
