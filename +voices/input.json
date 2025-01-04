@@ -2,7 +2,11 @@
     "Stuecke":
     {
         "voices": ["Partitur"],
-        "pieces": ["Traditional_AufmWasa","Traditional_SchwaebscheEisebahne","Silcher_MussIDenn","Traditional_SegelnOhneWind"]
+        "pieces": ["Traditional_AufmWasa",
+        "Traditional_SchwaebscheEisebahne",
+        "Silcher_MussIDenn",
+        "Traditional_SegelnOhneWind",
+        "Traditional_OleRegenschirm"]
     },
     "Abreu_TicoTico":
     {
@@ -1660,7 +1664,7 @@
         "Partitur":{
             "padding": "5",
             "basicdistance": "5",
-            "partvoices":["Eins"],
+            "partvoices":["Eins","Zwei","Bass"],
             "instrumentname":"Partitur"
         }
     },
@@ -1700,7 +1704,7 @@
         "Partitur":{
             "padding": "5",
             "basicdistance": "5",
-            "partvoices":["Eins"],
+            "partvoices":["Eins","Zwei","Bass"],
             "instrumentname":"Partitur"
         }
     },
@@ -1720,7 +1724,27 @@
         "Partitur":{
             "padding": "5",
             "basicdistance": "5",
-            "partvoices":["Eins"],
+            "partvoices":["Eins","Zwei","Bass"],
+            "instrumentname":"Partitur"
+        }
+    },
+    "Traditional_OleRegenschirm":
+    {
+        "base":{
+            "title": "OleRegenschirm",
+            "title_long": "Der kleine Ole mit dem Regenschirm", 
+            "composer": "Traditional",
+            "composer_long": "Aus Dänemark"
+        },
+        "Eins":{
+            "padding": "3.2",
+            "basicdistance": "2",
+            "instrumentname":"Klarinette 1"
+        },
+        "Partitur":{
+            "padding": "5",
+            "basicdistance": "5",
+            "partvoices":["Eins","Zwei","Drei","Bass"],
             "instrumentname":"Partitur"
         }
     },

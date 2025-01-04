@@ -1,0 +1,29 @@
+\bookpart{
+    \header{tagline = ""}
+    \paper{
+        paper-height=#280
+        paper-width=#230
+        horizontal-shift=-15\mm
+        print-page-number=##f
+    }
+    \markup{
+        \column{ 
+            \fill-line {\line{\abs-fontsize #18 { \sans {Der kleine Ole mit dem Regenschirm} }} } 
+            \fill-line {\line {} \line{\abs-fontsize #12 { \sans {Aus Dänemark} }} } 
+        } 
+    } 
+    \score{ 
+        \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 5)) } 
+        \new StaffGroup <<
+            \new Staff << \globalOleRegenschirm \OleRegenschirmEins >> 
+            \new Staff << \globalOleRegenschirm \OleRegenschirmZwei >> 
+            \new Staff << \globalOleRegenschirm \OleRegenschirmDrei >> 
+            \new Staff << \globalOleRegenschirm \OleRegenschirmBass >>   
+        >> 
+    }
+    \markup {
+        \column{
+
+        }
+    }
+}

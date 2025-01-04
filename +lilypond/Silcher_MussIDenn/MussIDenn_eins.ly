@@ -1,25 +1,23 @@
 MussIDennEins = \new Voice \relative c'{
-\partial 4 es8 f
-g4^\markup{Es} g8 bes as4^\markup{B7} as8 c 
-bes4^\markup{Es} bes8 (as) g4 r 
-bes4^\markup{B} bes8 (as) g4 g8 (bes)
-as4^\markup{B7} as f bes 
-g2^\markup{Es} r4 es8 f 
-g4^\markup{Es} g8 bes as4 as8 c 
-bes4^\markup{B} bes8 (as) g4 r 
-bes4^\markup{Es} bes8 (as) g4 g8 (bes)
-as4^\markup{B7} as f bes 
-g2^\markup{Es} r4 \repeat volta 2{
-es8 g
-f4.^\markup{Bes} g8 as4 f
-g4.^\markup{Es} as8 bes4 bes 
-c4^\markup{As} c es d8 c
-bes2^\markup{Es} r4 es,8 g   
-bes4^\markup{Es} bes8 c bes4 bes8 es 
-bes4^\markup{B} bes8 (as) g4 r 
-bes4^\markup{Es} bes8 (as) g4 g8 (bes)
-as4^\markup{B7} as f bes 
-g2^\markup{Es} r4 
-} 
+\partial 4 d8 e
+fis4^\markup{D} fis8 a g4^\markup{G} g8 b
+a4^\markup{D} a8 (g) fis4 r 
+a4^\markup{D} a8 (g) fis4 fis8 (a)
+g4^\markup{Em} g e^\markup{A} a 
+fis2^\markup{D} r4 d8 e 
+fis4^\markup{D} fis8 a g4^\markup{G} g8 b
+a4^\markup{D} a8 (g) fis4 r 
+a4^\markup{D} a8 (g) fis4 fis8 (a)
+g4^\markup{Em} g e^\markup{A} a 
+fis2^\markup{D} r4 d8 fis\bar"||"
+e4.^\markup{A7} fis8 g4 d
+fis4.^\markup{D} g8 a4 a
+b4^\markup{G} b d cis8 b
+a2^\markup{D} r4 d,8 fis   
+a4^\markup{D} a8 b a4 a8 d 
+a4^\markup{D} a8 (g) fis4 r 
+a4^\markup{D} a8 (g) fis4 fis8 (a)
+g4^\markup{Em} g e^\markup{A} a
+fis2^\markup{D} r4 
 \bar"|."
 }

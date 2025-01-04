@@ -1,13 +1,11 @@
 globalAufmWasa= {
-\time 3/4
-\key e \major
+\time 6/8
+\key f \major
 \compressEmptyMeasures
 \set Timing.beamExceptions = #'()
 \set Timing.baseMoment = #(ly:make-moment 1/8)
 \set Timing.beatStructure = 3,3
 }
 \include "AufmWasa_eins.ly"
-% \include "SirDuke_zwei.ly"
-% \include "SirDuke_drei.ly"
-% \include "SirDuke_vier.ly"
-% \include "SirDuke_bass.ly"
+\include "AufmWasa_zwei.ly"
+\include "AufmWasa_bass.ly"

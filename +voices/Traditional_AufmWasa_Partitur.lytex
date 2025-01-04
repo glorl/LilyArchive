@@ -15,7 +15,9 @@
     \score{ 
         \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 5)) } 
         \new StaffGroup <<
-            \new Staff << \globalAufmWasa \AufmWasaEins >>   
+            \new Staff << \globalAufmWasa \AufmWasaEins >> 
+            \new Staff << \globalAufmWasa \AufmWasaZwei >> 
+            \new Staff << \globalAufmWasa \AufmWasaBass >>   
         >> 
     }
     \markup {

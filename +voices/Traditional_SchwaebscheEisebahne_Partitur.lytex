@@ -15,7 +15,9 @@
     \score{ 
         \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 5)) } 
         \new StaffGroup <<
-            \new Staff << \globalSchwaebscheEisebahne \SchwaebscheEisebahneEins >>   
+            \new Staff << \globalSchwaebscheEisebahne \SchwaebscheEisebahneEins >> 
+            \new Staff << \globalSchwaebscheEisebahne \SchwaebscheEisebahneZwei >> 
+            \new Staff << \globalSchwaebscheEisebahne \SchwaebscheEisebahneBass >>   
         >> 
     }
     \markup {

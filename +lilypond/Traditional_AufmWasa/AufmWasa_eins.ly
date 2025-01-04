@@ -1,15 +1,21 @@
 AufmWasaEins = \new Voice \relative c'{
-e4^\markup{E} e8 e b e
-gis4 gis8 gis e gis
-b4 b8 b a gis
-fis4^\markup{H} fis8 fis4 r8
+\partial 8 r8 
+r2. 
+r2. 
+r2. 
+r2.
+\bar"||"\break 
+f4 f8 f c f
+a4 a8 a f a
+c4 c8 c bes a
+g4 g8 g4 r8
 \repeat volta 2 {
-a4^\markup{A} cis8 cis b a 
-gis4^\markup{E} b8 b a gis 
-fis4^\markup{H7} gis8 a4 cis8}
+bes4 d8 d c bes 
+a4 c8 c bes a 
+g4 a8 bes4 d8}
 \alternative{
-    {b4^\markup{E} a8 gis4 r8}
-    {b4^\markup{E} dis,8 e4 r8}
+    {c4 bes8 a4 r8}
+    {c4 e,8 f4 r8}
 }
 \bar"|."
 }

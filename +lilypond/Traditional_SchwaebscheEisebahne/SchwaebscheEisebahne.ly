@@ -7,7 +7,5 @@ globalSchwaebscheEisebahne= {
 % \set Timing.beatStructure = 3,3
 }
 \include "SchwaebscheEisebahne_eins.ly"
-% \include "SirDuke_zwei.ly"
-% \include "SirDuke_drei.ly"
-% \include "SirDuke_vier.ly"
-% \include "SirDuke_bass.ly"
+\include "SchwaebscheEisebahne_zwei.ly"
+\include "SchwaebscheEisebahne_bass.ly"
