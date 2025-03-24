@@ -1,12 +1,8 @@
 {
     "Stuecke":
     {
-        "voices": ["Partitur"],
-        "pieces": ["Traditional_AufmWasa",
-        "Traditional_SchwaebscheEisebahne",
-        "Silcher_MussIDenn",
-        "Traditional_SegelnOhneWind",
-        "Traditional_OleRegenschirm"]
+        "voices": ["Eins"],
+        "pieces": ["Mozart_MesseC"]
     },
     "Abreu_TicoTico":
     {
