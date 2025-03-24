@@ -29,11 +29,11 @@
     
 
 \begin{lilypond}
+    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_MessiasII/MessiasII.ly"
 
-    \include "/home/georg/Dokumente/Quintett/+lilypond/Lopez_Duo/Duo.ly"
     \book{
+        \include "/home/georg/Dokumente/LilyArchive/+voices/Haendel_MessiasII_Duo.lytex"
 
-    \include "/home/georg/Dokumente/Quintett/+voices/Lopez_Duo_Duo.lytex"
     }
 
 \end{lilypond}

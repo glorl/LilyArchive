@@ -19,7 +19,7 @@
     \score{ 
         \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 2)) } 
         \new StaffGroup <<
-            \new Staff << \globalMessias \MessiasEinsZweifuenf >>   
+            \new Staff << \globalMessiasV1 \MessiasV1EinsZweifuenf >>   
         >> 
     }
     \markup{
@@ -29,7 +29,7 @@
     \score{ 
         \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 2)) } 
         \new StaffGroup <<
-            \new Staff << \globalMessias \MessiasEinsDreineun >>   
+            \new Staff << \globalMessiasV1 \MessiasV1EinsDreineun >>   
         >> 
     }
     \markup{
@@ -39,7 +39,7 @@
     \score{ 
         \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 2)) } 
         \new StaffGroup <<
-            \new Staff << \globalMessias \MessiasEinsViereins >>   
+            \new Staff << \globalMessiasV1 \MessiasV1EinsViereins >>   
         >> 
     }
     \markup {

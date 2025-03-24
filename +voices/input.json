@@ -1,8 +1,8 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins"],
-        "pieces": ["Mozart_MesseC"]
+        "voices": ["Duo"],
+        "pieces": ["Haendel_MessiasII"]
     },
     "Abreu_TicoTico":
     {
@@ -726,10 +726,10 @@
             "instrumentname":"Partitur"
         }
     },
-    "Haendel_Messias":
+    "Haendel_MessiasI":
     {
         "base":{
-            "title": "Messias",
+            "title": "MessiasI",
             "title_long": "Der Messias", 
             "subpieces": ["Zweifuenf","Dreineun","Viereins"], 
             "subpieces_long": ["Nr. 25 Chorus","Nr. 39 Chorus","Nr. 41 Chorus","Hallejuja (Orchester-Version)"], 
@@ -740,7 +740,28 @@
             "padding": "5",
             "basicdistance": "2",
             "instrumentname":"Klarinette 1+2"
-        }, 
+        }
+    },
+    "Haendel_MessiasII":
+    {
+        "base":{
+            "title": "MessiasII",
+            "title_long": "Der Messias",
+            "subpieces": ["Halleluja"],
+            "subpieces_long": ["Halleluja"],
+            "composer": "Haendel",
+            "composer_long": "G.F. Haendel"
+        },
+        "Eins":{
+            "padding": "5",
+            "basicdistance": "2",
+            "instrumentname":"Klarinette 1"
+        },
+        "Zwei":{
+            "padding": "5",
+            "basicdistance": "2",
+            "instrumentname":"Klarinette 2"
+        },
         "Duo":{
             "padding": "5",
             "basicdistance": "2",

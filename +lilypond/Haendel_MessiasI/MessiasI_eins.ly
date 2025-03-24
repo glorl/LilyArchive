@@ -1,4 +1,4 @@
-MessiasEinsZweifuenf = \transpose bes c' {\new Voice \relative c'' {
+MessiasIEinsZweifuenf = \transpose bes c' {\new Voice \relative c'' {
 \time 4/4
 \key es \major
 R1*11^\markup{\bold Allegro}
@@ -61,7 +61,7 @@ c1
 \bar"|."
 }}
 
-MessiasEinsDreineun = \transpose bes c'{\new Voice \relative c'' {
+MessiasIEinsDreineun = \transpose bes c'{\new Voice \relative c'' {
 \time 4/4
 \key d \major
 R1*3^\markup{\bold Allegro}
@@ -156,7 +156,7 @@ d8 d r4 r d
 d2. d4 
 d1\bar"|."
 }}
-MessiasEinsViereins = \transpose bes c'{\new Voice \relative c'' {
+MessiasIEinsViereins = \transpose bes c'{\new Voice \relative c'' {
 \time 4/4
 \key c \major
 R1*4^\markup{\bold Grave}
@@ -196,7 +196,7 @@ c4 b8 a gis4. gis8
 a2 r 
 R1*3\bar"|."
 }}
-MessiasEinsHalleluja = \transpose bes c'{\new Voice \relative c'' {
+MessiasIEinsHalleluja = \transpose bes c'{\new Voice \relative c'' {
 \time 4/4
 \key d \major
 d4. \f fis8-. g-. fis-. r4
