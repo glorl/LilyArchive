@@ -1,8 +1,8 @@
 {
     "Stuecke":
     {
-        "voices": ["Duo"],
-        "pieces": ["Haendel_MessiasII"]
+        "voices": ["Eins"],
+        "pieces": ["Mozart_MissaSolemnisC"]
     },
     "Abreu_TicoTico":
     {
@@ -1175,6 +1175,33 @@
         "Eins":{
             "padding": "3.2",
             "basicdistance": "2",
+            "instrumentname":"Klarinette 1"
+        },
+        "Zwei":{
+            "padding": "3.2",
+            "basicdistance": "2",
+            "instrumentname":"Klarinette 2"
+        },
+        "Partitur":{
+            "padding": "5",
+            "basicdistance": "0.1",
+            "partvoices":["Eins","Zwei"],
+            "instrumentname":"Partitur"
+        }
+    },
+    "Mozart_MissaSolemnisC":
+    {
+        "base":{
+            "title": "MissaSolemnisC",
+            "title_long": "Missa Solemnis in C",
+            "subpieces": ["Kyrie","Gloria","Credo","Sanctus","Benedictus","Agnusdei"],
+            "subpieces_long": ["1. Kyrie","2. Gloria","3. Credo","4. Sanctus","5. Benedictus","6. Agnus Dei"],
+            "composer": "Mozart",
+            "composer_long": "W.A. Mozart"
+        },
+        "Eins":{
+            "padding": "3.2",
+            "basicdistance": "0",
             "instrumentname":"Klarinette 1"
         },
         "Zwei":{

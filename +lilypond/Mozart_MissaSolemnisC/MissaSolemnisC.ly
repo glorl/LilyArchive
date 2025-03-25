@@ -1,7 +1,7 @@
-globalMesseC = {
+globalMissaSolemnisC = {
 \compressEmptyMeasures
 \override DynamicTextSpanner.style = #'none
 }
 
-\include "MesseC_eins.ly"
-\include "MesseC_zwei.ly"
+\include "MissaSolemnisC_eins.ly"
+\include "MissaSolemnisC_zwei.ly"
