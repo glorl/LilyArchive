@@ -144,10 +144,27 @@ g4 e d d
 c4 c,8. c16 c4 r \fermata \bar"|."
 }
 
-MissaSolemnisCEinsCredo = \new Voice \transpose bes c' \relative c''{
+MissaSolemnisCEinsCredo = \new Voice \relative c''{
 \time 3/4
 \key c \major
-R2.
+c2\f e4
+g4. f8 e d
+c2 a4
+e'4. d8 c b
+a2 f4
+c'4. d8 e f
+\appoggiatura a16 g8 f16 e \appoggiatura g16 f8 e16 d \appoggiatura f16 e8 d16 c
+d8 c b a g4
+c2 e4
+g4. f8 e d
+c2 a4
+e'4. d8 c b
+a2 f4
+c'4. d8 e f
+g8 a g f e d
+c8 g g e e c
+c4 r r
+
 }
 
 MissaSolemnisCEinsSanctus = \new Voice \transpose bes c' \relative c''{
