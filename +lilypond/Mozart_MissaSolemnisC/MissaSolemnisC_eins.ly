@@ -336,10 +336,60 @@ g2\f \appoggiatura g8 f4 e
 c4 r r2\fermata \bar"|."
 }
 
-MissaSolemnisCEinsBenedictus = \new Voice \transpose bes c' \relative c'''{
+MissaSolemnisCEinsBenedictus = \new Voice \relative c'{
 \time 4/4
-\key f \major
+\key c \major
+<> ^\markup{\bold{Allegro non troppo}}
+R1*7
+<<
+  { b,,1\rest
+  b1\rest}
+  \new CueVoice {
+    \cueClef "bass" \stemUp dis'8^\markup{Fag. I/II} e a,4 b8 c a b
+    e1 \cueClefUnset
+  }
+>>
+r8 e'\f e'4. f16 e d c b a
+gis8 a4 b16 a b8 c d e
+f4 e r2
+g4 c, e2
+d8 g, c4. b8 a d~
+d c4 bes a8 g c16 bes
+a8 c, c'4. d16 c bes a g f
+e8 f4 e16 d e8 f4 e8
+fis8 g4 fis8 g bes4 a8
+g4 r r2
 R1
+a'4 e f2
+e8 a, d4. c8 b e
+c8 (b c e) a2
+gis4 a4. g8 (fis b)
+g2~g8 (f! e a)
+f2~f8 (e d g)
+e4. f8 d4. e8
+c8 a4 gis8 c4 a
+b8 a r4 r8 a4 (gis8)
+r8 f'4 (e8) r2
+e4 a,4. b8 c b16 a
+gis4 r r2
+R1
+f'16\p (e d c b c d e f e d e f g! a b )
+c4 r r2
+R1*2
+r2 r4 r8 g,\f
+g8 (e'4) d16. (c32) b8 (f'4 ) e16. (d32)
+c8 (c'4 b16 a) g8 (f) e e
+cis8 (d e d) \grace{d32 (e)} f8-! f4 e16. (d32)
+c!8 c \appoggiatura e16 d8 c16 d d8 (dis) e-! e-!
+cis8 (d e d) \grace{d32 (e)} f8-! f4 e16. (d32)
+c!8 c \appoggiatura e16 d8 c16 b c4 g
+c4 e g8. f16 e8 r
+\appoggiatura e16 d8 (f16 d) c8 (b) c4 g
+c4 e g8. f16 e8 r
+R1*3
+g2 \appoggiatura g8 f4 e
+\appoggiatura e8 d4 c f8 f d4\trill
+c4 r r2\fermata \bar"|."
 }
 
 MissaSolemnisCEinsAgnusdei = \new Voice \transpose bes c' \relative c'{
