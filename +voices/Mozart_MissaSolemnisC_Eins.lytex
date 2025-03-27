@@ -17,7 +17,7 @@
         \fill-line {\line{\abs-fontsize #14 { \sans {1. Kyrie} }} \line {} } }
     } 
     \score{ 
-        \layout{ system-system-spacing = #'((padding . 3.2) (basic-distance . 0)) } 
+        \layout{ system-system-spacing = #'((padding . 2) (basic-distance . 0)) } 
         \new StaffGroup <<
             \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsKyrie >>   
         >> 
@@ -27,7 +27,7 @@
         \fill-line {\line{\abs-fontsize #14 { \sans {2. Gloria} }} \line {} } }
     } 
     \score{ 
-        \layout{ system-system-spacing = #'((padding . 3.2) (basic-distance . 0)) } 
+        \layout{ system-system-spacing = #'((padding . 2) (basic-distance . 0)) } 
         \new StaffGroup <<
             \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsGloria >>   
         >> 
@@ -37,7 +37,7 @@
         \fill-line {\line{\abs-fontsize #14 { \sans {3. Credo} }} \line {} } }
     } 
     \score{ 
-        \layout{ system-system-spacing = #'((padding . 3.2) (basic-distance . 0)) } 
+        \layout{ system-system-spacing = #'((padding . 2) (basic-distance . 0)) } 
         \new StaffGroup <<
             \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsCredo >>   
         >> 
@@ -47,7 +47,7 @@
         \fill-line {\line{\abs-fontsize #14 { \sans {4. Sanctus} }} \line {} } }
     } 
     \score{ 
-        \layout{ system-system-spacing = #'((padding . 3.2) (basic-distance . 0)) } 
+        \layout{ system-system-spacing = #'((padding . 2) (basic-distance . 0)) } 
         \new StaffGroup <<
             \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsSanctus >>   
         >> 
@@ -57,7 +57,7 @@
         \fill-line {\line{\abs-fontsize #14 { \sans {5. Benedictus} }} \line {} } }
     } 
     \score{ 
-        \layout{ system-system-spacing = #'((padding . 3.2) (basic-distance . 0)) } 
+        \layout{ system-system-spacing = #'((padding . 2) (basic-distance . 0)) } 
         \new StaffGroup <<
             \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsBenedictus >>   
         >> 
@@ -67,7 +67,7 @@
         \fill-line {\line{\abs-fontsize #14 { \sans {6. Agnus Dei} }} \line {} } }
     } 
     \score{ 
-        \layout{ system-system-spacing = #'((padding . 3.2) (basic-distance . 0)) } 
+        \layout{ system-system-spacing = #'((padding . 2) (basic-distance . 0)) } 
         \new StaffGroup <<
             \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsAgnusdei >>   
         >> 

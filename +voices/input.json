@@ -1193,14 +1193,14 @@
     {
         "base":{
             "title": "MissaSolemnisC",
-            "title_long": "Missa Solemnis in C",
+            "title_long": "Missa solemnis in C",
             "subpieces": ["Kyrie","Gloria","Credo","Sanctus","Benedictus","Agnusdei"],
             "subpieces_long": ["1. Kyrie","2. Gloria","3. Credo","4. Sanctus","5. Benedictus","6. Agnus Dei"],
             "composer": "Mozart",
             "composer_long": "W.A. Mozart"
         },
         "Eins":{
-            "padding": "3.2",
+            "padding": "2",
             "basicdistance": "0",
             "instrumentname":"Klarinette 1"
         },

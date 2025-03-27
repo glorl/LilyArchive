@@ -392,8 +392,100 @@ g2 \appoggiatura g8 f4 e
 c4 r r2\fermata \bar"|."
 }
 
-MissaSolemnisCEinsAgnusdei = \new Voice \transpose bes c' \relative c'{
-\time 3/4
-\key c \major
-R2.
+MissaSolemnisCEinsAgnusdei = \new Voice \relative c''{
+\time 4/4
+\key es \major
+bes4.^\markup{\bold{Andante sostenuto}} (es8) \appoggiatura f16 es8 (d) r4
+f4 ~f16 (g as as,) \appoggiatura bes as8 (g) r4
+r4 r8 g'8 g16 (c) c4 (bes8)
+bes8 (as4 g8) g16. (as64 g f16 es d c bes as)
+g8 r r4 r2
+bes'2 bes8. (g16) es8-. es-.
+as8. (f16) d8-. d-. g2
+r16 f (d bes) r es (c a) bes4 r
+r2 f'8. (g32 a bes) a-. g-. f-. es-. d-. c-. bes-.
+f4 r r8 c'32 (d c d) f16 (es d c )
+bes4 r r2
+R1
+r2 bes8. (c32 d) es16 (d c bes)
+d8. (es32 f) g16 (f es d) as'-. g f es d c-. bes-. as-.
+g8 r r4 r32 fis' (g fis g8) r32 d (es d es8)
+R1
+r2 r4 r8 f
+f16 (as!) as4 (d,8) es r r4
+bes'4 ~bes16 c \appoggiatura bes32 as16 \appoggiatura g32 f16 es8 d r4
+R1
+r2 r16 f (d bes) r16 es (c a)
+bes4 r bes2 ~
+bes2 ~bes8 r r4
+r8 r16 c' (bes as! g f ) es4 r
+es1~
+es16 c' (bes as g f as f) bes16. (g32 ) es8 ~es16  f32 (g) \appoggiatura g32 f16 es32 d
+es8. (f32 g) as16 (g f es) g8. (a32 bes) c16 (bes as g)
+des'16-. c-. bes-. as-. g-. f-. es-. des-. c4-! r
+r16 g' (bes g) r es (g es) r f (as f) r d! (f d)
+es4 r r des8 (c)
+r2 r4 es8 (d!)
+R1*2
+c'4 (fis,) g r\fermata \bar"||" \time 3/4 \key c \major
+<>^\markup{\bold {Allegro assai}} R2.*6
+<<
+  { b,,,,2.\rest
+  b2.\rest}
+  \new CueVoice {
+    \cueClef "bass" \stemUp c'4-!^\markup{Fag. I/II} f-! d-!
+    g r r\cueClefUnset
+  }
+>>
+c'8-.\f c-. c-. c-. c32\trill (b c8.)
+d8-. c-. b a-. g16 a b c
+d8-. d-. d-. d-. d32\trill (c d8.)
+d4 (\appoggiatura f16 e4 ) d
+g8. (a32 b c8) b-. a-. g-.
+f8-. e-. d-. c-. b4
+g'8. a16 c,4 b\trill
+c4 r r
+R2.*7
+r4 r8 d\f (f d)
+c8-. c-. c-. c-. c32 \trill (b c8.)
+d8-. c-. b-. a-. g16 a b c
+d8-. d-. d-. d-. d32\trill (c d8.)
+d4 (\appoggiatura f16 e4) d
+g8. (a32 b c8) b-. a-. g-.
+f8-. e-. d-. c-. b4
+g'8. a16 c,4 b
+c4 c' (as\p
+es4 c as
+es4) r r
+R2.*6
+r8 g' (fis g fis g)
+g,4 r r
+R2.*6
+r4 r8 d'\f (f! d)
+c8-. c-. c-. c-. c32\trill (b c8.)
+d8-. c-. b-. a-. g16 a b c
+d8-. d-. d-. d-. d32 \trill (c d8. )
+d4(\appoggiatura f16 e4) d
+g8. (a32 b c8) b-. a-. g-.
+f8-. e-. d-. c-. b4
+R2.*2
+e8. (f32 g a8) g-. f-. e-.
+d-. c-. b-. a-. g4
+R2.*10
+e'2.\f
+f2.
+d2 (b4)
+g'2.
+e2.
+f2.
+b2.
+c4 r8 c,16 d \appoggiatura f16 e8 d16 c
+g'4 e d
+e4 r8 c16 d \appoggiatura f16 e8 d16 c
+g'4 e d
+c r r
+c'2.\p ~
+c2.~
+c2.~
+c4 r r\fermata \bar"|."
 }
