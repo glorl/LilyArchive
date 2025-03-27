@@ -164,13 +164,176 @@ c'4. d8 e f
 g8 a g f e d
 c8 g g e e c
 c4 r r
-
+r4 e' e
+c'4. (b8 a gis)
+a4 e4. cis8
+d4 r r
+r4 d d
+b'4. (a8 g fis)
+g4 d4. b8
+c4 e fis8 g
+a2 c4
+b2 c4
+b4 (a) r
+d,4 d8 d d d
+d4 (fis a)
+g4 b,8 b b b
+b4 (d fis)
+e4 e8 e e fis
+g4 g,8 a b c
+d8 c' b a g fis
+g8 d d bes bes g
+g4 r r
+a'8 e e cis cis a
+a4 r r
+d8 a' a f! f d
+d8 a'4 g8 f e
+d2 e4
+f2 e4
+d8 g g16 fis g a g f e d
+c2 e4
+d4 g b,
+c2 a4
+b4 e g,
+a2 f4
+c'4. d8 e f
+\appoggiatura a16 g8 f16 e \appoggiatura g16 f8 e16 d \appoggiatura f16 e8 d16 c
+\appoggiatura e16 d8 c16 b \appoggiatura d16 c8 bes16 a \appoggiatura c16 bes8 a16 g
+\appoggiatura bes16 a8 g16 f \appoggiatura a16 g8 f16 e \appoggiatura g16 f8 e16 d
+e8 c'' c c c c
+c8. f,16 e4 d
+c4 r\fermata r ^\markup{\bold Andante}
+R2.*3
+c2.\p ~
+c2. ~
+c2. ~
+c2.
+r2.
+bes2.
+e!2.
+a2.
+d,2.
+g2.
+c,2.
+(d4) r r
+R2.*2
+a'2. ~
+a2.~
+a2.
+a2.
+(g8) g (fis g) c (a)
+r8 g (fis g) a (fis)
+e4^\markup{Allegro vivace} r r
+f!4\f f8 f f f
+e4 r r
+R2.*2
+c2 e4
+g4. f8 e d
+c2 a4
+e'4. d8 c b
+a2 f4
+c'4. d8 e f
+\appoggiatura a16 g8 f16 e \appoggiatura g16 f8 e16 d \appoggiatura f16 e8 d16 c
+d8-! d-! d-! bes-! bes-! g-!
+g4 r r
+a'8-! e-! e-! cis-! cis-! a-!
+a4 r r
+d8-! a'-! a-! f-! f-! d-!
+d4 r r
+e8-! b'-! b-! gis-! gis-! e-!
+e4 r r
+a8-! e-! e-! c-! c-! a-!
+a4 r r
+R2.*3
+c2 e4
+g4. f8 e d
+c2 a4
+e'4. d8 c b
+a2 f4
+c'4. d8 e f
+g8 a g f e d
+c'8 bes a g f e
+f4 r r
+R2.*2
+r4 r a\p ~
+a4 \appoggiatura c16 bes4 \appoggiatura a16 g4
+\appoggiatura f16 e!4 (f) r
+R2.*2
+r4 r e ~
+e4 \appoggiatura g16 f4 \appoggiatura e16 d4
+\appoggiatura c16 b!4 (c) r
+R2.
+r4 r g'
+c8 (c) c(bes) bes(a)
+a4 (g) r
+R2.*7
+f8-! c'-! c-! a-! a-! f-!
+f4 r r
+r4 a, a
+a'4. (g8 f e)
+f4 a4. fis8
+g4 r r
+r g, g
+g'4. (f!8 e d)
+e4 g4. e8
+f2. ~
+f4 d a'
+g2. ~
+g4 e c'
+f,2. ~
+f2.
+e2 f4
+e4 d r
+R2.*4
+as'2.\p
+g2.
+fis2.
+g8 g\f g16 fis g a g f e d
+c2 e4
+d4 g b,
+c2 a4
+b4 e g,
+a2 f4
+c'4. d8 e f
+\appoggiatura a16 g8 f16 e \appoggiatura g16 f8 e16 d \appoggiatura f16 e8 d16 c
+\appoggiatura e16 d8 c16 b \appoggiatura d16 c8 bes16 a \appoggiatura c16 bes8 a16 g
+\appoggiatura bes16 a8 g16 f \appoggiatura a16 g8 f16 e \appoggiatura g16 f8 e16 d
+e8 c'' c c c c
+c8. f,16 e4 d
+c8 g c d e f
+g8 a g f e d
+c8 g c d e f
+g8 a g f e d
+c4 r d
+e4 r r \fermata \bar"|."
 }
 
-MissaSolemnisCEinsSanctus = \new Voice \transpose bes c' \relative c''{
+MissaSolemnisCEinsSanctus = \new Voice \relative c''{
 \time 4/4
 \key c \major
-R1
+c4\f c, r2
+e'16 (f) f-. f-. e (f) f-. f-. r2
+fis16 (g) g-. g-. fis (g) g-. g-. r2
+r2 b2\p \cresc
+c4. b16 a g4\f f
+e8 e4 e8 fis4 r
+fis4 r fis r
+fis4 ~fis16 \((e) d(c)\) c8\trill b r\fermata r^\markup{\bold{Allegro non troppo}}
+R1*3
+r2 r4 r8 g\f
+g8 (e'4) d16. (c32) b8 (f'4) e16. (d32)
+c8 (c'4 b16 a) g8 (f) e e
+cis8 (d e d) \grace{d32 (e)} f8-! f4 e16. (d32)
+c!8 c \appoggiatura e16 d8 c16 d d8 (dis) e-! e-!
+cis (d! e d) \grace{d32 (e)} f8-! f4 e16. (d32)
+c!8 c \appoggiatura e16 d8 c16 d c4 g
+c4 e g8. f16 e8 r
+\appoggiatura e16 d8 (f16 d) c8 (b) c4 g
+c4 e g8. f16 e8 r
+R1*3
+g2\f \appoggiatura g8 f4 e
+\appoggiatura e8 d4 c f8 f d4\trill
+c4 r r2\fermata \bar"|."
 }
 
 MissaSolemnisCEinsBenedictus = \new Voice \transpose bes c' \relative c'''{
