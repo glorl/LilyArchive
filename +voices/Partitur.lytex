@@ -29,18 +29,10 @@
     
 
 \begin{lilypond}
-    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Traditional_AufmWasa/AufmWasa.ly"
-    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Traditional_SchwaebscheEisebahne/SchwaebscheEisebahne.ly"
-    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Silcher_MussIDenn/MussIDenn.ly"
-    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Traditional_SegelnOhneWind/SegelnOhneWind.ly"
-    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Traditional_OleRegenschirm/OleRegenschirm.ly"
+    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MissaSolemnisC/MissaSolemnisC.ly"
 
     \book{
-        \include "/home/georg/Dokumente/LilyArchive/+voices/Traditional_AufmWasa_Partitur.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+voices/Traditional_SchwaebscheEisebahne_Partitur.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+voices/Silcher_MussIDenn_Partitur.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+voices/Traditional_SegelnOhneWind_Partitur.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+voices/Traditional_OleRegenschirm_Partitur.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+voices/Mozart_MissaSolemnisC_Partitur.lytex"
 
     }
 
