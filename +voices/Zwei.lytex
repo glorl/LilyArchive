@@ -29,12 +29,10 @@
     
 
 \begin{lilypond}
-    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseC/MesseC.ly"
-    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Bach_Weihnachtsoratorium/Weihnachtsoratorium.ly"
+    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MissaSolemnisC/MissaSolemnisC.ly"
 
     \book{
-        \include "/home/georg/Dokumente/LilyArchive/+voices/Mozart_MesseC_Zwei.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+voices/Bach_Weihnachtsoratorium_Zwei.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+voices/Mozart_MissaSolemnisC_Zwei.lytex"
 
     }
 

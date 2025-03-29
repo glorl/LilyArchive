@@ -1,7 +1,7 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins"],
+        "voices": ["Zwei"],
         "pieces": ["Mozart_MissaSolemnisC"]
     },
     "Abreu_TicoTico":
@@ -1205,7 +1205,7 @@
             "instrumentname":"Klarinette 1"
         },
         "Zwei":{
-            "padding": "3.2",
+            "padding": "2",
             "basicdistance": "2",
             "instrumentname":"Klarinette 2"
         },
