@@ -17,9 +17,10 @@
         \fill-line {\line{\abs-fontsize #14 { \sans {1. Kyrie} }} \line {} } }
     } 
     \score{ 
-        \layout{ system-system-spacing = #'((padding . 2) (basic-distance . 0)) } 
+        \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 0.1)) } 
         \new StaffGroup <<
-            \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsKyrie >>   
+            \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsKyrie >> 
+            \new Staff << \globalMissaSolemnisC \MissaSolemnisCZweiKyrie >>   
         >> 
     }
     \markup{
@@ -27,9 +28,10 @@
         \fill-line {\line{\abs-fontsize #14 { \sans {2. Gloria} }} \line {} } }
     } 
     \score{ 
-        \layout{ system-system-spacing = #'((padding . 2) (basic-distance . 0)) } 
+        \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 0.1)) } 
         \new StaffGroup <<
-            \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsGloria >>   
+            \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsGloria >> 
+            \new Staff << \globalMissaSolemnisC \MissaSolemnisCZweiGloria >>   
         >> 
     }
     \markup{
@@ -37,9 +39,10 @@
         \fill-line {\line{\abs-fontsize #14 { \sans {3. Credo} }} \line {} } }
     } 
     \score{ 
-        \layout{ system-system-spacing = #'((padding . 2) (basic-distance . 0)) } 
+        \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 0.1)) } 
         \new StaffGroup <<
-            \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsCredo >>   
+            \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsCredo >> 
+            \new Staff << \globalMissaSolemnisC \MissaSolemnisCZweiCredo >>   
         >> 
     }
     \markup{
@@ -47,9 +50,10 @@
         \fill-line {\line{\abs-fontsize #14 { \sans {4. Sanctus} }} \line {} } }
     } 
     \score{ 
-        \layout{ system-system-spacing = #'((padding . 2) (basic-distance . 0)) } 
+        \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 0.1)) } 
         \new StaffGroup <<
-            \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsSanctus >>   
+            \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsSanctus >> 
+            \new Staff << \globalMissaSolemnisC \MissaSolemnisCZweiSanctus >>   
         >> 
     }
     \markup{
@@ -57,9 +61,10 @@
         \fill-line {\line{\abs-fontsize #14 { \sans {5. Benedictus} }} \line {} } }
     } 
     \score{ 
-        \layout{ system-system-spacing = #'((padding . 2) (basic-distance . 0)) } 
+        \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 0.1)) } 
         \new StaffGroup <<
-            \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsBenedictus >>   
+            \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsBenedictus >> 
+            \new Staff << \globalMissaSolemnisC \MissaSolemnisCZweiBenedictus >>   
         >> 
     }
     \markup{
@@ -67,9 +72,10 @@
         \fill-line {\line{\abs-fontsize #14 { \sans {6. Agnus Dei} }} \line {} } }
     } 
     \score{ 
-        \layout{ system-system-spacing = #'((padding . 2) (basic-distance . 0)) } 
+        \layout{ system-system-spacing = #'((padding . 5) (basic-distance . 0.1)) } 
         \new StaffGroup <<
-            \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsAgnusdei >>   
+            \new Staff << \globalMissaSolemnisC \MissaSolemnisCEinsAgnusdei >> 
+            \new Staff << \globalMissaSolemnisC \MissaSolemnisCZweiAgnusdei >>   
         >> 
     }
     \markup {

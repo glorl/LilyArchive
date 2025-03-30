@@ -312,27 +312,27 @@ MissaSolemnisCZweiSanctus = \new Voice \relative c''{
 \time 4/4
 \key c \major
 c4\f c, r2
-e'16 (f) f-. f-. e (f) f-. f-. r2
-fis16 (g) g-. g-. fis (g) g-. g-. r2
-r2 b2\p \cresc
-c4. b16 a g4\f f
-e8 e4 e8 fis4 r
-fis4 r fis r
-fis4 ~fis16 \((e) d(c)\) c8\trill b r\fermata r^\markup{\bold{Allegro non troppo}}
+cis'16 (d) d-. d-. cis (d) d-. d-. r2
+dis16 (e) e-. e-. dis (e) e-. e-. r2
+r2 d!2\p \cresc
+g4 e2\f d4
+c8 g4 g8 c4 r
+c4 r c r
+c4. a8 a8\trill g r\fermata r^\markup{\bold{Allegro non troppo}}
 R1*3
 r2 r4 r8 g\f
 g8 (e'4) d16. (c32) b8 (f'4) e16. (d32)
-c8 (c'4 b16 a) g8 (f) e e
+c4 a'8 (g16 f) e8 (d) c e
 cis8 (d e d) \grace{d32 (e)} f8-! f4 e16. (d32)
 c!8 c \appoggiatura e16 d8 c16 d d8 (dis) e-! e-!
 cis (d! e d) \grace{d32 (e)} f8-! f4 e16. (d32)
-c!8 c \appoggiatura e16 d8 c16 d c4 g
-c4 e g8. f16 e8 r
-\appoggiatura e16 d8 (f16 d) c8 (b) c4 g
-c4 e g8. f16 e8 r
+c!8 c \appoggiatura e16 d8 c16 d c4 e,
+e4 c' e8. d16 c8 r
+\appoggiatura g16 f8 (a16 f) e8 (d) e4 e
+g4 c e8. d16 c8 r
 R1*3
-g2\f \appoggiatura g8 f4 e
-\appoggiatura e8 d4 c f8 f d4\trill
+e4\f d c b
+a4 g a8 a b4\trill
 c4 r r2\fermata \bar"|."
 }
 
@@ -363,74 +363,57 @@ R1
 a'4 e f2
 e8 a, d4. c8 b e
 c8 (b c e) a2
-gis4 a4. g8 (fis b)
-g2~g8 (f! e a)
-f2~f8 (e d g)
-e4. f8 d4. e8
-c8 a4 gis8 c4 a
+gis4 e dis8 e4 dis8
+e4. d!8 cis d4 cis8
+d4. c!8 b c4 b8~
+b8 c a4. b8 gis4
+a8 a4 gis8 c4 a
 b8 a r4 r8 a4 (gis8)
 r8 f'4 (e8) r2
 e4 a,4. b8 c b16 a
 gis4 r r2
 R1
-f'16\p (e d c b c d e f e d e f g! a b )
-c4 r r2
+d'16\p (c b a g a b c d c b c d e f d )
+e4 r r2
 R1*2
 r2 r4 r8 g,\f
 g8 (e'4) d16. (c32) b8 (f'4 ) e16. (d32)
-c8 (c'4 b16 a) g8 (f) e e
+c4 a'8 (g16 f) e8 (d) c e
 cis8 (d e d) \grace{d32 (e)} f8-! f4 e16. (d32)
 c!8 c \appoggiatura e16 d8 c16 d d8 (dis) e-! e-!
 cis8 (d e d) \grace{d32 (e)} f8-! f4 e16. (d32)
-c!8 c \appoggiatura e16 d8 c16 b c4 g
-c4 e g8. f16 e8 r
-\appoggiatura e16 d8 (f16 d) c8 (b) c4 g
-c4 e g8. f16 e8 r
+c!8 c \appoggiatura e16 d8 c16 b c4 e,
+g4 c e8. d16 c8 r
+\appoggiatura g16 f8 (a16 f) e8 (d) e4 e
+g4 c e8. d16 c8 r
 R1*3
-g2 \appoggiatura g8 f4 e
-\appoggiatura e8 d4 c f8 f d4\trill
+e4 d c b
+a4 g a8 a b4\trill
 c4 r r2\fermata \bar"|."
 }
 
 MissaSolemnisCZweiAgnusdei = \new Voice \relative c''{
 \time 4/4
 \key es \major
-bes4.^\markup{\bold{Andante sostenuto}} (es8) \appoggiatura f16 es8 (d) r4
-f4 ~f16 (g as as,) \appoggiatura bes as8 (g) r4
-r4 r8 g'8 g16 (c) c4 (bes8)
-bes8 (as4 g8) g16. (as64 g f16 es d c bes as)
-g8 r r4 r2
-bes'2 bes8. (g16) es8-. es-.
-as8. (f16) d8-. d-. g2
-r16 f (d bes) r es (c a) bes4 r
-r2 f'8. (g32 a bes) a-. g-. f-. es-. d-. c-. bes-.
-f4 r r8 c'32 (d c d) f16 (es d c )
-bes4 r r2
-R1
-r2 bes8. (c32 d) es16 (d c bes)
-d8. (es32 f) g16 (f es d) as'-. g f es d c-. bes-. as-.
-g8 r r4 r32 fis' (g fis g8) r32 d (es d es8)
-R1
-r2 r4 r8 f
-f16 (as!) as4 (d,8) es r r4
-bes'4 ~bes16 c \appoggiatura bes32 as16 \appoggiatura g32 f16 es8 d r4
-R1
-r2 r16 f (d bes) r16 es (c a)
-bes4 r bes2 ~
-bes2 ~bes8 r r4
-r8 r16 c' (bes as! g f ) es4 r
-es1~
-es16 c' (bes as g f as f) bes16. (g32 ) es8 ~es16  f32 (g) \appoggiatura g32 f16 es32 d
-es8. (f32 g) as16 (g f es) g8. (a32 bes) c16 (bes as g)
-des'16-. c-. bes-. as-. g-. f-. es-. des-. c4-! r
-r16 g' (bes g) r es (g es) r f (as f) r d! (f d)
-es4 r r des8 (c)
-r2 r4 es8 (d!)
+<>^\markup{\bold{Andante sostenuto}}
+R1*27
+<<
+  { a,1\rest
+  a1\rest
+  a2\rest}
+  \new CueVoice {
+    \stemUp des''16-.^\markup{Kl. I/II} c-. bes-. a-. g-. f-. e-. des-. c4-! r
+    r16 g' (bes g) r es (g es) r f (as f) r d! (f d)
+    es4 r
+  }
+>>
+r bes\p
+r2 r4 c
 R1*2
-c'4 (fis,) g r\fermata \bar"||" \time 3/4 \key c \major
+fis4 (c) b r\fermata \bar"||" \time 3/4 \key c \major
 <>^\markup{\bold {Allegro assai}} R2.*6
 <<
-  { b,,,,2.\rest
+  { b,,,2.\rest
   b2.\rest}
   \new CueVoice {
     \cueClef "bass" \stemUp c'4-!^\markup{Fag. I/II} f-! d-!
@@ -478,13 +461,13 @@ d2 (b4)
 g'2.
 e2.
 f2.
-b2.
-c4 r8 c,16 d \appoggiatura f16 e8 d16 c
-g'4 e d
+d2.
 e4 r8 c16 d \appoggiatura f16 e8 d16 c
-g'4 e d
+g'4 c, b
+c4 r8 c16 d \appoggiatura f16 e8 d16 c
+g'4 c, b
 c r r
-c'2.\p ~
+c,2.\p ~
 c2.~
 c2.~
 c4 r r\fermata \bar"|."
