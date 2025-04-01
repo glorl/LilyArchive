@@ -7,6 +7,6 @@ for piecename in piecenames:
 text.close()
 
 text = open('../+lilypond/Mozart_MissaSolemnisC/MissaSolemnisC_zwei.ly')
-pieces = re.findall('(new Voice[^\t\n\r\f\v\b]*)', text.read())
+pieces = re.findall(r'(\\new Voice.*\{)', text.read())
 print(pieces)
 text.close()

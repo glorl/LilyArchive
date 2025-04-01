@@ -408,7 +408,7 @@ f4 r r8 c'32 (d c d) f16 (es d c )
 bes4 r r2
 R1
 r2 bes8. (c32 d) es16 (d c bes)
-d8. (es32 f) g16 (f es d) as'-. g f es d c-. bes-. as-.
+d8. (es32 f) g16 (f es d) as'-. g-. f-. es-. d-. c-. bes-. as-.
 g8 r r4 r32 fis' (g fis g8) r32 d (es d es8)
 R1
 r2 r4 r8 f

@@ -29,9 +29,11 @@
     
 
 \begin{lilypond}
+    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_MessiasII/MessiasII.ly"
     \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MissaSolemnisC/MissaSolemnisC.ly"
 
     \book{
+        \include "/home/georg/Dokumente/LilyArchive/+voices/Haendel_MessiasII_Eins.lytex"
         \include "/home/georg/Dokumente/LilyArchive/+voices/Mozart_MissaSolemnisC_Eins.lytex"
 
     }
