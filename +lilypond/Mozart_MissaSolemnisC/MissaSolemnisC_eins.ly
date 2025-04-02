@@ -1,7 +1,7 @@
 MissaSolemnisCEinsKyrie = \new Voice \relative c'' {
 \time 3/4
 \key c \major
-<>^\markup{\large {Andante}}R2.*5
+<>^\markup{\large \bold{Andante}}R2.*5
 <<
   { b,2.\rest
   b2.\rest}
@@ -10,18 +10,18 @@ MissaSolemnisCEinsKyrie = \new Voice \relative c'' {
     c8. (a16) c8 a,4 (c8)
   }
 >>
-r4 r8 e\p (d cis)
-cis4 (d8) f (b d)
-d4 (c!) g4 ~
-g8 (f4 e8) ~e16 (d) d(c)
+r4 r8 g'\p (f e)
+e4 (f8) a (d, f)
+f4 (e8) c( c' b)~
+b8 (a4 g8)~g16 (f) f (e)
 \appoggiatura f16 e8 (d16 e) d8 g4\f b8
 c4 r r
 R2.
 c,2. ~
-c4 b f
+c4 b f'
 e4 r r
 R2.
-a'4~a8 r r4
+a4~a8 r r4
 r4 r8 g8\p (f e)
 e4 (f8) a (d, f)
 f4 (e8) (c c' b)~
@@ -53,7 +53,7 @@ c2 r4\fermata
 MissaSolemnisCEinsGloria = \new Voice \relative c''{
 \time 4/4
 \key c \major
-c4.\f c8 b4 c
+c4.^\markup{\large \bold{Allegro molto}}\f c8 b4 c
 d4 e f2
 e4. c8 b b\trill (c) c\trill
 (d) d\trill (e) e\trill f2
@@ -81,8 +81,8 @@ r2 e\fp~
 e1 ~
 e4 r r2
 R1*2
-r4 bes4. (a8 g fis16 g)
-a4 r r c-!
+r4 bes'4. (a8 g f16 g)
+a4 r r c,-!
 a4-! f-! r f'-!
 c4-! a-! r a
 c8-. es-. \p es-. es-. es-. c'-. c-. c-.
@@ -111,7 +111,7 @@ fis1
 g4 r r2
 R1
 g4 g8. g16 g4 g
-bes4 bes8. bes16 bes8 bes bes bes
+b4 b8. b16 b8 b b b
 c4. c,8 b4 c
 d4 e f2
 e4. c8 b b\trill (c) c\trill
@@ -147,7 +147,7 @@ c4 c,8. c16 c4 r \fermata \bar"|."
 MissaSolemnisCEinsCredo = \new Voice \relative c''{
 \time 3/4
 \key c \major
-c2\f e4
+c2^\markup{\large \bold{Allegro vivace}}\f e4
 g4. f8 e d
 c2 a4
 e'4. d8 c b
@@ -202,15 +202,15 @@ c'4. d8 e f
 \appoggiatura bes16 a8 g16 f \appoggiatura a16 g8 f16 e \appoggiatura g16 f8 e16 d
 e8 c'' c c c c
 c8. f,16 e4 d
-c4 r\fermata r ^\markup{\bold Andante}
+c4 r\fermata r ^\markup{\large{\bold Andante}}
 R2.*3
-c2.\p ~
+c'2.\p ~
 c2. ~
 c2. ~
 c2.
 r2.
 bes2.
-e!2.
+e,!2.
 a2.
 d,2.
 g2.
@@ -223,7 +223,7 @@ a2.
 a2.
 (g8) g (fis g) c (a)
 r8 g (fis g) a (fis)
-e4^\markup{Allegro vivace} r r
+e4^\markup{\large{\bold{Allegro vivace}}} r r
 f!4\f f8 f f f
 e4 r r
 R2.*2
@@ -267,7 +267,7 @@ r4 r g'
 c8 (c) c(bes) bes(a)
 a4 (g) r
 R2.*7
-f8-! c'-! c-! a-! a-! f-!
+f8-!\f c'-! c-! a-! a-! f-!
 f4 r r
 r4 a, a
 a'4. (g8 f e)
@@ -311,14 +311,14 @@ e4 r r \fermata \bar"|."
 MissaSolemnisCEinsSanctus = \new Voice \relative c''{
 \time 4/4
 \key c \major
-c4\f c, r2
+c4^\markup{\large{\bold{Adagio}}}\f c, r2
 e'16 (f) f-. f-. e (f) f-. f-. r2
 fis16 (g) g-. g-. fis (g) g-. g-. r2
 r2 b2\p \cresc
 c4. b16 a g4\f f
 e8 e4 e8 fis4 r
 fis4 r fis r
-fis4 ~fis16 \((e) d(c)\) c8\trill b r\fermata r^\markup{\bold{Allegro non troppo}}
+fis4 ~fis16 \((e) d(c)\) c8\trill b r\fermata r^\markup{\large{\bold{Allegro non troppo}}}
 R1*3
 r2 r4 r8 g\f
 g8 (e'4) d16. (c32) b8 (f'4) e16. (d32)
@@ -339,7 +339,7 @@ c4 r r2\fermata \bar"|."
 MissaSolemnisCEinsBenedictus = \new Voice \relative c'{
 \time 4/4
 \key c \major
-<> ^\markup{\bold{Allegro non troppo}}
+<> ^\markup{\large{\bold{Allegro non troppo}}}
 R1*7
 <<
   { b,,1\rest
@@ -395,7 +395,7 @@ c4 r r2\fermata \bar"|."
 MissaSolemnisCEinsAgnusdei = \new Voice \relative c''{
 \time 4/4
 \key es \major
-bes4.^\markup{\bold{Andante sostenuto}} (es8) \appoggiatura f16 es8 (d) r4
+bes4.^\markup{\large{\bold{Andante sostenuto}}} (es8) \appoggiatura f16 es8 (d) r4
 f4 ~f16 (g as as,) \appoggiatura bes as8 (g) r4
 r4 r8 g'8 g16 (c) c4 (bes8)
 bes8 (as4 g8) g16. (as64 g f16 es d c bes as)
@@ -408,7 +408,7 @@ f4 r r8 c'32 (d c d) f16 (es d c )
 bes4 r r2
 R1
 r2 bes8. (c32 d) es16 (d c bes)
-d8. (es32 f) g16 (f es d) as'-. g-. f-. es-. d-. c-. bes-. as-.
+d8. (es32 f) g16 (f es d) as'!-. g-. f-. es-. d-. c-. bes-. as-.
 g8 r r4 r32 fis' (g fis g8) r32 d (es d es8)
 R1
 r2 r4 r8 f
@@ -421,19 +421,19 @@ bes2 ~bes8 r r4
 r8 r16 c' (bes as! g f ) es4 r
 es1~
 es16 c' (bes as g f as f) bes16. (g32 ) es8 ~es16  f32 (g) \appoggiatura g32 f16 es32 d
-es8. (f32 g) as16 (g f es) g8. (a32 bes) c16 (bes as g)
+es8. (f32 g) as16 (g f es) g8. (as32 bes) c16 (bes as g)
 des'16-. c-. bes-. as-. g-. f-. es-. des-. c4-! r
 r16 g' (bes g) r es (g es) r f (as f) r d! (f d)
 es4 r r des8 (c)
 r2 r4 es8 (d!)
 R1*2
 c'4 (fis,) g r\fermata \bar"||" \time 3/4 \key c \major
-<>^\markup{\bold {Allegro assai}} R2.*6
+<>^\markup{\large{\bold {Allegro assai}}} R2.*6
 <<
   { b,,,,2.\rest
   b2.\rest}
   \new CueVoice {
-    \cueClef "bass" \stemUp c'4-!^\markup{Fag. I/II} f-! d-!
+    \cueClef "bass" \stemUp c'4-!^\markup{Fag. I} f-! d-!
     g r r\cueClefUnset
   }
 >>

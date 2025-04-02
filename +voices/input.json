@@ -1,8 +1,8 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins", "Zwei"],
-        "pieces": ["Haendel_MessiasII", "Mozart_MissaSolemnisC"]
+        "voices": ["Partitur"],
+        "pieces": ["Mozart_MissaSolemnisC"]
     },
     "Abreu_TicoTico":
     {
