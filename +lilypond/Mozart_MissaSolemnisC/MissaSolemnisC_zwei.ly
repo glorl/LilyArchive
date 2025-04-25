@@ -1,4 +1,4 @@
-MissaSolemnisCZweiKyrie = \new Voice \relative c'' {
+MissaSolemnisCZweiKyrie = \new Voice \transpose bes c' \relative c'' {
 \time 3/4
 \key c \major
 <>^\markup{\large \bold{Andante}}R2.*5
@@ -49,7 +49,7 @@ c2 r4\fermata
 \bar"|."
 }
 
-MissaSolemnisCZweiGloria = \new Voice \relative c''{
+MissaSolemnisCZweiGloria = \new Voice \transpose bes c' \relative c''{
 \time 4/4
 \key c \major
 e,4.^\markup{\large \bold{Allegro molto}}\f e8 f4 g
@@ -143,7 +143,7 @@ g4 c c b
 c4 c,8. c16 c4 r \fermata \bar"|."
 }
 
-MissaSolemnisCZweiCredo = \new Voice \relative c''{
+MissaSolemnisCZweiCredo = \new Voice \transpose bes c' \relative c''{
 \time 3/4
 \key c \major
 c2^\markup{\large \bold{Allegro vivace}}\f e4
@@ -307,7 +307,7 @@ c4 r b
 c4 r r \fermata \bar"|."
 }
 
-MissaSolemnisCZweiSanctus = \new Voice \relative c''{
+MissaSolemnisCZweiSanctus = \new Voice \transpose bes c' \relative c''{
 \time 4/4
 \key c \major
 c4^\markup{\large{\bold{Adagio}}}\f c, r2
@@ -335,7 +335,7 @@ a4 g a8 a b4\trill
 c4 r r2\fermata \bar"|."
 }
 
-MissaSolemnisCZweiBenedictus = \new Voice \relative c'{
+MissaSolemnisCZweiBenedictus = \new Voice \transpose bes c' \relative c'{
 \time 4/4
 \key c \major
 <> ^\markup{\large{\bold{Allegro non troppo}}}
@@ -391,7 +391,7 @@ a4 g a8 a b4\trill
 c4 r r2\fermata \bar"|."
 }
 
-MissaSolemnisCZweiAgnusdei = \new Voice \relative c''{
+MissaSolemnisCZweiAgnusdei = \new Voice \transpose bes c' \relative c''{
 \time 4/4
 \key es \major
 <>^\markup{\large{\bold{Andante sostenuto}}}

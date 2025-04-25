@@ -1,4 +1,4 @@
-MissaSolemnisCEinsKyrie = \new Voice \relative c'' {
+MissaSolemnisCEinsKyrie = \new Voice \transpose bes c' \relative c'' {
 \time 3/4
 \key c \major
 <>^\markup{\large \bold{Andante}}R2.*5
@@ -50,7 +50,7 @@ c2 r4\fermata
 }
 
 
-MissaSolemnisCEinsGloria = \new Voice \relative c''{
+MissaSolemnisCEinsGloria = \new Voice \transpose bes c' \relative c''{
 \time 4/4
 \key c \major
 c4.^\markup{\large \bold{Allegro molto}}\f c8 b4 c
@@ -144,7 +144,7 @@ g4 e d d
 c4 c,8. c16 c4 r \fermata \bar"|."
 }
 
-MissaSolemnisCEinsCredo = \new Voice \relative c''{
+MissaSolemnisCEinsCredo = \new Voice \transpose bes c' \relative c''{
 \time 3/4
 \key c \major
 c2^\markup{\large \bold{Allegro vivace}}\f e4
@@ -308,7 +308,7 @@ c4 r d
 e4 r r \fermata \bar"|."
 }
 
-MissaSolemnisCEinsSanctus = \new Voice \relative c''{
+MissaSolemnisCEinsSanctus = \new Voice \transpose bes c' \relative c''{
 \time 4/4
 \key c \major
 c4^\markup{\large{\bold{Adagio}}}\f c, r2
@@ -336,7 +336,7 @@ g2\f \appoggiatura g8 f4 e
 c4 r r2\fermata \bar"|."
 }
 
-MissaSolemnisCEinsBenedictus = \new Voice \relative c'{
+MissaSolemnisCEinsBenedictus = \new Voice \transpose bes c' \relative c'{
 \time 4/4
 \key c \major
 <> ^\markup{\large{\bold{Allegro non troppo}}}
@@ -392,7 +392,7 @@ g2 \appoggiatura g8 f4 e
 c4 r r2\fermata \bar"|."
 }
 
-MissaSolemnisCEinsAgnusdei = \new Voice \relative c''{
+MissaSolemnisCEinsAgnusdei = \new Voice \transpose bes c' \relative c''{
 \time 4/4
 \key es \major
 bes4.^\markup{\large{\bold{Andante sostenuto}}} (es8) \appoggiatura f16 es8 (d) r4

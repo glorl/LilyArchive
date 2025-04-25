@@ -29,10 +29,10 @@
     
 
 \begin{lilypond}
-    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MissaSolemnisC/MissaSolemnisC.ly"
+    \include "/home/georg/Dokumente/LilyArchive/+lilypond/Bach_BistDuBeiMir/BistDuBeiMir.ly"
 
     \book{
-        \include "/home/georg/Dokumente/LilyArchive/+voices/Mozart_MissaSolemnisC_Eins.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+voices/Bach_BistDuBeiMir_Eins.lytex"
 
     }
 

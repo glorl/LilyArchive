@@ -1,8 +1,8 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins"],
-        "pieces": ["Bach_BistDuBeiMir"]
+        "voices": ["Eins","Zwei"],
+        "pieces": ["Haendel_MessiasII","Mozart_MissaSolemnisC"]
     },
     "Abreu_TicoTico":
     {
@@ -51,9 +51,7 @@
             "title": "BistDuBeiMir",
             "title_long": "Bist du bei mir",
             "composer": "Bach",
-            "composer_long": "J.S. Bach, arr. I. Patscheck",
-            "partvoices":["Eins","Zwei","Drei","Vier","Bass"],
-            "instrumentname":["Klarinette 1", "Klarinette 2", "Klarinette 3", "Klarinette 4", "Bassklarinette"]
+            "composer_long": "J.S. Bach, arr. I. Patscheck"
         },
         "Eins":{
             "padding": "5",
