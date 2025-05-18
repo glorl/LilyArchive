@@ -40,9 +40,13 @@ def rep_pattern(arg_rep,arg_string):
     out_string = out_pattern.sub(lambda m: arg_rep[re.escape(m.group(0))], arg_string)
     return arg_rep, out_pattern, out_string
 
+# read input
+# readJson()
+
 # Iterate through the json list
 voices=data['Stuecke']['voices']
 for voice in voices:
+    # x = voice.new('name')
 
     ######## book ############
     ftemplate_book = open(os.path.join(path_templates,'book.lytex'),"r")        
@@ -56,9 +60,9 @@ for voice in voices:
         "instrumentname": '',
         "bookheader": ""
         }
-
     for piece in data['Stuecke']['pieces']:
-
+        # voice.makepiece('parameters')
+        #
         title_short     = data[piece]['title']
         title_long      = data[piece]['title_long']
         composer        = data[piece]['composer']
@@ -221,3 +225,10 @@ for voice in voices:
     ftemplate_book.close()
         
 finput.close()
+
+# write outputs
+# voice.genpdf()
+
+class voice():
+    def __init__(self,name):
+        self.name=name
