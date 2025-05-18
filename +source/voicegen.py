@@ -59,17 +59,16 @@ for voice in voices:
 
     for piece in data['Stuecke']['pieces']:
 
-        data_piece      = data[piece]
-        title_short     = data_piece['base']['title']
-        title_long      = data_piece['base']['title_long']
-        composer        = data_piece['base']['composer']
-        composer_long   = data_piece['base']['composer_long']
+        title_short     = data[piece]['title']
+        title_long      = data[piece]['title_long']
+        composer        = data[piece]['composer']
+        composer_long   = data[piece]['composer_long']
         
-        padding         = data_piece[voice]['padding']
-        basicdistance   = data_piece[voice]['basicdistance']
-        instrumentname  = data_piece[voice]['instrumentname']
+        padding         = data[piece]['padding'][voice]
+        basicdistance   = data[piece]['basicdistance'][voice]
+        instrumentname  = data[piece]['instrumentname'][voice]
         
-        tf_lyrics = 'lyrics' in data_piece[voice]
+        tf_lyrics = 'lyrics' in data[piece]
 
         rep["title_short"]      = title_short
         rep["title_long"]       = title_long
@@ -80,26 +79,16 @@ for voice in voices:
         rep["basicdistance_val"]= basicdistance
         rep["instrumentname"]   = instrumentname
 
-        if not('subpieces' in data_piece['base']):
-            if 'partvoices' in data_piece[voice]:
-                partvoices          = data_piece[voice]['partvoices']
-                rep["voice"]        = partvoices[0] 
-                length_partvoices   = len(partvoices)
-            else:
-                rep["voice"]        = voice 
-                length_partvoices   = 0
+        if 'partvoices' in data[piece]:
+            partvoices          = data[piece][voice]['partvoices']
+            rep["voice"]        = partvoices[0]
+            length_partvoices   = len(partvoices)
         else:
-            if 'partvoices' in data_piece[voice]:
-                partvoices          = data_piece[voice]['partvoices']
-                rep["voice"]        = partvoices[0]
-                length_partvoices   = len(partvoices)
-            else:
-                rep["voice"]        = voice
-                length_partvoices   = 0
-            
+            rep["voice"]        = voice
+            length_partvoices   = 0
         
-        if 'n_emptyline' in data_piece[voice]:
-            n_emptyline = data_piece[voice]['n_emptyline']
+        if 'n_emptyline' in data[piece]:
+            n_emptyline = data[piece][voice]['n_emptyline']
         else: 
             n_emptyline = 0
         emptyline = ''
@@ -114,8 +103,8 @@ for voice in voices:
         ######## bookpart ############
         # prepare title line 
         rep, pattern, titlelinestring = rep_pattern(rep,titleline)
-        if 'subtitle' in data_piece['base']:
-            subtitle        = data_piece['base']['subtitle']
+        if 'subtitle' in data[piece]:
+            subtitle        = data[piece]['subtitle']
             rep['subtitle'] = subtitle
             rep, pattern, titlelinestring = rep_pattern(rep,titleline)
             subtitlelinestring = pattern.sub(lambda m: rep[re.escape(m.group(0))], subtitleline)
@@ -131,13 +120,13 @@ for voice in voices:
         rep, pattern, markuplinestring = rep_pattern(rep,markupline)
         rep["markupline"]=markuplinestring
 
-        if not('subpieces' in data_piece['base']): # no subpiece: only title, subtitle, 1 score 
+        if not('subpieces' in data[piece]): # no subpiece: only title, subtitle, 1 score
             score_overall = 'markupline \nscoreline'
             # staff line
             rep["staff"]    = staffline
             rep, pattern, staffstring = rep_pattern(rep,staffline)
 
-            if tf_lyrics and (partvoices[0] in data_piece[voice]['lyrics']): 
+            if tf_lyrics and (partvoices[0] in data[piece][voice]['lyrics']):
                 lyricsline_i = lyricsline.replace('voice',partvoices[0])
                 lyricsline_i = pattern.sub(lambda m: rep[re.escape(m.group(0))], lyricsline_i)
                 staffstring = staffstring+'\n'+lyricsline_i
@@ -147,7 +136,7 @@ for voice in voices:
                 staffstring_i = pattern.sub(lambda m: rep[re.escape(m.group(0))], staffstring_i)
                 staffstring = staffstring+'\n'+staffstring_i
                 
-                if tf_lyrics and (partvoices[ipartvoices] in data_piece[voice]['lyrics']): 
+                if tf_lyrics and (partvoices[ipartvoices] in data[piece][voice]['lyrics']):
                     lyricsline_i = lyricsline.replace('voice',partvoices[ipartvoices])
                     lyricsline_i = pattern.sub(lambda m: rep[re.escape(m.group(0))], lyricsline_i)
                     staffstring = staffstring+'\n'+lyricsline_i
@@ -169,11 +158,11 @@ for voice in voices:
 
             score_overall_i = 'markupline '
             
-            for i_subpieces in range(len(data_piece['base']['subpieces'])):
+            for i_subpieces in range(len(data[piece]['subpieces'])):
 
                 score_overall_i = score_overall_i+'\nsubpieceline \nscoreline'
                 
-                rep["sub_piece"]    = data_piece['base']['subpieces_long'][i_subpieces]
+                rep["sub_piece"]    = data[piece]['subpieces_long'][i_subpieces]
                 rep, pattern, subpiecestring = rep_pattern(rep,subpieceline)
 
                 rep["subpieceline"]    = subpiecestring
@@ -182,7 +171,7 @@ for voice in voices:
                 rep["staff"]    = staffline
                 rep, pattern, staffstring = rep_pattern(rep,staffline)
 
-                if tf_lyrics and (partvoices[0] in data_piece[voice]['lyrics']): 
+                if tf_lyrics and (partvoices[0] in data[piece][voice]['lyrics']):
                     lyricsline_i = lyricsline.replace('voice',partvoices[0])
                     lyricsline_i = pattern.sub(lambda m: rep[re.escape(m.group(0))], lyricsline_i)
                     staffstring = staffstring+'\n'+lyricsline_i
@@ -192,12 +181,12 @@ for voice in voices:
                     staffstring_i = pattern.sub(lambda m: rep[re.escape(m.group(0))], staffstring_i)
                     staffstring = staffstring+'\n'+staffstring_i
 
-                    if tf_lyrics and (partvoices[ipartvoices] in data_piece[voice]['lyrics']): 
+                    if tf_lyrics and (partvoices[ipartvoices] in data[piece][voice]['lyrics']):
                         lyricsline_i = lyricsline.replace('voice',partvoices[ipartvoices])
                         lyricsline_i = pattern.sub(lambda m: rep[re.escape(m.group(0))], lyricsline_i)
                         staffstring = staffstring+'\n'+lyricsline_i
                                     
-                staffstring = staffstring.replace('SP',data_piece['base']['subpieces'][i_subpieces])
+                staffstring = staffstring.replace('SP',data[piece]['subpieces'][i_subpieces])
                 rep["staff"]=staffstring
 
                 # prepare score line 

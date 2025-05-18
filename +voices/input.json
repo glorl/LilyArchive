@@ -2,7 +2,7 @@
     "Stuecke":
     {
         "voices": ["Eins"],
-        "pieces": ["Bach_BistDuBeiMir"]
+        "pieces": ["Haendel_MessiasII"]
     },
     "Abreu_TicoTico":
     {
@@ -47,42 +47,34 @@
     },
     "Bach_BistDuBeiMir":
     {
-        "base":{
-            "title": "BistDuBeiMir",
-            "title_long": "Bist du bei mir",
-            "composer": "Bach",
-            "composer_long": "J.S. Bach, arr. I. Patscheck",
-            "partvoices":["Eins","Zwei","Drei","Vier","Bass"],
-            "instrumentname":["Klarinette 1", "Klarinette 2", "Klarinette 3", "Klarinette 4", "Bassklarinette"]
-        },
+        "title": "BistDuBeiMir",
+        "title_long": "Bist du bei mir",
+        "composer": "Bach",
+        "composer_long": "J.S. Bach, arr. I. Patscheck",
+        "partvoices":["Eins","Zwei","Drei","Vier","Bass"],
+        "instrumentname":
+            {"Eins":"Klarinette 1", "Zwei":"Klarinette 2", "Drei":"Klarinette 3", "Vier":"Klarinette 4", "Fuenf":"Bassklarinette"},
+        "padding":
+            {"Eins":"5", "Zwei":"5", "Drei":"5", "Vier":"5", "Fuenf":"5"},
+        "basicdistance":
+            {"Eins":"0.1", "Zwei":"0.1", "Drei":"0.1", "Vier":"0.1", "Fuenf":"0.1"},
         "Eins":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "instrumentname":"Klarinette 1"
+            "padding": "5", "basicdistance": "0.1", "instrumentname":"Klarinette 1"
         },
         "Zwei":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "instrumentname":"Klarinette 2"
+            "padding": "5", "basicdistance": "0.1", "instrumentname":"Klarinette 2"
         },
         "Drei":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "instrumentname":"Klarinette 3"
+            "padding": "5", "basicdistance": "0.1", "instrumentname":"Klarinette 3"
         },
         "Vier":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "instrumentname":"Klarinette 4"
+            "padding": "5", "basicdistance": "0.1", "instrumentname":"Klarinette 4"
         },
         "Bass":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "instrumentname":"Bassklarinette"
+            "padding": "5", "basicdistance": "0.1", "instrumentname":"Bassklarinette"
         },
         "Partitur":{
-            "padding": "5",
-            "basicdistance": "0.1",
+            "padding": "5", "basicdistance": "0.1",
             "partvoices":["Eins","Zwei","Drei","Vier","Bass"],
             "instrumentname":"Partitur"
         }
@@ -746,31 +738,19 @@
     },
     "Haendel_MessiasII":
     {
-        "base":{
-            "title": "MessiasII",
-            "title_long": "Der Messias",
-            "subpieces": ["Halleluja"],
-            "subpieces_long": ["Halleluja"],
-            "composer": "Haendel",
-            "composer_long": "G.F. Haendel"
+        "title": "MessiasII",
+        "title_long": "Der Messias",
+        "subpieces": ["Halleluja"],
+        "subpieces_long": ["Halleluja"],
+        "composer": "Haendel",
+        "composer_long": "G.F. Haendel",
+        "instrumentname":
+            {"Eins":"Klarinette 1", "Zwei":"Klarinette 2", "Partitur":"Partitur"},
+        "padding":
+            {"Eins":"5", "Zwei":"5", "Partitur":"5"},
+        "basicdistance":
+            {"Eins":"2", "Zwei":"2", "Partitur":"2"}
         },
-        "Eins":{
-            "padding": "5",
-            "basicdistance": "2",
-            "instrumentname":"Klarinette 1"
-        },
-        "Zwei":{
-            "padding": "5",
-            "basicdistance": "2",
-            "instrumentname":"Klarinette 2"
-        },
-        "Duo":{
-            "padding": "5",
-            "basicdistance": "2",
-            "partvoices": ["Eins","Zwei"],
-            "instrumentname":"Partitur"
-        }
-    },
     "Haendel_OmbraMaiFu":
     {
         "base":{
