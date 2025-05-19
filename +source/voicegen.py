@@ -46,7 +46,7 @@ def rep_pattern(arg_rep,arg_string):
 # Iterate through the json list
 voices=data['Stuecke']['voices']
 for voice in voices:
-    # x = voice.new('name')
+    # v = voice('name')
 
     ######## book ############
     ftemplate_book = open(os.path.join(path_templates,'book.lytex'),"r")        
@@ -61,7 +61,7 @@ for voice in voices:
         "bookheader": ""
         }
     for piece in data['Stuecke']['pieces']:
-        # voice.makepiece('parameters')
+        # v.piece = voice('Eins')
         #
         title_short     = data[piece]['title']
         title_long      = data[piece]['title_long']
@@ -210,7 +210,7 @@ for voice in voices:
         for line in ftemplate_bookpart:
             rep,pattern,line = rep_pattern(rep,line)
             fcopy_bookpart.write(line)
-
+'
         fcopy_bookpart.close()
         ftemplate_bookpart.close()
 
@@ -227,8 +227,38 @@ for voice in voices:
 finput.close()
 
 # write outputs
-# voice.genpdf()
+# x.genPDF()
 
-class voice():
+class voice:
+
+    # template lines
+    emptyline_i = '            \\fill-line {\\line{\\abs-fontsize #30 { {\\null} }} }'
+    staffline   = '            \\new Staff << \\globaltitle_short \\title_shortvoiceSP >> '
+    lyricsline  = '            \\new Lyrics \\lyricsto "Voicetitle_shortvoiceSP" <<\\title_shortvoiceSPLyrics>>'
+    titleline   = '            \\fill-line {\\line{\\abs-fontsize #18 { \\sans {title_long} }} }'
+    subtitleline= '\\fill-line {\\line{\\abs-fontsize #16 { \\sans {subtitle} }} }'
+    composerline= '            \\fill-line {\\line {} \\line{\\abs-fontsize #12 { \\sans {composer_long} }} }'
+
+    markupline = '    \\markup{\n        \\column{ \ntitleline \ncomposerline \n        } \n    }'
+    subpieceline='    \\markup{\n        \\column{\\fill-line {\\line{\\abs-fontsize #30 { {\\null} }} } \n'\
+        +'        \\fill-line {\\line{\\abs-fontsize #14 { \\sans {sub_piece} }} \\line {} } }\n    }'
+    scoreline = '    \\score{ \n        \\layout{ system-system-spacing = #\'((padding . padding_val) (basic-distance . basicdistance_val)) } \n'\
+        +'        \\new StaffGroup <<\nstaff  \n        >> \n    }'
+
     def __init__(self,name):
         self.name=name
+        self.add_piece(piece)
+
+    def add_piece(piece):
+        self.piece.append(piece)
+        self.piece.title_short=[]
+        self.piece.title_long=[]
+        self.piece.composer=[]
+        self.piece.composer_long=[]
+        self.piece.padding=[]
+        self.piece.basicdistance=[]
+        self.piece.instrumentname=[]
+
+
+    def genPDF():
+        x=1
