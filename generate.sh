@@ -1,5 +1,5 @@
 # generate voice 
-python3 +source/voicegen.py
+python3 +source/voicegen_oo.py
 
 cd +voices/ 
 
