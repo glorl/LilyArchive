@@ -1,4 +1,5 @@
-MessiasIIEinsHalleluja = \transpose bes c'{\new Voice \relative c'' {
+global=\bar
+MessiasIIEinsHalleluja = {\transpose bes c'{\new Voice \relative c'' {
 \time 4/4
 \key d \major
 d4.\f^\markup{\bold{Allegro moderato.}} fis8-. g-. fis-. r4
@@ -90,4 +91,4 @@ d8 fis16 fis a8 fis d fis16 fis a8 d,16 d
 b'8 a r4 r a,^\markup{\large{\bold Adagio.}}
 b2. b4
 a1\fermata \bar"|."
-}}
+}}}
