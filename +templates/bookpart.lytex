@@ -1,8 +1,8 @@
 \bookpart{
     \header{tagline = ""}
     \paper{
-        paper-height=paperheight
-        paper-width=paperwidth
+        paper-height=pheight
+        paper-width=pwidth
         horizontal-shift=-15\mm
         print-page-number=##f
     }
