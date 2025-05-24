@@ -1,4 +1,4 @@
-MessiasIIZweiHalleluja = \transpose bes c'{\new Voice \relative c' {
+MessiasIIZweiHalleluja = {\transpose bes c'{\new Voice \relative c' {
 \time 4/4
 \key d \major
 fis4.^\markup{\bold{Allegro moderato.}}  \f a8-. b-. a-. r4
@@ -91,5 +91,4 @@ d, d'16 d fis8 d d, d'16 d fis8 d16 d
 g8 fis r4 r fis,^\markup{\large{\bold Adagio.}}
 g2. g4
 fis1\fermata\bar"|."
-}
-}
+}}}

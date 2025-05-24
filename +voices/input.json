@@ -1,7 +1,7 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins"],
+        "voices": ["Eins","Zwei"],
         "pieces": ["Haendel_MessiasII"]
     },
     "Abreu_TicoTico":
@@ -746,6 +746,7 @@
         "composer_long": "G.F. Haendel",
         "instrumentname":
             {"Eins":"Klarinette 1", "Zwei":"Klarinette 2", "Partitur":"Partitur"},
+        "foldername": "Haendel_MessiasII",
         "padding":
             {"Eins":"5", "Zwei":"5", "Partitur":"5"},
         "basicdistance":

@@ -3,5 +3,6 @@
 # +voices/
 *.pdf
 *.midi
+*.lytex
 # *.json
 .gitignore

@@ -25,7 +25,7 @@ def parse_lilypond_assignments(file_path):
                     i += 1
 
                 # Jetzt sollte eine öffnende Klammer folgen
-                if i < length and content[i] == '{':
+                if i < length and content[i] == '{' :
                     brace_count = 1
                     block_start = i
                     i += 1
@@ -46,8 +46,8 @@ def parse_lilypond_assignments(file_path):
 
 # Beispielverwendung:
 if __name__ == '__main__':
-    file_path = '+lilypond/Haendel_MessiasII/MessiasII_eins.ly'
+    file_path = '+source/06_Tuileries_07_Bydlo.ly'
     result = parse_lilypond_assignments(file_path)
 
     for name, block in result.items():
-        print(f"{name} = {block}\n")
+        print(f"{name} ")
