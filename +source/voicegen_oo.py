@@ -109,7 +109,8 @@ for voice in voicelist:
                 rep['score_overall']=p.markupline+p.scoreline
                 rep['emptyline']    =''
                 rep['instrumentname']= instrumentname
-                # write output line by line
+
+                # action required: this can be put into the class
                 ftemplate_bookpart = open(os.path.join(path_templates,'bookpart.lytex'),"r")
                 fcopy_bookpart = open(os.path.join(path_lilypond,foldername,composer+'_'+title_short+'_'+voice+'.lytex'),"wt")
 
@@ -120,9 +121,10 @@ for voice in voicelist:
                 ftemplate_bookpart.close()
                 fcopy_bookpart.close()
 
+                # action required: add contents sequentially
                 rep['includes_lytex']    ='        \\include \"'+os.path.join(path_lilypond,foldername,composer+'_'+title_short+'_'+voice+'.lytex\"')
 
-            # write output line by line
+            # action required: this can be put into the class
             ftemplate_book = open(os.path.join(path_templates,'book.lytex'),"r")
             fcopy_book = open(os.path.join(path_voices,voice+'.lytex'),"wt")
 
