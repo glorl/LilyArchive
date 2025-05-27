@@ -1,3 +1,5 @@
+import re
+
 def parse_lilypond_assignments(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -18,7 +20,6 @@ def parse_lilypond_assignments(file_path):
 
             if i < length and content[i] == '=':
                 i += 1
-
                 while i < length and content[i].isspace():
                     i += 1
 
@@ -26,6 +27,7 @@ def parse_lilypond_assignments(file_path):
                     brace_count = 1
                     block_start = i
                     i += 1
+
                     while i < length and brace_count > 0:
                         if content[i] == '{':
                             brace_count += 1
@@ -36,11 +38,15 @@ def parse_lilypond_assignments(file_path):
                     block_end = i
                     block_raw = content[block_start:block_end]
 
-                    # Zeilenweise Einrücken mit 8 Leerzeichen
-                    block_indented = '\n'.join(
-                        r'       ' + line if line.strip() != '' else ''
-                        for line in block_raw.splitlines()
-                    )
+                    # ✨ Struktur erzeugen: künstliche Zeilenumbrüche nach Lilypond-typischen Mustern
+                    formatted = re.sub(r'(\\(transpose|new|relative|time|key|mark|tempo|clef|bar|voiceOne|voiceTwo|voiceThree|voiceFour)\b)', r'\n\1', block_raw)
+                    formatted = re.sub(r'([{}])', r'\n\1\n', formatted)
+
+                    # ✨ Zeilen aufsplitten, leere entfernen
+                    lines = [line.strip() for line in formatted.splitlines() if line.strip()]
+
+                    # ✨ Einrücken mit 8 Leerzeichen
+                    block_indented = '\n'.join('        ' + line for line in lines)
 
                     assignments[name] = block_indented
         else:

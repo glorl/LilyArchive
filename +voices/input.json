@@ -750,7 +750,7 @@
         "padding":
             {"Eins":"5", "Zwei":"5", "Partitur":"5"},
         "basicdistance":
-            {"Eins":"2", "Zwei":"2", "Partitur":"2"}
+            {"Eins":"5", "Zwei":"2", "Partitur":"2"}
         },
     "Haendel_OmbraMaiFu":
     {

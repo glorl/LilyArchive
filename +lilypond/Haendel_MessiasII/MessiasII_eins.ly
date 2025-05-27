@@ -1,4 +1,3 @@
-global=\bar
 MessiasIIEinsHalleluja = {\transpose bes c'{\new Voice \relative c'' {
 \time 4/4
 \key d \major

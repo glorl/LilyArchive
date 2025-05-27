@@ -67,11 +67,12 @@ path_json       = os.path.join(cwd,'+voices')
 
 
 rep = dict()
-rep['paperheight']     = "#280"
-rep['paperwidth']      = "#230"
+rep['pheight']     = "#280"
+rep['pwidth']      = "#230"
 rep['horizontalshift'] = "-15mm"
 rep['printpagenumber'] = "##f"
-
+rep['bookheader']      = ""
+rep['includes_lyfiles']= ""
 # Open & iterate through database
 finput = open (os.path.join(path_json,'input.json'), "r")
 data = json.loads(finput.read())
@@ -87,6 +88,7 @@ for voice in voicelist:
         padding       = data[piece]['padding'][voice]
         basicdistance = data[piece]['basicdistance'][voice]
         foldername    = data[piece]['foldername']
+        instrumentname= data[piece]['instrumentname'][voice]
 
         path_ly = os.path.join(path_lilypond,foldername)
 
@@ -98,6 +100,7 @@ for voice in voicelist:
 
         # write lytex to file (copy from template)
         for name, block in result.items():
+
             if voice in name:
                 # generate score line
                 p.generate_scoreline(padding,basicdistance,block)
@@ -105,7 +108,7 @@ for voice in voicelist:
                 # prepare replacement in template by lilypond
                 rep['score_overall']=p.markupline+p.scoreline
                 rep['emptyline']    =''
-
+                rep['instrumentname']= instrumentname
                 # write output line by line
                 ftemplate_bookpart = open(os.path.join(path_templates,'bookpart.lytex'),"r")
                 fcopy_bookpart = open(os.path.join(path_lilypond,foldername,composer+'_'+title_short+'_'+voice+'.lytex'),"wt")
@@ -116,3 +119,16 @@ for voice in voicelist:
 
                 ftemplate_bookpart.close()
                 fcopy_bookpart.close()
+
+                rep['includes_lytex']    ='        \\include \"'+os.path.join(path_lilypond,foldername,composer+'_'+title_short+'_'+voice+'.lytex\"')
+
+            # write output line by line
+            ftemplate_book = open(os.path.join(path_templates,'book.lytex'),"r")
+            fcopy_book = open(os.path.join(path_voices,voice+'.lytex'),"wt")
+
+            for line in ftemplate_book:
+                rep,pattern,line = replace_pattern(rep,line)
+                fcopy_book.write(line)
+
+            ftemplate_book.close()
+            fcopy_book.close()
