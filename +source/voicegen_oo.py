@@ -36,20 +36,19 @@ class cl_piece:
         self.includes_lyfiles = ''
         self.includes_lytex   = ''
         self.generate_markup(composer_long,title_long,piece,voice)
-    def generate_includes (self,path_lilypond,path_voices,piece,voice):
-        subtitleline= '\\fill-line {\\line{\\abs-fontsize #16 { \\sans {subtitle} }} }'
-        self.includes_lyfiles =self.includes_lyfiles+'    \\include \"'+os.path.join(path_lilypond,piece,title_short+'.ly\"\n')
-        self.includes_lytex   =self.includes_lytex +'        \\include \"'+os.path.join(path_voices,piece+'_'+voice+'.lytex\"\n')
-    def generate_composerline (self,composer_long):
-        self.composerline= '            \\fill-line {\\line {} \\line{\\abs-fontsize #12 { \\sans {'+composer_long+'} }} }\n'
+    #def generate_includes (self,path_lilypond,path_voices,piece,voice):
+    #    subtitleline= '\\fill-line {\\line{\\abs-fontsize #16 { \\sans {subtitle} }} }'
+    #    self.includes_lyfiles =self.includes_lyfiles+'    \\include \"'+os.path.join(path_lilypond,piece,title_short+'.ly\"\n')
+    #    self.includes_lytex   =self.includes_lytex +'        \\include \"'+os.path.join(path_voices,piece+'_'+voice+'.lytex\"\n')
     def generate_titleline (self,title_long):
-        self.titleline   = '            \\fill-line {\\line{\\abs-fontsize #18 { \\sans {'+title_long+'} }} }\n'
+        self.titleline   = '            \\fill-line {\\line{\\abs-fontsize #18 { \\sans {'+title_long+'} }} }'
+    def generate_composerline (self,composer_long):
+        self.composerline= '            \\fill-line {\\line {} \\line{\\abs-fontsize #12 { \\sans {'+composer_long+'} }} }'
     def generate_markup(self,path_lilypond,path_voices,piece,voice):
         self.generate_titleline(composer_long)
         self.generate_composerline(title_long)
         self.markupline = '    \\markup{\n        \\column{ \n'+self.titleline+' \n'+self.composerline+' \n        } \n    }\n'
     def generate_scoreline(self,padding_val,basicdistance_val, block):
-        staffline   = '            \\new Staff << \\globaltitle_short \\title_shortvoiceSP >> '
         self.scoreline = '    \\score{ \n        \\layout{ system-system-spacing = #\'((padding .'\
             +padding_val+') (basic-distance . '\
             +basicdistance_val+')) } \n'\
