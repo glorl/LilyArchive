@@ -1,4 +1,7 @@
-MissaSolemnisCEinsKyrie = \new Voice \transpose bes c' \relative c'' {
+MissaSolemnisCEinsKyrie = {
+\compressEmptyMeasures
+\override DynamicTextSpanner.style = #'none
+\new Voice \transpose bes c' \relative c'' {
 \time 3/4
 \key c \major
 <>^\markup{\large \bold{Andante}}R2.*5
@@ -47,7 +50,7 @@ d2.
 c2.\pp ~
 c2 r4\fermata
 \bar"|."
-}
+}}
 
 
 MissaSolemnisCEinsGloria = \new Voice \transpose bes c' \relative c''{

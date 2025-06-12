@@ -1,117 +1,92 @@
 \version "2.24.2"
+
 \header {
-  title = "Variation über Bachs Partita Nr. 2 in d-Moll"
-  subtitle = "nach der Allemanda"
-  composer = "frei nach J. S. Bach"
-  arranger = "Variation: ChatGPT"
+  title = "Here Comes the Sun — Polka-Variation"
+  subtitle = "im Schwarzwälder Stil"
+  composer = "George Harrison"
+  arranger = "Polka-Variation: ChatGPT"
 }
 
-violin = \relative d' {
-  \voiceOne
-  \key d \minor
-  \time 4/4
-  \tempo "Andante con moto"
+melody = \relative c'' {
+  \key d \major
+  \time 2/4
+  \tempo "Fröhlich"
 
-  \partial 8 a'16( bes) |
-  % Hauptthema
-  c8.( d16) bes8 a16( g) a4 d8( e) |
-  f8.( g16) e8 d c4 a'8( bes) |
+  % Auftakt
+  a8 a |
 
-  % Fortführung
-  a8 g16( f) e8 f g4. g16( a) |
-  bes8 a16( g) f8 e d4 r |
+  % Thema als Polka-Melodie
+  d4 fis8 a |
+  b4. a8 |
+  fis8 e d e |
+  fis8 e d a |
 
-  % Ausschmückung der Einleitung
-  d16( f) e( d) c( d e f) g4 a16( g f e) |
-  f8.( e16) d8 c bes4. bes32( c d e) |
-  f8( g) e( f) d4 a'16( g f e) |
-  d8 f16( e) d8 c b( a) d4 |
+  d4 fis8 a |
+  b4. a8 |
+  fis8 e d e |
+  fis4 d8 a |
 
-  d16( e f g) a4 bes8 a16( g) f8 e |
-  g4 e16( f g a) bes8 a16( g) f8 e |
-  a4 d,16( e f d) e8 f g4 |
-  f16( e d c) bes8 d a4 r |
+  % Zwischenspiel
+  b8 cis d4 |
+  a8 b d4 |
+  b8 cis d b |
+  a4 r |
 
-  % Erweiterung: Episode mit Kadenz nach G-Moll
-  g8( bes) a16( g) f( g) a8 d, g16( a bes c) |
-  d8( e) f16( g a bes) g4. g16( a) |
-  bes8( a) g f e d r4 |
-
-  % Kadenz in d-Moll
-  a'8 g16( f) e8 f d4 bes'16( a g f) |
-  e8( d) a'4 a,8 bes16( c) d4 |
-
-  % Übergang zur Subdominante (g-Moll)
-  f8.( g16) a8 f bes,4 bes'16( a g f) |
-  g4 a16( g f e) d4 r4 |
-
-  % Rückkehr des Hauptthemas
-  c'8.( d16) bes8 a16( g) a4 d8( e) |
-  f8.( g16) e8 d c4 a'8( bes) |
-
-  % Neue Schlusskadenz auf f
-a8( g) f( e) d4 bes'16( a g f) |
-e8( f) c'4 f,2 ermata |
+  % Wiederholung
+  \repeat volta 2 {
+    d8 d e fis |
+    g4. e8 |
+    fis8 fis e d |
+    e4 r |
+  }
 }
 
-viola = \relative d' {
-  \voiceTwo
-  \key d \minor
-  \time 4/4
+accompaniment = \relative c' {
+  \key d \major
+  \time 2/4
 
-  \partial 8 f8 |
-  % Kontrapunkt zum Hauptthema
-  a8.( bes16) g8 f e4 f8( g) |
-  a8.( bes16) g8 f e4 f8( g) |
+  % Auftakt
+  d8 <fis a> |
 
-  f8 e16( d) c8 d e4. e16( f) |
-  g8 f16( e) d8 c bes4 r |
+  % Begleitung mit Polka-Oompah
+  <d fis>4 r8 <a d> |
+  <g b>4 r8 <fis a> |
+  <d fis>8 r <a d> r |
+  <d fis>8 r <a d> r |
 
-  bes16( d) c( bes) a( bes c d) e4 f16( e d c) |
-  d8.( c16) bes8 a g4. g16( a bes c) |
-  d8( e) c( d) bes4 f'16( e d c) |
-  bes8 d16( c) bes8 a g( f) bes4 |
+  <d fis>4 r8 <a d> |
+  <g b>4 r8 <fis a> |
+  <d fis>8 r <a d> r |
+  <d fis>4 r |
 
-  bes16( c d e) f4 g8 f16( e) d8 c |
-  e4 c16( d e f) g8 f16( e) d8 c |
-  f4 bes,16( c d bes) c8 d e4 |
-  d16( c bes a) g8 bes f4 r |
+  % Zwischenspiel
+  <g b>4 r |
+  <fis a>4 r |
+  <g b>4 <fis a> |
+  <d fis>4 r |
 
-  % Episode
-  f8( g) f16( e) d( e) f8 bes,4 e16( f g a) |
-  bes8( c) d16( e f g) e4. e16( f) |
-  g8( f) e d c bes r4 |
-
-  % Kadenz in d-Moll
-  f8 e16( d) c8 d bes4 g'16( f e d) |
-  c8( bes) f'4 f,8 g16( a) bes4 |
-
-  d8.( e16) f8 d g,4 g'16( f e d) |
-  f4 g16( f e d) bes4 r4 |
-
-  % Hauptthema Kontrapunkt
-  a8.( bes16) g8 f e4 f8( g) |
-  a8.( bes16) g8 f e4 f8( g) |
-
-  % Neue Schlusskadenz kontrapunktisch, eine Oktave höher
-  f'8( e) d( c) bes4 g'16( f e d) |
-  c8( d) a'4 a,2 \fermata |
+  % Wiederholung
+  \repeat volta 2 {
+    <d fis>4 <a d> |
+    <g b>4 r |
+    <fis a>4 <d fis> |
+    <a d>4 r |
+  }
 }
-
 
 \score {
   \new StaffGroup <<
     \new Staff <<
       \clef treble
-      \new Voice = "violin" { \violin }
+      \new Voice = "melody" { \melody }
     >>
     \new Staff <<
       \clef treble
-      \new Voice = "viola" { \viola }
+      \new Voice = "accompaniment" { \accompaniment }
     >>
   >>
   \layout { }
   \midi {
-    \tempo 4 = 72
+    \tempo 4 = 112
   }
 }

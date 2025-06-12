@@ -2,7 +2,7 @@
     "Stuecke":
     {
         "voices": ["Eins","Zwei"],
-        "pieces": ["Haendel_MessiasII"]
+        "pieces": ["Haendel_MessiasII","Mozart_MissaSolemnisC"]
     },
     "Abreu_TicoTico":
     {
@@ -750,7 +750,7 @@
         "padding":
             {"Eins":"5", "Zwei":"5", "Partitur":"5"},
         "basicdistance":
-            {"Eins":"5", "Zwei":"2", "Partitur":"2"}
+            {"Eins":"2", "Zwei":"2", "Partitur":"2"}
         },
     "Haendel_OmbraMaiFu":
     {
@@ -1174,30 +1174,20 @@
     },
     "Mozart_MissaSolemnisC":
     {
-        "base":{
-            "title": "MissaSolemnisC",
-            "title_long": "Missa solemnis in C",
-            "subpieces": ["Kyrie","Gloria","Credo","Sanctus","Benedictus","Agnusdei"],
-            "subpieces_long": ["1. Kyrie","2. Gloria","3. Credo","4. Sanctus","5. Benedictus","6. Agnus Dei"],
-            "composer": "Mozart",
-            "composer_long": "W.A. Mozart"
-        },
-        "Eins":{
-            "padding": "2",
-            "basicdistance": "0",
-            "instrumentname":"Klarinette 1"
-        },
-        "Zwei":{
-            "padding": "2",
-            "basicdistance": "2",
-            "instrumentname":"Klarinette 2"
-        },
-        "Partitur":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "partvoices":["Eins","Zwei"],
-            "instrumentname":"Partitur"
-        }
+        "title": "MissaSolemnisC",
+        "title_long": "Missa solemnis in C",
+        "subpieces": ["Kyrie","Gloria","Credo","Sanctus","Benedictus","Agnusdei"],
+        "subpieces_long": ["1. Kyrie","2. Gloria","3. Credo","4. Sanctus","5. Benedictus","6. Agnus Dei"],
+        "composer": "Mozart",
+        "composer_long": "W.A. Mozart",
+        "instrumentname":
+            {"Eins":"Klarinette 1", "Zwei":"Klarinette 2", "Partitur":"Partitur"},
+        "foldername": "Mozart_MissaSolemnisC",
+        "padding":
+            {"Eins":"5", "Zwei":"5", "Partitur":"5"},
+        "basicdistance":
+            {"Eins":"2", "Zwei":"2", "Partitur":"2"}
+
     },
     "Mozart_SinfonieEs":
     {

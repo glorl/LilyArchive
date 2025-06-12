@@ -1,6 +1,5 @@
 import os,json, re
-from lilyfunctions import parse_lilypond_assignments
-from lilyfunctions import replace_pattern
+from lilyfunctions import parse_lilypond_assignments, replace_pattern
 
 class cl_voice:
 
@@ -13,58 +12,51 @@ class cl_voice:
         self.includes_lyfiles = ''
         self.includes_lytex   = ''
 
-#     def rep_pattern(arg_rep,arg_string):
-#         arg_rep = dict((re.escape(k), v) for k, v in arg_rep.items())
-#         out_pattern = re.compile("|".join(arg_rep.keys()))
-#         out_string = out_pattern.sub(lambda m: arg_rep[re.escape(m.group(0))], arg_string)
-#         return arg_rep, out_pattern, out_string
-
-    def write_bookpart():
-        # write output
-        ftemplate_bookpart = open(os.path.join(path_templates,'bookpart.lytex'),"r")
-        fcopy_bookpart = open(os.path.join(path_voices,composer+'_'+title_short+'_'+voice+'.lytex'),"wt")
-        for line in ftemplate_bookpart:
-            rep,pattern,line = rep_pattern(rep,line)
-            fcopy_bookpart.write(line)
-
-        fcopy_bookpart.close()
-        ftemplate_bookpart.close()
 
 class cl_piece:
+    cwd = os.getcwd()
+    path_templates  = os.path.join(cwd,'+templates')
+
     def __init__(self,piece,composer_long,title_long,voice):
         self.name=piece
         self.includes_lyfiles = ''
         self.includes_lytex   = ''
         self.generate_markup(composer_long,title_long,piece,voice)
-    #def generate_includes (self,path_lilypond,path_voices,piece,voice):
-    #    subtitleline= '\\fill-line {\\line{\\abs-fontsize #16 { \\sans {subtitle} }} }'
-    #    self.includes_lyfiles =self.includes_lyfiles+'    \\include \"'+os.path.join(path_lilypond,piece,title_short+'.ly\"\n')
-    #    self.includes_lytex   =self.includes_lytex +'        \\include \"'+os.path.join(path_voices,piece+'_'+voice+'.lytex\"\n')
     def generate_titleline (self,title_long):
         self.titleline   = '            \\fill-line {\\line{\\abs-fontsize #18 { \\sans {'+title_long+'} }} }'
     def generate_composerline (self,composer_long):
         self.composerline= '            \\fill-line {\\line {} \\line{\\abs-fontsize #12 { \\sans {'+composer_long+'} }} }'
     def generate_markup(self,path_lilypond,path_voices,piece,voice):
-        self.generate_titleline(composer_long)
-        self.generate_composerline(title_long)
+        self.generate_titleline(title_long)
+        self.generate_composerline(composer_long)
         self.markupline = '    \\markup{\n        \\column{ \n'+self.titleline+' \n'+self.composerline+' \n        } \n    }\n'
     def generate_scoreline(self,padding_val,basicdistance_val, block):
-        self.scoreline = '    \\score{ \n        \\layout{ system-system-spacing = #\'((padding .'\
+        self.scoreline = '    \\score{ \n        \\layout{ system-system-spacing = #\'((padding . '\
             +padding_val+') (basic-distance . '\
             +basicdistance_val+')) } \n'\
             +'        \\new StaffGroup <<\n'\
             +'           \\new Staff << '\
             +block\
             +'  \n         >> \n      >> \n    }'
+    def generate_subpieceline(self,sub_piece):
+        subpieceline='    \\markup{\n        \\column{\\fill-line {\\line{\\abs-fontsize #30 { {\\null} }} } \n'\
+            +'        \\fill-line {\\line{\\abs-fontsize #14 { \\sans {sub_piece} }} \\line {} } }\n    }'
+    def write_bookpart(self,path_voices,composer,title_short,voice,rep):
+        ftemplate_bookpart = open(os.path.join(path_templates,'bookpart.lytex'),"r")
+        fcopy_bookpart = open(os.path.join(path_voices,composer+'_'+title_short+'_'+voice+'.lytex'),"wt")
+        for line in ftemplate_bookpart:
+            rep,pattern,line = replace_pattern(rep,line)
+            fcopy_bookpart.write(line)
+        fcopy_bookpart.close()
+        ftemplate_bookpart.close()
 
 ########################################################
 # read input from database
 cwd = os.getcwd()
 path_lilypond   = os.path.join(cwd,'+lilypond')
-path_templates  = os.path.join(cwd,'+templates')
 path_voices     = os.path.join(cwd,'+voices')
 path_json       = os.path.join(cwd,'+voices')
-
+path_templates  = os.path.join(cwd,'+templates')
 
 rep = dict()
 rep['pheight']     = "#280"
@@ -80,6 +72,8 @@ finput.close()
 
 voicelist=data['Stuecke']['voices']
 for voice in voicelist:
+    rep['includes_lytex'] = ''
+
     for piece in data['Stuecke']['pieces']:
         title_short   = data[piece]['title']
         title_long    = data[piece]['title_long']
@@ -90,10 +84,10 @@ for voice in voicelist:
         foldername    = data[piece]['foldername']
         instrumentname= data[piece]['instrumentname'][voice]
 
-        path_ly = os.path.join(path_lilypond,foldername)
+        path_lytex = os.path.join(path_lilypond,foldername)
 
         # parse lilypond blocks in specified folder
-        result = parse_lilypond_assignments(path_ly)
+        result = parse_lilypond_assignments(path_lytex)
 
         # initiate piece. generate title + composer line.
         p = cl_piece(piece,composer_long,title_long,voice)
@@ -102,6 +96,7 @@ for voice in voicelist:
         for name, block in result.items():
 
             if voice in name:
+                print(name)
                 # generate score line
                 p.generate_scoreline(padding,basicdistance,block)
 
@@ -110,27 +105,19 @@ for voice in voicelist:
                 rep['emptyline']    =''
                 rep['instrumentname']= instrumentname
 
-                # action required: this can be put into the class
-                ftemplate_bookpart = open(os.path.join(path_templates,'bookpart.lytex'),"r")
-                fcopy_bookpart = open(os.path.join(path_lilypond,foldername,composer+'_'+title_short+'_'+voice+'.lytex'),"wt")
+                # write bookpart snippets to file for each voice+piece
+                p.write_bookpart(path_lytex,composer,title_short,voice,rep)
 
-                for line in ftemplate_bookpart:
-                    rep,pattern,line = replace_pattern(rep,line)
-                    fcopy_bookpart.write(line)
+                includes_lytex = '\\include \"'+os.path.join(path_lytex,composer+'_'+title_short+'_'+voice+'.lytex\"\n')
+                rep['includes_lytex']    =rep['includes_lytex']+'        ' + includes_lytex
 
-                ftemplate_bookpart.close()
-                fcopy_bookpart.close()
+    # action required: this can be put into the voice class
+    ftemplate_book = open(os.path.join(path_templates,'book.lytex'),"r")
+    fcopy_book     = open(os.path.join(path_voices,voice+'.lytex'),"wt")
 
-                # action required: add contents sequentially
-                rep['includes_lytex']    ='        \\include \"'+os.path.join(path_lilypond,foldername,composer+'_'+title_short+'_'+voice+'.lytex\"')
+    for line in ftemplate_book:
+        rep,pattern,line = replace_pattern(rep,line)
+        fcopy_book.write(line)
 
-            # action required: this can be put into the class
-            ftemplate_book = open(os.path.join(path_templates,'book.lytex'),"r")
-            fcopy_book = open(os.path.join(path_voices,voice+'.lytex'),"wt")
-
-            for line in ftemplate_book:
-                rep,pattern,line = replace_pattern(rep,line)
-                fcopy_book.write(line)
-
-            ftemplate_book.close()
-            fcopy_book.close()
+    ftemplate_book.close()
+    fcopy_book.close()
