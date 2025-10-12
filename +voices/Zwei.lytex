@@ -32,6 +32,11 @@
 
     \book{
         \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_MessiasII/Haendel_MessiasII_Zwei.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_MessiasII/Haendel_MessiasII_Zwei.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_MessiasII/Haendel_MessiasII_Zwei.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MissaSolemnisC/Mozart_MissaSolemnisC_Zwei.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MissaSolemnisC/Mozart_MissaSolemnisC_Zwei.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MissaSolemnisC/Mozart_MissaSolemnisC_Zwei.lytex"
         \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MissaSolemnisC/Mozart_MissaSolemnisC_Zwei.lytex"
 
     }

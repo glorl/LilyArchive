@@ -1,12 +1,12 @@
 import glob, re
 
-def parse_lilypond_assignments(file_path):
+def parse_lilypond_assignments(file_path,voice):
 # return all lilypond commands from a given folder
 # open point list
 # - merge all commands
 # - indent lines so that it is more clean in the bookpart.lytex
 
-    lilyfiles = glob.glob(file_path+'/*.ly')
+    lilyfiles = glob.glob(file_path+'/*'+voice+'.ly')
     assignments = {}
 
     for lilyfile in lilyfiles:

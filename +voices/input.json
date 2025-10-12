@@ -1,8 +1,8 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins","Zwei"],
-        "pieces": ["Haendel_MessiasII","Mozart_MissaSolemnisC"]
+        "voices": ["Eins"],
+        "pieces": ["Haendel_MessiasII"]
     },
     "Abreu_TicoTico":
     {
@@ -740,8 +740,8 @@
     {
         "title": "MessiasII",
         "title_long": "Der Messias",
-        "subpieces": ["Halleluja"],
-        "subpieces_long": ["Halleluja"],
+        "subtitles": ["Halleluja"],
+        "subtitles_long": ["Halleluja"],
         "composer": "Haendel",
         "composer_long": "G.F. Haendel",
         "instrumentname":
@@ -1176,8 +1176,8 @@
     {
         "title": "MissaSolemnisC",
         "title_long": "Missa solemnis in C",
-        "subpieces": ["Kyrie","Gloria","Credo","Sanctus","Benedictus","Agnusdei"],
-        "subpieces_long": ["1. Kyrie","2. Gloria","3. Credo","4. Sanctus","5. Benedictus","6. Agnus Dei"],
+        "subtitles": ["Kyrie","Gloria","Credo","Sanctus","Benedictus","Agnusdei"],
+        "subtitles_long": ["1. Kyrie","2. Gloria","3. Credo","4. Sanctus","5. Benedictus","6. Agnus Dei"],
         "composer": "Mozart",
         "composer_long": "W.A. Mozart",
         "instrumentname":

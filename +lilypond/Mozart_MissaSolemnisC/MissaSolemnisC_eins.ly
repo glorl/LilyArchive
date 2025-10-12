@@ -53,7 +53,10 @@ c2 r4\fermata
 }}
 
 
-MissaSolemnisCEinsGloria = \new Voice \transpose bes c' \relative c''{
+MissaSolemnisCEinsGloria = {
+\compressEmptyMeasures
+\override DynamicTextSpanner.style = #'none
+\new Voice \transpose bes c' \relative c''{
 \time 4/4
 \key c \major
 c4.^\markup{\large \bold{Allegro molto}}\f c8 b4 c
@@ -145,7 +148,7 @@ R1
 g'1~
 g4 e d d
 c4 c,8. c16 c4 r \fermata \bar"|."
-}
+}}
 
 MissaSolemnisCEinsCredo = \new Voice \transpose bes c' \relative c''{
 \time 3/4
