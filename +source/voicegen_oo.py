@@ -88,10 +88,10 @@ for voice in voicelist:
         title         = df.at[0,'title']
         composer      = df.at[0,'composer']
         foldername    = df.at[0,'foldername']
-        subtitles     = df.at[0,'parts']
-        instrumentname= data[piece]['instrumentname'][voice]
-        padding       = data[piece]['padding'][voice]
-        basicdistance = data[piece]['basicdistance'][voice]
+        subtitles     = df['parts'].apply(lambda x: json.loads(x) if pd.notna(x) else [])[0]
+        instrumentname= json.loads(df.at[0,'instrumentname'])[voice]
+        padding       = json.loads(df.at[0,'padding'])[voice]
+        basicdistance = json.loads(df.at[0,'basicdistance'])[voice]
 
         path_lytex = os.path.join(path_lilypond,foldername)
 
@@ -103,14 +103,11 @@ for voice in voicelist:
 
         # write lytex to file (copy from template)
         for name, block in result.items():
-
             includes_lytex = '\\include \"'+os.path.join(path_lytex,piece+'_'+voice+'.lytex\"\n')
             rep['includes_lytex']    =rep['includes_lytex']+'        ' + includes_lytex
             for subtitle in subtitles:
-
                 if voice in name:
                     if subtitle in name:
-                        # print(voice+subtitle)
                         # generate score line
                         p.generate_scoreline(padding,basicdistance,block)
 

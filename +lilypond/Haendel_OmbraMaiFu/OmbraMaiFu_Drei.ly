@@ -1,4 +1,7 @@
-OmbraMaiFuDrei= \new Voice \relative c' {
+OmbraMaiFuDrei= {\new Voice \relative c' {
+\time 3/4
+\key g \major
+\compressEmptyMeasures
 g2.\mf (
 c2.)
 g4 g g 
@@ -91,6 +94,7 @@ c,4_\markup{\italic rit.} (a8 b) d4
 b2.~}}
 b2.~
 b4 r r\bar"|."
+}
 }
 
 % HaendelLargozweiVocal = \new Voice \relative c' {

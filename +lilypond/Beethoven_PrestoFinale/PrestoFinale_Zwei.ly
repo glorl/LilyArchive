@@ -1,4 +1,6 @@
-PrestoFinaleZwei = \new Voice \relative c' {
+PrestoFinaleZwei = {\new Voice \relative c' {
+\time 2/4
+\key c \major
 \compressEmptyMeasures
 \set Timing.beatStructure = #'(4)
 \partial 8 e'8-.\p
@@ -303,5 +305,35 @@ e4-- r8 g-.
 e4-- r8 c'-.
 c4-- c--
 c4-- r\fermata 
-\bar"|."
+\bar"|."\break
+}
+\relative c' {
+    \omit Score.SpanBar
+    \omit Score.BarNumber
+    \small
+    \set Timing.measureLength = #(ly:make-moment 5/8)
+    g8^\markup{\huge{\bold{Cadenza cl 2}}} (\omit Score.BarLine [a c d e]
+    \set Timing.measureLength = #(ly:make-moment 6/8)
+    g8 [fis g a g fis]
+    \set Timing.measureLength = #(ly:make-moment 4/8)
+    g16 [a b c] d [e f fis]
+    g4.)\fermata f8
+    (d [e f g ]
+    a[ b c d]
+    e16 [d c b ] a [c b a ]
+    g [b a g] f [a g f]
+    \set Timing.measureLength = #(ly:make-moment 2/8)
+    e [d c b ] )
+    \set Timing.measureLength = #(ly:make-moment 3/8)
+    a16 ([g f e d des])
+    c8 ([b) d-.]
+    f([d) f-.]
+    e-. ([f-. fis-.)]
+    \set Timing.measureLength = #(ly:make-moment 4/8)
+    g2\fermata
+    \undo \omit Score.BarLine
+    \undo \omit Score.SpanBar
+    \undo \omit Score.BarNumber
+    \bar"||"
+}
 }

@@ -1,4 +1,6 @@
-PrestoFinaleVier = \new Voice \relative c' {
+PrestoFinaleVier = {\new Voice \relative c' {
+\time 2/4
+\key c \major
 \compressEmptyMeasures
 \set Timing.beatStructure = #'(4)
 \partial 8 g'8-. \p
@@ -316,4 +318,4 @@ g4-- r8 g8-.
 g4-- g-- 
 g4-- r\fermata
 \bar"|."
-}
+}}

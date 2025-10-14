@@ -1,4 +1,7 @@
-OmbraMaiFuEins= \new Voice \relative c'' {
+OmbraMaiFuEins= {\new Voice \relative c'' {
+\time 3/4
+\key g \major
+\compressEmptyMeasures
 g2.\mf ~
 g4 fis-- e8. d16 
 d2.
@@ -91,6 +94,7 @@ c8_\markup{\italic rit.} (b a4) a8. (g16)
 g2.~}}
 g2.~
 g4 r r\bar"|."
+}
 }
 
 HaendelLargoeinsVocal = \new Voice \relative c'' {

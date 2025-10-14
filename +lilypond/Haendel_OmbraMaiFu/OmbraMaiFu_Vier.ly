@@ -1,5 +1,8 @@
-OmbraMaiFuVier = \new Voice \relative c' {
-g4--\mf g-- g-- 
+OmbraMaiFuVier = {\new Voice \relative c' {
+\time 3/4
+\key g \major
+\compressEmptyMeasures
+g4--\mf g-- g--
 a4-- a-- a-- 
 g4-- g-- g-- 
 c4-- c-- d--
@@ -91,6 +94,7 @@ e4--_\markup{\italic rit.} a8 (b) c4
 g2.~}}
 g2.~
 g4 r r\bar"|."
+}
 }
 
 HaendelLargobassVocal = \new Voice \relative c' {

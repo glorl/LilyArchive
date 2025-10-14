@@ -1,4 +1,6 @@
-PrestoFinaleDrei = \new Voice \relative c' {
+PrestoFinaleDrei = {\new Voice \relative c' {
+\time 2/4
+\key c \major
 \compressEmptyMeasures
 \set Timing.beatStructure = #'(4)
 \partial 8 r8
@@ -329,4 +331,4 @@ c-. c'-. g-. e-.
 c-. c'-. g-. e-. 
 c4-- r\fermata 
 \bar"|."
-}
+}}

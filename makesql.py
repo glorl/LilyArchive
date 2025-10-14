@@ -1,26 +1,27 @@
 import sqlite3
-import pandas as pd
 
-# 1️⃣ Datenbank lesen
-conn = sqlite3.connect("+voices/pieces.sqlite")
-df = pd.read_sql_query("SELECT * FROM pieces", conn)
+# Pfad zu deiner Datei
+db_path = "+voices/pieces.sqlite"
+
+conn = sqlite3.connect(db_path)
+cur = conn.cursor()
+
+# Prüfe, ob die Spalten schon existieren
+cur.execute("PRAGMA table_info(pieces);")
+columns = [col[1] for col in cur.fetchall()]
+
+
+# Falls nicht vorhanden: hinzufügen (als TEXT)
+if "padding" not in columns:
+    cur.execute("ALTER TABLE pieces ADD COLUMN padding TEXT;")
+
+if "basicdistance" not in columns:
+    cur.execute("ALTER TABLE pieces ADD COLUMN basicdistance TEXT;")
+
+conn.commit()
 conn.close()
 
-# 2️⃣ Nicht benötigte Spalten löschen
-df = df.drop(columns=["title", "composer"], errors='ignore')
-
-# 3️⃣ Spalten umbenennen
-df = df.rename(columns={
-    "title_long": "title",
-    "composer_long": "composer"
-})
-
-# 4️⃣ Neue Tabelle zurückschreiben
-conn = sqlite3.connect("pieces.sqlite")
-df.to_sql("pieces", conn, if_exists="replace", index=False)
-conn.close()
-
-print("✅ Tabelle 'pieces' wurde angepasst.")
+print("✅ Spalten 'padding' und 'basicdistance' sind jetzt als TEXT (JSON-kompatibel) vorhanden.")
 
 
 # import pandas as pd

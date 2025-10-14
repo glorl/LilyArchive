@@ -1,4 +1,6 @@
-PrestoFinaleBass = \new Voice \relative c' {
+PrestoFinaleBass = {\new Voice \relative c' {
+\time 2/4
+\key c \major
 \compressEmptyMeasures
 \set Timing.beatStructure = #'(4)
 \partial 8 r8
@@ -295,5 +297,31 @@ c r r g-.
 c-. c-. g-. e-. 
 c'-. c-. g-. e-. 
 c'4-- r\fermata 
-\bar"|."
+\bar"|."\break
+}
+\relative c' {
+    \omit Score.SpanBar
+    \omit Score.BarNumber
+    \small
+    \set Timing.measureLength = #(ly:make-moment 6/8)
+    f8^\markup{\huge{\bold{Cadenza b.cl.}}} ([e] d [f d c]
+    \omit Score.BarLine
+    \set Timing.measureLength = #(ly:make-moment 4/8)
+    b [d b a]
+    g [ges f e]
+    f [g a b ]
+    c [d e f]
+    g [a ais b]
+    c4.\fermata) c8
+    (d [b a as]
+    g16 [c g e] d [a' f d]
+    \set Timing.measureLength = #(ly:make-moment 15/8)
+    g [ges f e es d des c b bes a as g ges f]
+    \set Timing.measureLength = #(ly:make-moment 2/8)
+    e4\fermata)
+    \undo \omit Score.BarLine
+    \undo \omit Score.SpanBar
+    \undo \omit Score.BarNumber
+    \bar"||"
+}
 }

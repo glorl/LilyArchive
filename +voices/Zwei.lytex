@@ -31,13 +31,8 @@
 \begin{lilypond}
 
     \book{
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_MessiasII/Haendel_MessiasII_Zwei.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_MessiasII/Haendel_MessiasII_Zwei.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_MessiasII/Haendel_MessiasII_Zwei.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MissaSolemnisC/Mozart_MissaSolemnisC_Zwei.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MissaSolemnisC/Mozart_MissaSolemnisC_Zwei.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MissaSolemnisC/Mozart_MissaSolemnisC_Zwei.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MissaSolemnisC/Mozart_MissaSolemnisC_Zwei.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Beethoven_PrestoFinale/Beethoven_PrestoFinale_Zwei.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_OmbraMaiFu/Haendel_OmbraMaiFu_Zwei.lytex"
 
     }
 
