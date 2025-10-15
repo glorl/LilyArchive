@@ -1,4 +1,7 @@
-SinfoniaDrei = \new Voice \relative c' {
+SinfoniaDrei = {\new Voice \relative c' {
+\time 4/4
+\key g \major
+\compressEmptyMeasures
 d4---.\p d---. r d
 r4 d\< r8 d r4
 r4 e r8 e\! r4
@@ -42,4 +45,5 @@ r4 e---. r8 e-. cis4---.
 \alternative{{
 fis1}{
 b8 (c16 b) a (b g8) fis2\fermata}}\bar"|."
+}
 }

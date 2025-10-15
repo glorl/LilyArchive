@@ -31,6 +31,7 @@
 \begin{lilypond}
 
     \book{
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Bach_Sinfonia/Bach_Sinfonia_Vier.lytex"
         \include "/home/georg/Dokumente/LilyArchive/+lilypond/Beethoven_PrestoFinale/Beethoven_PrestoFinale_Vier.lytex"
         \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_OmbraMaiFu/Haendel_OmbraMaiFu_Vier.lytex"
 

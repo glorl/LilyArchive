@@ -1,4 +1,7 @@
-SinfoniaZwei = \new Voice \relative c'' {
+SinfoniaZwei = {\new Voice \relative c'' {
+\time 4/4
+\key g \major
+\compressEmptyMeasures
 g4---.\p g---. r8 g r4
 r4 a\< r8 a r4
 r4 g r8 g\! r4
@@ -42,4 +45,5 @@ r4 g---. r8 g-. g4---.
 \alternative{{
 a1}{
 a1\fermata}}\bar"|."
+}
 }

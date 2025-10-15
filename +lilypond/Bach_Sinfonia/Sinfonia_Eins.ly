@@ -1,4 +1,7 @@
-SinfoniaEins = \new Voice \relative c'' {
+SinfoniaEins = {\new Voice \relative c'' {
+\time 4/4
+\key g \major
+\compressEmptyMeasures
 b2\p ~b8 (c d e
 a,2) \<~a8 (b c d
 g,4\!) g'8 (e c2)~
@@ -42,4 +45,4 @@ d8) g8 (a b) cis,4.\trill (d8)
 \alternative{{
 d1}{
 d1\fermata}}\bar"|."
-}
+}}
