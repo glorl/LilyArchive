@@ -2,7 +2,7 @@
     "Stuecke":
     {
         "voices": ["Eins"],
-        "pieces": ["Bach_Sinfonia","Beethoven_PrestoFinale","Haendel_OmbraMaiFu"]
+        "pieces": ["Brahms_UngarischerTanz"]
     },
     "Abreu_TicoTico":
     {
@@ -161,47 +161,6 @@
             "instrumentname":"Partitur"
         }
     },
-    "Bach_Sinfonia":
-    {
-        "base":{
-            "title": "Sinfonia",
-            "title_long": "Ich steh mit einem Fuß im Grabe (BWV 156)",
-            "subtitle": "I. Sinfonia",
-            "composer": "Bach",
-            "composer_long": "J.S. Bach, arr. I. Patscheck"
-        },
-        "Eins":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "instrumentname":"Klarinette 1"
-        },
-        "Zwei":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "instrumentname":"Klarinette 2"
-        },
-        "Drei":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "instrumentname":"Klarinette 3"
-        },
-        "Vier":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "instrumentname":"Klarinette 4"
-        },
-        "Bass":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "instrumentname":"Bassklarinette"
-        },
-        "Partitur":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "partvoices":["Eins","Zwei","Drei","Vier","Bass"],
-            "instrumentname":"Partitur"
-        }
-    },
     "Bach_WachetAuf":
     {
         "base":{
@@ -298,36 +257,6 @@
             "padding": "5",
             "basicdistance": "0.1",
             "partvoices":["Zwei","Vier","Bass"],
-            "instrumentname":"Partitur"
-        }
-    },
-    "Beethoven_PrestoFinale":
-    {
-        "base":{
-            "title": "PrestoFinale",
-            "title_long": "Presto - Finale", 
-            "composer": "Beethoven",
-            "composer_long": "L. van Beethoven, arr. I. Patscheck"
-        },
-        "Zwei":{
-            "padding": "3.2",
-            "basicdistance": "2",
-            "instrumentname":"Klarinette 2"
-        },
-        "Vier":{
-            "padding": "3.2",
-            "basicdistance": "2",
-            "instrumentname":"Klarinette 4"
-        },
-        "Bass":{
-            "padding": "3.2",
-            "basicdistance": "2",
-            "instrumentname":"Bassklarinette"
-        },
-        "Partitur":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "partvoices":["Eins","Zwei","Drei","Vier","Bass"],
             "instrumentname":"Partitur"
         }
     },
@@ -751,42 +680,6 @@
             {"Eins":"5", "Zwei":"5", "Partitur":"5"},
         "basicdistance":
             {"Eins":"2", "Zwei":"2", "Partitur":"2"}
-        },
-    "Haendel_OmbraMaiFu":
-    {
-        "base":{
-            "title": "OmbraMaiFu",
-            "title_long": "Xerxes", 
-            "subtitle": "Aria: Ombra mai fù", 
-            "composer": "Haendel",
-            "composer_long": "G.F. Hendel, arr. I. Patscheck"
-        },
-        "Eins":{
-            "padding": "3.2",
-            "basicdistance": "2",
-            "instrumentname":"Klarinette 1"
-        },
-        "Zwei":{
-            "padding": "3.2",
-            "basicdistance": "2",
-            "instrumentname":"Klarinette 2"
-        },
-        "Vier":{
-            "padding": "3.2",
-            "basicdistance": "2",
-            "instrumentname":"Klarinette 4"
-        },
-        "Bass":{
-            "padding": "3.2",
-            "basicdistance": "2",
-            "instrumentname":"Bassklarinette"
-        },
-        "Partitur":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "partvoices":["Eins","Zwei","Drei","Vier","Bass"],
-            "instrumentname":"Partitur"
-        }
     },
     "Haydn_Introduktion":
     {

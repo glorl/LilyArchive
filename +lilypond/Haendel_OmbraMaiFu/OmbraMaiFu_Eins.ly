@@ -1,4 +1,4 @@
-OmbraMaiFuEins= {\new Voice \relative c'' {
+OmbraMaiFuInstrumentalEins= {\new Voice \relative c'' {
 \time 3/4
 \key g \major
 \compressEmptyMeasures
@@ -97,7 +97,7 @@ g4 r r\bar"|."
 }
 }
 
-HaendelLargoeinsVocal = \new Voice \relative c'' {
+OmbraVocalFuEins = {\new Voice \relative c'' {
 g2.\mf ~
 g4 fis-- e8. d16 
 d2.
@@ -153,4 +153,5 @@ c8_\markup{\italic {rall. e dim.}}  (b) a4. (g8)
 g2.\p\> ~
 g2. ~
 g4\pp r r \bar"|."
+}
 }
