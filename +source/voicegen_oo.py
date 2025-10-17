@@ -11,7 +11,7 @@ class cl_piece:
     def generate_titleline (self,title):
         self.titleline   = '            \\fill-line {\\line{\\abs-fontsize #18 { \\sans {'+title+'} }} }'
     def generate_partsline(self,parts_long):
-        self.partsline='            \\fill-line {\\line{\\abs-fontsize #14 { \\sans {' + parts_long + '} } } \\line { } } \n'
+        self.partsline='           \\fill-line {\\line{\\abs-fontsize #14 { \\sans {' + parts_long + '} } } \\line { } } \n'
     def generate_composerline (self,composer):
         self.composerline= '            \\fill-line {\\line {} \\line{\\abs-fontsize #12 { \\sans {'+composer+'} }} }'
     def generate_markup(self,path_lilypond,path_voices,piece,voice,ipart,parts_long):
@@ -25,7 +25,7 @@ class cl_piece:
                 self.generate_composerline(composer)
                 self.generate_partsline(parts_long[ipart])
                 self.markupline = '    \\markup{\n        \\column{ \n'+self.titleline+' \n'+self.composerline+' \n ' \
-                    + self.partsline + '}\n}\n'
+                    + self.partsline + '        }\n    }\n'
             else:
                 self.generate_partsline(parts_long[ipart])
                 self.markupline = '    \\markup{\n        \\column{\n' \
@@ -41,7 +41,7 @@ class cl_piece:
             +'        \\new StaffGroup <<\n'\
             +'           \\new Staff << '\
             +block\
-            +'  \n         >> \n      >> \n    }'
+            +'  \n         >>\n      >>\n    }'
     def write_bookpart(self,path_voices,piece,voice,part,rep):
         ftemplate_bookpart = open(os.path.join(path_templates,'bookpart.lytex'),"r")
         fcopy_bookpart = open(os.path.join(path_voices,piece+'_'+voice+'_'+part+'.lytex'),"wt")
@@ -84,10 +84,6 @@ for voice in voicelist:
         foldername    = df.at[0,'foldername']
         parts         = df['parts'].apply(lambda x: json.loads(x) if pd.notna(x) else [])[0]
         parts_long    = df['parts_long'].apply(lambda x: json.loads(x) if pd.notna(x) else [])[0]
-        # print(parts_long)
-        instrumentname= json.loads(df.at[0,'instrumentname'])[voice]
-        padding       = json.loads(df.at[0,'padding'])[voice]
-        basicdistance = json.loads(df.at[0,'basicdistance'])[voice]
 
         path_lytex = os.path.join(path_lilypond,foldername)
 
@@ -95,10 +91,14 @@ for voice in voicelist:
         result = parse_lilypond_assignments(path_lytex,voice)
 
         # write lytex to file (copy from template)
-        for name, block in result.items():
-            for ipart,part in enumerate(parts):
-                if voice in name:
-                    if part in name:
+        for ipart,part in enumerate(parts):
+            for name, block in result.items():
+                if part in name:
+                    if voice in name:
+
+                        instrumentname= json.loads(df.at[0,'instrumentname'])[voice]
+                        padding       = json.loads(df.at[0,'padding'])[voice]
+                        basicdistance = json.loads(df.at[0,'basicdistance'])[voice]
 
                         includes_lytex = '\\include \"'+os.path.join(path_lytex,piece+'_'+voice+'_'+part+'.lytex\"\n')
                         rep['includes_lytex']    =rep['includes_lytex']+'        ' + includes_lytex

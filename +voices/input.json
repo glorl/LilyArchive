@@ -1,8 +1,8 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins","Zwei","Drei","Vier","Bass"],
-        "pieces": ["Beethoven_PrestoFinale","Brahms_UngarischerTanz"]
+        "voices": ["Eins","Zwei" ],
+        "pieces": ["Brahms_UngarischerTanz"]
     },
     "Abreu_TicoTico":
     {
@@ -314,48 +314,6 @@
             "padding": "3.2",
             "basicdistance": "2",
             "instrumentname":"Klarinette 2"
-        },
-        "Vier":{
-            "padding": "3.2",
-            "basicdistance": "2",
-            "instrumentname":"Klarinette 4"
-        },
-        "Bass":{
-            "padding": "3.2",
-            "basicdistance": "2",
-            "instrumentname":"Bassklarinette"
-        },
-        "Partitur":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "partvoices":["Eins","Zwei","Drei","Vier","Bass"],
-            "instrumentname":"Partitur"
-        }
-    },
-    "Brahms_UngarischerTanz":
-    {
-        "base":{
-            "title": "UngarischerTanz",
-            "title_long": "Ungarische Tänze", 
-            "subpieces": ["Fuenf","Sechs"], 
-            "subpieces_long": ["Nr. 5","Nr. 6"], 
-            "composer": "Brahms",
-            "composer_long": "J. Brahms, arr. I. Patscheck"
-        },
-        "Eins":{
-            "padding": "3",
-            "basicdistance": "2",
-            "instrumentname":"Klarinette 1"
-        },
-        "Zwei":{
-            "padding": "3.2",
-            "basicdistance": "2",
-            "instrumentname":"Klarinette 2"
-        },
-        "Drei":{
-            "padding": "3.2",
-            "basicdistance": "2",
-            "instrumentname":"Klarinette 3"
         },
         "Vier":{
             "padding": "3.2",

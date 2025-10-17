@@ -1,4 +1,5 @@
 MessiasIIZweiHalleluja = {\transpose bes c'{\new Voice \relative c' {
+\compressEmptyMeasures
 \time 4/4
 \key d \major
 fis4.^\markup{\bold{Allegro moderato.}}  \f a8-. b-. a-. r4
