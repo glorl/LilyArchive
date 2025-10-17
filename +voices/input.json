@@ -1,8 +1,8 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins"],
-        "pieces": ["Brahms_UngarischerTanz"]
+        "voices": ["Eins","Zwei","Drei","Vier","Bass"],
+        "pieces": ["Beethoven_PrestoFinale","Brahms_UngarischerTanz"]
     },
     "Abreu_TicoTico":
     {

@@ -6,31 +6,34 @@ class cl_piece:
     cwd = os.getcwd()
     path_templates  = os.path.join(cwd,'+templates')
 
-    def __init__(self,piece,composer,title,voice,parts_long):
-        self.generate_markup(composer,title,piece,voice,parts_long)
+    def __init__(self,piece,composer,title,voice,ipart,parts_long):
+        self.generate_markup(composer,title,piece,voice,ipart,parts_long)
     def generate_titleline (self,title):
         self.titleline   = '            \\fill-line {\\line{\\abs-fontsize #18 { \\sans {'+title+'} }} }'
     def generate_partsline(self,parts_long):
-        self.partsline='    \\column{\\fill-line {\\line{\\abs-fontsize #30 { {\\null} } } } \n' \
-            +'            \\fill-line {\\line{\\abs-fontsize #14 { \\sans {' + parts_long + '} } } \\line { } } }\n'
+        self.partsline='            \\fill-line {\\line{\\abs-fontsize #14 { \\sans {' + parts_long + '} } } \\line { } } \n'
     def generate_composerline (self,composer):
         self.composerline= '            \\fill-line {\\line {} \\line{\\abs-fontsize #12 { \\sans {'+composer+'} }} }'
-    def generate_markup(self,path_lilypond,path_voices,piece,voice,parts_long):
+    def generate_markup(self,path_lilypond,path_voices,piece,voice,ipart,parts_long):
         if not parts_long:
             self.generate_titleline(title)
             self.generate_composerline(composer)
             self.markupline = '    \\markup{\n        \\column{ \n'+self.titleline+' \n'+self.composerline+' \n        } \n    }\n'
         else:
-            for i, iparts_long in enumerate(parts_long):
-                if i==0:
-                    self.generate_titleline(title)
-                    self.generate_composerline(composer)
-                    self.generate_partsline(iparts_long)
-                    self.markupline = '    \\markup{\n        \\column{ \n'+self.titleline+' \n'+self.composerline+' \n        } \n    ' \
-                        + self.partsline + '}\n'
-                else:
-                    self.generate_partsline(iparts_long)
-                    self.markupline = '    \\markup{\n' + self.partsline + '}\n'
+            if ipart==0:
+                self.generate_titleline(title)
+                self.generate_composerline(composer)
+                self.generate_partsline(parts_long[ipart])
+                self.markupline = '    \\markup{\n        \\column{ \n'+self.titleline+' \n'+self.composerline+' \n ' \
+                    + self.partsline + '}\n}\n'
+            else:
+                self.generate_partsline(parts_long[ipart])
+                self.markupline = '    \\markup{\n        \\column{\n' \
+                    +'           \\fill-line {\\line{\\abs-fontsize #30 { {\\null} } } } \n' \
+                    +'           \\fill-line {\\line{\\abs-fontsize #30 { {\\null} } } } \n' \
+                    +'           \\fill-line {\\line{\\abs-fontsize #30 { {\\null} } } } \n' \
+                    + self.partsline + '}\n   }\n'
+
     def generate_scoreline(self,padding_val,basicdistance_val, block):
         self.scoreline = '    \\score{ \n        \\layout{ system-system-spacing = #\'((padding . '\
             +padding_val+') (basic-distance . '\
@@ -47,7 +50,7 @@ class cl_piece:
             fcopy_bookpart.write(line)
         fcopy_bookpart.close()
         ftemplate_bookpart.close()
-        print ('written successfully: ',os.path.join(path_voices,piece+'_'+voice+'_'+part+'.lytex'))
+
 ########################################################
 # read input from database
 cwd = os.getcwd()
@@ -93,17 +96,16 @@ for voice in voicelist:
 
         # write lytex to file (copy from template)
         for name, block in result.items():
-            for part in parts:
+            for ipart,part in enumerate(parts):
                 if voice in name:
                     if part in name:
 
                         includes_lytex = '\\include \"'+os.path.join(path_lytex,piece+'_'+voice+'_'+part+'.lytex\"\n')
-                        print (includes_lytex)
                         rep['includes_lytex']    =rep['includes_lytex']+'        ' + includes_lytex
 
                         # print(name)
                         # initiate piece. generate title + composer line.
-                        p = cl_piece(piece,composer,title,voice,parts_long)
+                        p = cl_piece(piece,composer,title,voice,ipart,parts_long)
                         # generate score line
                         p.generate_scoreline(padding,basicdistance,block)
 
