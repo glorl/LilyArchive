@@ -1,4 +1,4 @@
-OmbraMaiFuZwei= {\new Voice \relative c' {
+OmbraMaiFuZweiInstrumental= {\new Voice \relative c' {
 \time 3/4
 \key g \major
 \compressEmptyMeasures
@@ -97,7 +97,7 @@ d4 r r\bar"|."
 }
 }
 
-HaendelLargozweiVocal = \new Voice \relative c' {
+HaendelLargoZweiVocal = {\new Voice \relative c' {
 d2.\mf ~
 d4 d (c)
 d2.
@@ -153,4 +153,4 @@ g2_\markup{\italic{rall. e dim.}} fis4
 d2.\p \>
 ~d2.
 ~d4\pp r r\bar"|."
-}
+}}

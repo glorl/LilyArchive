@@ -31,9 +31,7 @@
 \begin{lilypond}
 
     \book{
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Beethoven_PrestoFinale/Beethoven_PrestoFinale_Bass_Presto.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Brahms_UngarischerTanz/Brahms_UngarischerTanz_Bass_Fuenf.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Brahms_UngarischerTanz/Brahms_UngarischerTanz_Bass_Sechs.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_OmbraMaiFu/Haendel_OmbraMaiFu_Bass_Vocal.lytex"
 
     }
 

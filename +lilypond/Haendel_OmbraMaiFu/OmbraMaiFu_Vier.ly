@@ -1,4 +1,4 @@
-OmbraMaiFuVier = {\new Voice \relative c' {
+OmbraMaiFuVierInstrumental = {\new Voice \relative c' {
 \time 3/4
 \key g \major
 \compressEmptyMeasures
@@ -97,60 +97,64 @@ g4 r r\bar"|."
 }
 }
 
-HaendelLargobassVocal = \new Voice \relative c' {
-g4--\mf g-- g-- 
-a4-- a-- a-- 
-b4-- b-- b-- 
-c4-- a-- g--
-d'4-- d-- d-- 
-c4-- c-- c-- 
-b4-- b-- b-- 
+OmbraMaiFuVierVocal = {\new Voice \relative c' {
+\time 3/4
+\key g \major
+\compressEmptyMeasures
+g4--\mf g-- g--
 a4-- a-- a--
-g4-- g-- g-- 
-g4-- a-- b-- 
-c4-- c-- d--
-e4-- e-- e-- 
-d4-- c-- b-- 
-c4 (d) d-- 
-g,4-- r r
-g4--\p g-- g-- 
-d'4-- d-- d-- 
-e4-- e,-- e--
-b'4-- b-- c-- 
-g4-- g-- g--
+b4-- b-- b--
 c4-- a-- g--
-d'4-- d-- d-- 
-c4--\< c-- c-- 
-b4--\! b-- b-- 
-c4 \> (a d) 
-g,4--\! g-- g-- 
-a4-- a-- a-- 
-b4-- b-- b-- 
+d'4-- d-- d--
+g,4-- g-- a--
+g4-- g-- g--
+a4-- a-- a--
+g4-- g-- g--
+g4-- a-- b--
+c2 b4
+a4-- a-- a--
+a4-- a-- b--
+c4 a8 (b) c4--
+b4-- r r
+g2.\p
+fis2.
+e4-- e-- e--
+b'2 c4--
+d2.
+e,4 (d'2)
+d2.
+c4--\< c-- c--
+b4--\! b-- b--
+c4 \> (a d)
+g,4--\! g-- g--
+a4-- a-- a--
+b4-- b-- b--
 e,4-- \< fis-- g--
-d'4-- d-- e-- 
-a,4--\f a-- c-- 
-b4 ( a g) 
-a4-- b-- b-- 
+d'4-- d-- e--
+a,4--\f a-- c--
+b4 ( a g)
+a4-- b-- b--
 e,4-- e--_\markup{\dynamic p \italic subito} e--
 fis4-- g-- g--
-d'4-- d-- c-- 
-c4--\< b-- a-- 
-g4-- g-- a-- 
-b4--\f b-- b-- 
+d'4-- d-- c--
+c4--\< b-- a--
+d2 d4
+b4--\f b-- b--
 c4-- c-- d--
-e4-- e-- e-- 
-d4-- c-- b-- 
-c4-- \< d-- d-- 
+e2.
+d4-- c-- b--
+e,4-- \< d'2
 e,2.\!\fermata
 ~e2 r4
-c'4--\p d-- d-- 
-g,2 \breathe a4-- \f 
-b4-- b-- b--
-c4-- c-- d--
-e4-- e-- e-- 
-d4-- c-- b-- 
-c4--_\markup{\italic{rall. e dim.}} d-- d-- 
+c'4--\p d-- d--
+g,2 \breathe a4-- \f
+g2.
+g2.
+e2.
+d'2.
+e,4--_\markup{\italic{rall. e dim.}} d'2
 g,2.~\p\>
 g2.~
 g4\pp r r\bar"|."
+}
 }

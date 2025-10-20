@@ -31,9 +31,8 @@
 \begin{lilypond}
 
     \book{
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Beethoven_PrestoFinale/Beethoven_PrestoFinale_Drei_Presto.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Brahms_UngarischerTanz/Brahms_UngarischerTanz_Drei_Fuenf.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Brahms_UngarischerTanz/Brahms_UngarischerTanz_Drei_Sechs.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_OmbraMaiFu/Haendel_OmbraMaiFu_Drei_Instrumental.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_OmbraMaiFu/Haendel_OmbraMaiFu_Drei_Vocal.lytex"
 
     }
 

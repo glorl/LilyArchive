@@ -7,7 +7,14 @@ class cl_piece:
     path_templates  = os.path.join(cwd,'+templates')
 
     def __init__(self,piece,composer,title,voice,ipart,parts_long):
+        self.piece=piece
+        self.composer=composer
+        self.title=title
+        self.voice=voice
+        self.ipart=ipart
+        self.parts_long=parts_long
         self.generate_markup(composer,title,piece,voice,ipart,parts_long)
+
     def generate_titleline (self,title):
         self.titleline   = '            \\fill-line {\\line{\\abs-fontsize #18 { \\sans {'+title+'} }} }'
     def generate_partsline(self,parts_long):
@@ -73,6 +80,8 @@ finput.close()
 
 conn = sqlite3.connect("+voices/pieces.sqlite")
 
+snips = []
+
 voicelist=data['Stuecke']['voices']
 for voice in voicelist:
     rep['includes_lytex'] = ''
@@ -85,6 +94,10 @@ for voice in voicelist:
         parts         = df['parts'].apply(lambda x: json.loads(x) if pd.notna(x) else [])[0]
         parts_long    = df['parts_long'].apply(lambda x: json.loads(x) if pd.notna(x) else [])[0]
 
+        instrumentname= json.loads(df.at[0,'instrumentname'])[voice]
+        padding       = json.loads(df.at[0,'padding'])[voice]
+        basicdistance = json.loads(df.at[0,'basicdistance'])[voice]
+
         path_lytex = os.path.join(path_lilypond,foldername)
 
         # parse lilypond blocks in specified folder
@@ -96,26 +109,21 @@ for voice in voicelist:
                 if part in name:
                     if voice in name:
 
-                        instrumentname= json.loads(df.at[0,'instrumentname'])[voice]
-                        padding       = json.loads(df.at[0,'padding'])[voice]
-                        basicdistance = json.loads(df.at[0,'basicdistance'])[voice]
-
                         includes_lytex = '\\include \"'+os.path.join(path_lytex,piece+'_'+voice+'_'+part+'.lytex\"\n')
                         rep['includes_lytex']    =rep['includes_lytex']+'        ' + includes_lytex
 
                         # print(name)
-                        # initiate piece. generate title + composer line.
-                        p = cl_piece(piece,composer,title,voice,ipart,parts_long)
+                        snips.append(cl_piece(piece,composer,title,voice,ipart,parts_long))
                         # generate score line
-                        p.generate_scoreline(padding,basicdistance,block)
-
+                        snips[-1].generate_scoreline(padding,basicdistance,block)
+                        print(snips[-1].piece)
                         # prepare replacement in template by lilypond
-                        rep['score_overall']=p.markupline+p.scoreline
+                        rep['score_overall']=snips[-1].markupline+snips[-1].scoreline
                         rep['emptyline']    =''
                         rep['instrumentname']= instrumentname
 
                         # write bookpart snippets to file for each voice+piece
-                        p.write_bookpart(path_lytex,piece,voice,part,rep)
+                        snips[-1].write_bookpart(path_lytex,piece,voice,part,rep)
 
     # action required: this can be put into the voice class
     ftemplate_book = open(os.path.join(path_templates,'book.lytex'),"r")
@@ -128,4 +136,6 @@ for voice in voicelist:
     ftemplate_book.close()
     fcopy_book.close()
 
+
+print(len(snips))
 conn.close()

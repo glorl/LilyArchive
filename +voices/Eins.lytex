@@ -31,8 +31,8 @@
 \begin{lilypond}
 
     \book{
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Brahms_UngarischerTanz/Brahms_UngarischerTanz_Eins_Fuenf.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Brahms_UngarischerTanz/Brahms_UngarischerTanz_Eins_Sechs.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_OmbraMaiFu/Haendel_OmbraMaiFu_Eins_Instrumental.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_OmbraMaiFu/Haendel_OmbraMaiFu_Eins_Vocal.lytex"
 
     }
 

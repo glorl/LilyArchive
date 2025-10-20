@@ -97,7 +97,7 @@ g4 r r\bar"|."
 }
 }
 
-HaendelLargobassVocal = \new Voice \relative c' {
+OmbraMaiFuBassVocal = {\new Voice \relative c' {
 g4--\mf g-- g-- 
 a4-- a-- a-- 
 b4-- b-- b-- 
@@ -153,4 +153,5 @@ c4--_\markup{\italic{rall. e dim.}} d-- d--
 g,2.~\p\>
 g2.~
 g4\pp r r\bar"|."
+}
 }
