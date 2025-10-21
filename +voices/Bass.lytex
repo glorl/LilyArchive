@@ -31,6 +31,8 @@
 \begin{lilypond}
 
     \book{
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Bach_Sinfonia/Bach_Sinfonia_Bass_Sinfonia.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Beethoven_PrestoFinale/Beethoven_PrestoFinale_Bass_Presto.lytex"
         \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_OmbraMaiFu/Haendel_OmbraMaiFu_Bass_Instrumental.lytex"
         \include "/home/georg/Dokumente/LilyArchive/+lilypond/Haendel_OmbraMaiFu/Haendel_OmbraMaiFu_Bass_Vocal.lytex"
 
