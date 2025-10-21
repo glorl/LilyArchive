@@ -1,7 +1,7 @@
 {
     "Stuecke":
     {
-        "voices": ["Vier"],
+        "voices": ["Eins","Zwei","Drei","Vier","Bass"],
         "pieces": ["Haendel_OmbraMaiFu"]
     },
     "Abreu_TicoTico":

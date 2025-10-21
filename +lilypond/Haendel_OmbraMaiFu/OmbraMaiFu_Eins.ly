@@ -98,6 +98,9 @@ g4 r r\bar"|."
 }
 
 OmbraMaiFuEinsVocal = {\new Voice \relative c'' {
+\time 3/4
+\key g \major
+\compressEmptyMeasures
 g2.\mf ~
 g4 fis-- e8. d16 
 d2.

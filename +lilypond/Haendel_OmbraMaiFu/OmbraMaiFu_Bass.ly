@@ -1,4 +1,4 @@
-OmbraMaiFuBass = {\new Voice \relative c' {
+OmbraMaiFuBassInstrumental = {\new Voice \relative c' {
 \time 3/4
 \key g \major
 \compressEmptyMeasures
@@ -98,7 +98,10 @@ g4 r r\bar"|."
 }
 
 OmbraMaiFuBassVocal = {\new Voice \relative c' {
-g4--\mf g-- g-- 
+\time 3/4
+\key g \major
+\compressEmptyMeasures
+g4--\mf g-- g--
 a4-- a-- a-- 
 b4-- b-- b-- 
 c4-- a-- g--
