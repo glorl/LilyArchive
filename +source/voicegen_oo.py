@@ -1,6 +1,6 @@
 import os,json, re, sqlite3
 import pandas as pd
-from lilyfunctions import parse_lilypond_assignments, replace_pattern
+from lilyfunctions import parse_lilypond_assignments, replace_pattern, filter_snips
 
 class cl_piece:
     cwd = os.getcwd()
@@ -112,7 +112,7 @@ for voice in voicelist:
                         includes_lytex = '\\include \"'+os.path.join(path_lytex,piece+'_'+voice+'_'+part+'.lytex\"\n')
                         rep['includes_lytex']    =rep['includes_lytex']+'        ' + includes_lytex
 
-                        # print(name)
+                            # print(name)
                         snips.append(cl_piece(piece,composer,title,voice,ipart,parts_long))
                         # generate score line
                         snips[-1].generate_scoreline(padding,basicdistance,block)
@@ -122,6 +122,9 @@ for voice in voicelist:
                         rep['emptyline']    =''
                         rep['instrumentname']= instrumentname
 
+# for snip in snips:
+# find & sort for voices
+#
                         # write bookpart snippets to file for each voice+piece
                         snips[-1].write_bookpart(path_lytex,piece,voice,part,rep)
 
@@ -136,6 +139,9 @@ for voice in voicelist:
     ftemplate_book.close()
     fcopy_book.close()
 
+conn.close()
 
 print(len(snips))
-conn.close()
+
+criteria = {"title": df.at[0,'title']}
+snip_title = filter_snips(snips, criteria)

@@ -60,3 +60,14 @@ def replace_pattern(arg_rep,arg_string):
     out_pattern = re.compile("|".join(arg_rep.keys()))
     out_string = out_pattern.sub(lambda m: arg_rep[re.escape(m.group(0))], arg_string)
     return arg_rep, out_pattern, out_string
+
+
+def filter_snips(snips, criteria):
+
+    return [
+
+        snip for snip in snips
+
+        if all(getattr(snip, key) == value for key, value in criteria.items())
+
+    ]
