@@ -6,14 +6,14 @@ class cl_piece:
     cwd = os.getcwd()
     path_templates  = os.path.join(cwd,'+templates')
 
-    def __init__(self,piece,composer,title,voice,ipart,parts_long):
-        self.piece=piece
+    def __init__(self,folder,composer,title,voice,ipart,parts_long):
+        self.folder=folder
         self.composer=composer
         self.title=title
         self.voice=voice
         self.ipart=ipart
         self.parts_long=parts_long
-        self.generate_markup(composer,title,piece,voice,ipart,parts_long)
+        self.generate_markup(composer,title,folder,voice,ipart,parts_long)
 
     def generate_titleline (self,title):
         self.titleline   = '            \\fill-line {\\line{\\abs-fontsize #18 { \\sans {'+title+'} }} }'
@@ -21,7 +21,7 @@ class cl_piece:
         self.partsline='           \\fill-line {\\line{\\abs-fontsize #14 { \\sans {' + parts_long + '} } } \\line { } } \n'
     def generate_composerline (self,composer):
         self.composerline= '            \\fill-line {\\line {} \\line{\\abs-fontsize #12 { \\sans {'+composer+'} }} }'
-    def generate_markup(self,path_lilypond,path_voices,piece,voice,ipart,parts_long):
+    def generate_markup(self,path_lilypond,path_voices,folder,voice,ipart,parts_long):
         if not parts_long:
             self.generate_titleline(title)
             self.generate_composerline(composer)
@@ -73,7 +73,8 @@ rep['horizontalshift'] = "-15mm"
 rep['printpagenumber'] = "##f"
 rep['bookheader']      = ""
 rep['includes_lyfiles']= ""
-# Open & iterate through database
+
+# open json (basic info)
 finput = open (os.path.join(path_json,'input.json'), "r")
 data = json.loads(finput.read())
 finput.close()
@@ -81,13 +82,46 @@ finput.close()
 conn = sqlite3.connect("+voices/pieces.sqlite")
 
 snips = []
+voicelist=data['Stuecke']['voices']
+foldernames=data['Stuecke']['folders']
+
+for voice in voicelist:
+    rep['includes_lytex'] = ''
+    for folder in foldernames:
+        df = pd.read_sql_query("SELECT * FROM pieces WHERE foldername = ?",conn,params=(folder,))
+
+        title         = df.at[0,'title']
+        composer      = df.at[0,'composer']
+        parts         = df['parts'].apply(lambda x: json.loads(x) if pd.notna(x) else [])[0]
+        parts_long    = df['parts_long'].apply(lambda x: json.loads(x) if pd.notna(x) else [])[0]
+        path_lytex = os.path.join(path_lilypond,folder)
+
+        instrumentname= json.loads(df.at[0,'instrumentname'])[voice]
+        padding       = json.loads(df.at[0,'padding'])[voice]
+        basicdistance = json.loads(df.at[0,'basicdistance'])[voice]
+
+        result = parse_lilypond_assignments(path_lytex)
+        for name, block in result.items():
+            for ipart,part in enumerate(parts):
+                if ((part in name) and (voice in name)) :
+                    print(part,name )
+                    print('folder: ',folder, 'composer: ',composer, 'title: ',title, 'voice: ',voice, 'ipart: ',ipart, 'part: ',part, 'parts_long: ',parts_long)
+                    snips.append(cl_piece(folder,composer,title,voice,ipart,parts_long))
+                    snips[-1].generate_scoreline(padding,basicdistance,block)
+
+criteria = {'folder': 'Beethoven_PrestoFinale'}
+snips_filtered = filter_snips(snips, criteria)
+for isnip in snips_filtered:
+    print(isnip.scoreline)
+
+#############
 
 voicelist=data['Stuecke']['voices']
 for voice in voicelist:
     rep['includes_lytex'] = ''
 
-    for piece in data['Stuecke']['pieces']:
-        df = pd.read_sql_query("SELECT * FROM pieces WHERE foldername = ?",conn,params=(piece,))
+    for folder in data['Stuecke']['folders']:
+        df = pd.read_sql_query("SELECT * FROM pieces WHERE foldername = ?",conn,params=(folder,))
         title         = df.at[0,'title']
         composer      = df.at[0,'composer']
         foldername    = df.at[0,'foldername']
@@ -101,7 +135,7 @@ for voice in voicelist:
         path_lytex = os.path.join(path_lilypond,foldername)
 
         # parse lilypond blocks in specified folder
-        result = parse_lilypond_assignments(path_lytex,voice)
+        result = parse_lilypond_assignments(path_lytex)
 
         # write lytex to file (copy from template)
         for ipart,part in enumerate(parts):
@@ -109,14 +143,14 @@ for voice in voicelist:
                 if part in name:
                     if voice in name:
 
-                        includes_lytex = '\\include \"'+os.path.join(path_lytex,piece+'_'+voice+'_'+part+'.lytex\"\n')
+                        includes_lytex = '\\include \"'+os.path.join(path_lytex,folder+'_'+voice+'_'+part+'.lytex\"\n')
                         rep['includes_lytex']    =rep['includes_lytex']+'        ' + includes_lytex
 
                             # print(name)
-                        snips.append(cl_piece(piece,composer,title,voice,ipart,parts_long))
+                        snips.append(cl_piece(folder,composer,title,voice,ipart,parts_long))
                         # generate score line
                         snips[-1].generate_scoreline(padding,basicdistance,block)
-                        print(snips[-1].piece)
+                        print(snips[-1].folder)
                         # prepare replacement in template by lilypond
                         rep['score_overall']=snips[-1].markupline+snips[-1].scoreline
                         rep['emptyline']    =''
@@ -125,8 +159,8 @@ for voice in voicelist:
 # for snip in snips:
 # find & sort for voices
 #
-                        # write bookpart snippets to file for each voice+piece
-                        snips[-1].write_bookpart(path_lytex,piece,voice,part,rep)
+                        # write bookpart snippets to file for each voice+folder
+                        snips[-1].write_bookpart(path_lytex,folder,voice,part,rep)
 
     # action required: this can be put into the voice class
     ftemplate_book = open(os.path.join(path_templates,'book.lytex'),"r")
@@ -143,5 +177,3 @@ conn.close()
 
 print(len(snips))
 
-criteria = {"title": df.at[0,'title']}
-snip_title = filter_snips(snips, criteria)

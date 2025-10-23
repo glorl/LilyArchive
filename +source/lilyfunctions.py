@@ -1,12 +1,12 @@
 import glob, re
 
-def parse_lilypond_assignments(file_path,voice):
+def parse_lilypond_assignments(file_path):
 # return all lilypond commands from a given folder
 # open point list
 # - merge all commands
 # - indent lines so that it is more clean in the bookpart.lytex
 
-    lilyfiles = glob.glob(file_path+'/*'+voice+'.ly')
+    lilyfiles = glob.glob(file_path+'/*.ly')
     assignments = {}
 
     for lilyfile in lilyfiles:
@@ -63,11 +63,7 @@ def replace_pattern(arg_rep,arg_string):
 
 
 def filter_snips(snips, criteria):
-
     return [
-
         snip for snip in snips
-
         if all(getattr(snip, key) == value for key, value in criteria.items())
-
     ]

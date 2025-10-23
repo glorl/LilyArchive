@@ -2,7 +2,7 @@
     "Stuecke":
     {
         "voices": ["Eins","Zwei","Drei","Vier","Bass"],
-        "pieces": ["Haendel_OmbraMaiFu"]
+        "folders": ["Beethoven_PrestoFinale","Haendel_OmbraMaiFu"]
     },
     "Abreu_TicoTico":
     {
