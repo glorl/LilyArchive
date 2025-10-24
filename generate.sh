@@ -11,4 +11,5 @@ done
 
 rm -r */
 rm *.tex lock *.log *.aux *.dep snippet* tmp*
-cd .. 
+cd ..
+rm -r +source/__pycache__* +source/output*

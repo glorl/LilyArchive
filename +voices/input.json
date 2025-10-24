@@ -1,7 +1,7 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins","Zwei","Drei","Vier","Bass"],
+        "voices": ["Eins"],
         "folders": ["Beethoven_PrestoFinale","Haendel_OmbraMaiFu"]
     },
     "Abreu_TicoTico":

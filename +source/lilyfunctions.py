@@ -62,8 +62,8 @@ def replace_pattern(arg_rep,arg_string):
     return arg_rep, out_pattern, out_string
 
 
-def filter_snips(snips, criteria):
+def filter_pieces(pieces, criteria):
     return [
-        snip for snip in snips
-        if all(getattr(snip, key) == value for key, value in criteria.items())
+        piece for piece in pieces
+        if all(getattr(piece, key) == value for key, value in criteria.items())
     ]
