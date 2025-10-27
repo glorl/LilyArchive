@@ -67,3 +67,10 @@ def filter_pieces(pieces, criteria):
         piece for piece in pieces
         if all(getattr(piece, key) == value for key, value in criteria.items())
     ]
+
+def voice_count(voice):
+    if isinstance(voice, (list, tuple, set)):
+        return len(voice), voice
+    else:
+        # Strings und sonstige Nicht-Container zählen als 1 Eintrag
+        return 1, [voice]

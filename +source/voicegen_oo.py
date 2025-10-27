@@ -1,6 +1,6 @@
 import os,json, re, sqlite3
 import pandas as pd
-from lilyfunctions import parse_lilypond_assignments, replace_pattern, filter_pieces
+from lilyfunctions import parse_lilypond_assignments, replace_pattern, filter_pieces, voice_count
 from itertools import chain
 
 class piece:
@@ -136,36 +136,73 @@ for voice in voicelist:
                     my_piece_list.append(my_piece)
 
 # write output (bookpart.lytex, book.lytex)
-for voice in voicelist:
+for voice in voicelist_full:
     replacements_dict_lytex['includes_lytex'] = ''
+    length_voice,ivoicelist = voice_count(voice)
+    print('voice_count_output:', length_voice,ivoicelist)
+    if length_voice>1:
+        lytex_name_voice = 'Partitur'
+    else:
+        lytex_name_voice = voice
 
     for folder in foldernames:
-        filter_criteria= {'folder': folder, 'voice': voice}
+        filter_criteria= {'folder': folder}
         my_piece_list_filtered = filter_pieces(my_piece_list, filter_criteria)
+
         path_lytex = os.path.join(path_lilypond,folder)
-
-        print(len(my_piece_list_filtered))
         for ipiece in my_piece_list_filtered:
-            # includes to be set in book.lytex
 
-            includes_lytex = '\\include \"'+os.path.join( path_lytex, ipiece.folder+'_'+ ipiece.voice+'_'+ ipiece.part+'.lytex\"\n')
-            replacements_dict_lytex['includes_lytex']    =replacements_dict_lytex['includes_lytex']+'        ' + includes_lytex
+            for i_lengthvoice,i_ivoicelist in enumerate(ivoicelist):
+                ivoice = i_ivoicelist
+                print('ipiece:', ipiece,'ivoice',ivoice)
 
-            # generate score for given piece and voice
-            mybookpart = bookpart(ipiece,path_voices,replacements_dict_lytex)
-            mybookpart.generate()
+                filtfilter_criteria= {'voice': ivoice}
+                my_piece_list_filtfiltered = filter_pieces(my_piece_list_filtered, filtfilter_criteria)
 
-            # markup (titleline, composerline, subtitle, ... )
-            replacements_dict_lytex['score_overall']=mybookpart.markupline+mybookpart.scoreline
-            replacements_dict_lytex['emptyline']    =''
-            replacements_dict_lytex['instrumentname']= ipiece.instrumentname
+                # includes to be set in book.lytex
+                includes_lytex = '\\include \"'+os.path.join( path_lytex, ipiece.folder+'_'+ lytex_name_voice +'_'+ ipiece.part+'.lytex\"\n')
+                replacements_dict_lytex['includes_lytex']    =replacements_dict_lytex['includes_lytex']+'        ' + includes_lytex
 
-            # write bookpart.lytex
-            mybookpart.write_bookpart(ipiece,path_lytex,replacements_dict_lytex)
+                # generate score for given piece and voice
+                mybookpart = bookpart(ipiece,path_voices,replacements_dict_lytex)
+                mybookpart.generate()
+
+                # markup (titleline, composerline, subtitle, ... )
+                replacements_dict_lytex['score_overall']=mybookpart.markupline+mybookpart.scoreline
+                replacements_dict_lytex['emptyline']    =''
+                replacements_dict_lytex['instrumentname']= ipiece.instrumentname
+
+                # write bookpart.lytex
+                mybookpart.write_bookpart(ipiece,path_lytex,replacements_dict_lytex)
+
+    #else:
+    #    lytex_name_voice = voice
+    #    for folder in foldernames:
+    #        filter_criteria= {'folder': folder, 'voice': voice}
+    #        my_piece_list_filtered = filter_pieces(my_piece_list, filter_criteria)#
+
+    #        path_lytex = os.path.join(path_lilypond,folder)
+
+    #        for ipiece in my_piece_list_filtered:
+    #            # includes to be set in book.lytex
+    #            includes_lytex = '\\include \"'+os.path.join( path_lytex, ipiece.folder+'_'+ lytex_name_voice +'_'+ ipiece.part+'.lytex\"\n')
+    #            replacements_dict_lytex['includes_lytex']    =replacements_dict_lytex['includes_lytex']+'        ' + includes_lytex
+
+    #            # generate score for given piece and voice
+    #            mybookpart = bookpart(ipiece,path_voices,replacements_dict_lytex)
+    #            mybookpart.generate()
+
+                # markup (titleline, composerline, subtitle, ... )
+    #            replacements_dict_lytex['score_overall']=mybookpart.markupline+mybookpart.scoreline
+    #            replacements_dict_lytex['emptyline']    =''
+    #            replacements_dict_lytex['instrumentname']= ipiece.instrumentname
+
+    #            # write bookpart.lytex
+    #            mybookpart.write_bookpart(ipiece,path_lytex,replacements_dict_lytex)
 
     # write book
     ftemplate_book = open(os.path.join(path_templates,'book.lytex'),"r")
-    fcopy_book     = open(os.path.join(path_voices,voice+'.lytex'),"wt")
+    fcopy_book     = open(os.path.join(path_voices,lytex_name_voice+'.lytex'),"wt")
 
     for line in ftemplate_book:
         replacements_dict_lytex,pattern,line = replace_pattern(replacements_dict_lytex,line)
