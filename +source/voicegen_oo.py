@@ -7,47 +7,51 @@ class piece:
     cwd = os.getcwd()
     path_templates  = os.path.join(cwd,'+templates')
 
-    def __init__(self,folder,composer,title,voice,part,ipart,part_long,instrumentname,padding,basicdistance,block):
+    def __init__(self,folder,composer,title,voice,part,partnumber,part_long,padding,basicdistance,block):
         self.folder         =folder
         self.composer       =composer
         self.title          =title
         self.voice          =voice
         self.part           =part
-        self.ipart          =ipart
+        self.partnumber     =partnumber
         self.part_long      =part_long
-        self.instrumentname =instrumentname
+        # self.instrumentname =instrumentname
         self.padding        =padding
         self.basicdistance  =basicdistance
         self.block          =block
 
 
 class bookpart:
-    def __init__(self,piece,path_voices,replacements_dict_lytex):
-        self.piece =piece
-        self.path_voices = path_voices
+    def __init__(self,piecelist,replacements_dict_lytex,path_lytex,lytex_name_voice):
+        self.piecelist              = piecelist
+        self.replacements_dict_lytex= replacements_dict_lytex
+        self.path_lytex             = path_lytex
+        self.lytex_name_voice       = lytex_name_voice
 
     def generate(self):
         staffblock = ''
-        for iblock in [self.piece.block]:
+        # for iblock in [self.piece.block]:
+        for ipiece in self.piecelist:
+            block = ipiece.block
             staffblock = staffblock + '           \\new Staff << '\
-                +iblock\
+                +block\
                 +'  \n         >>\n'
         self.scoreline = '    \\score{ \n        \\layout{ system-system-spacing = #\'((padding . '\
-            +self.piece.padding+') (basic-distance . '\
-            +self.piece.basicdistance+')) } \n'\
+            +self.piecelist[0].padding+') (basic-distance . '\
+            +self.piecelist[0].basicdistance+')) } \n'\
             +'        \\new StaffGroup <<\n'\
             +staffblock+'      >>\n    }'
         self.generate_markup()
 
     def generate_titleline(self):
-        self.titleline   = '            \\fill-line {\\line{\\abs-fontsize #18 { \\sans {'+self.piece.title+'} }} }'
+        self.titleline   = '            \\fill-line {\\line{\\abs-fontsize #18 { \\sans {'+self.piecelist[0].title+'} }} }'
     def generate_partsline(self):
-        if self.piece.part_long:
-            self.partsline='           \\fill-line {\\line{\\abs-fontsize #14 { \\sans {' + self.piece.part_long + '} } } \\line { } } \n'
+        if self.piecelist[0].part_long:
+            self.partsline='           \\fill-line {\\line{\\abs-fontsize #14 { \\sans {' + self.piecelist[0].part_long + '} } } \\line { } } \n'
     def generate_composerline(self):
-        self.composerline= '            \\fill-line {\\line {} \\line{\\abs-fontsize #12 { \\sans {'+self.piece.composer+'} }} }'
+        self.composerline= '            \\fill-line {\\line {} \\line{\\abs-fontsize #12 { \\sans {'+self.piecelist[0].composer+'} }} }'
     def generate_markup(self):
-        if not self.piece.part_long:
+        if not self.piecelist[0].part_long:
             self.generate_titleline()
             self.generate_composerline()
             self.markupline = '    \\markup{\n        \\column{ \n'+self.titleline+' \n'+self.composerline+' \n        } \n    }\n'
@@ -66,11 +70,11 @@ class bookpart:
                     +'           \\fill-line {\\line{\\abs-fontsize #30 { {\\null} } } } \n' \
                     + self.partsline + '}\n   }\n'
 
-    def write_bookpart(self,piece,path_voices,replacements_dict_lytex):
+    def write_bookpart(self):
         ftemplate_bookpart  = open(os.path.join(path_templates,'bookpart.lytex'),"r")
-        fcopy_bookpart      = open(os.path.join(path_voices,self.piece.folder+'_'+self.piece.voice+'_'+self.piece.part+'.lytex'),"wt")
+        fcopy_bookpart      = open(os.path.join(self.path_lytex,self.piecelist[0].folder+'_'+self.lytex_name_voice+'_'+self.piecelist[0].part+'.lytex'),"wt")
         for line in ftemplate_bookpart:
-            replacements_dict_lytex,pattern,line = replace_pattern(replacements_dict_lytex,line)
+            replacements_dict_lytex,pattern,line = replace_pattern(self.replacements_dict_lytex,line)
             fcopy_bookpart.write(line)
         fcopy_bookpart.close()
         ftemplate_bookpart.close()
@@ -125,21 +129,20 @@ for voice in voicelist:
 
         ly_sourcecode = parse_lilypond_assignments(path_lytex)
         for name, block in ly_sourcecode.items():
-            for ipart,part in enumerate(parts):
+            for partnumber,part in enumerate(parts):
                 if parts_long:
-                    part_long = parts_long[ipart]
+                    part_long = parts_long[partnumber]
                 else:
                     part_long = []
                 if ((part in name) and (voice in name)) :
-                    my_piece = [];
-                    my_piece = piece(folder,composer,title,voice,part,ipart,part_long,instrumentname,padding,basicdistance,block)
+                    my_piece = []
+                    my_piece = piece(folder,composer,title,voice,part,partnumber,part_long,padding,basicdistance,block)
                     my_piece_list.append(my_piece)
 
 # write output (bookpart.lytex, book.lytex)
 for voice in voicelist_full:
     replacements_dict_lytex['includes_lytex'] = ''
     length_voice,ivoicelist = voice_count(voice)
-    print('voice_count_output:', length_voice,ivoicelist)
     if length_voice>1:
         lytex_name_voice = 'Partitur'
     else:
@@ -147,58 +150,33 @@ for voice in voicelist_full:
 
     for folder in foldernames:
         filter_criteria= {'folder': folder}
-        my_piece_list_filtered = filter_pieces(my_piece_list, filter_criteria)
+        my_piece_list_filtered1 = filter_pieces(my_piece_list, filter_criteria)
 
-        path_lytex = os.path.join(path_lilypond,folder)
-        for ipiece in my_piece_list_filtered:
+        # generate parts list 
+        partlist = list({piece.part for piece in my_piece_list_filtered1})
+        for ipart in partlist: 
 
-            for i_lengthvoice,i_ivoicelist in enumerate(ivoicelist):
-                ivoice = i_ivoicelist
-                print('ipiece:', ipiece,'ivoice',ivoice)
+            filter_criteria= {'folder': folder, 'part': ipart}
+            my_piece_list_filtered2  = filter_pieces(my_piece_list, filter_criteria)            
 
-                filtfilter_criteria= {'voice': ivoice}
-                my_piece_list_filtfiltered = filter_pieces(my_piece_list_filtered, filtfilter_criteria)
+            filter_criteria= {'folder': folder, 'part': ipart, 'voice': ivoicelist} # , 'voice': ivoicelist[0]
+            my_piece_list_filtered3  = filter_pieces(my_piece_list, filter_criteria)            
+            
+            path_lytex = os.path.join(path_lilypond,folder)
+            ipiece = my_piece_list_filtered3[0]
+            includes_lytex = '\\include \"'+os.path.join( path_lytex, ipiece.folder+'_'+ lytex_name_voice +'_'+ ipiece.part+'.lytex\"\n')
+            replacements_dict_lytex['includes_lytex']    =replacements_dict_lytex['includes_lytex']+'        ' + includes_lytex 
+            
+            mybookpart = bookpart(my_piece_list_filtered3,replacements_dict_lytex,path_lytex,lytex_name_voice)
+            mybookpart.generate()
 
-                # includes to be set in book.lytex
-                includes_lytex = '\\include \"'+os.path.join( path_lytex, ipiece.folder+'_'+ lytex_name_voice +'_'+ ipiece.part+'.lytex\"\n')
-                replacements_dict_lytex['includes_lytex']    =replacements_dict_lytex['includes_lytex']+'        ' + includes_lytex
+            # markup (titleline, composerline, subtitle, ... )
+            replacements_dict_lytex['score_overall']=mybookpart.markupline+mybookpart.scoreline
+            replacements_dict_lytex['emptyline']    =''
+            replacements_dict_lytex['instrumentname']= lytex_name_voice
+            mybookpart.replacements_dict_lytex = replacements_dict_lytex
 
-                # generate score for given piece and voice
-                mybookpart = bookpart(ipiece,path_voices,replacements_dict_lytex)
-                mybookpart.generate()
-
-                # markup (titleline, composerline, subtitle, ... )
-                replacements_dict_lytex['score_overall']=mybookpart.markupline+mybookpart.scoreline
-                replacements_dict_lytex['emptyline']    =''
-                replacements_dict_lytex['instrumentname']= ipiece.instrumentname
-
-                # write bookpart.lytex
-                mybookpart.write_bookpart(ipiece,path_lytex,replacements_dict_lytex)
-
-    #else:
-    #    lytex_name_voice = voice
-    #    for folder in foldernames:
-    #        filter_criteria= {'folder': folder, 'voice': voice}
-    #        my_piece_list_filtered = filter_pieces(my_piece_list, filter_criteria)#
-
-    #        path_lytex = os.path.join(path_lilypond,folder)
-
-    #        for ipiece in my_piece_list_filtered:
-    #            # includes to be set in book.lytex
-    #            includes_lytex = '\\include \"'+os.path.join( path_lytex, ipiece.folder+'_'+ lytex_name_voice +'_'+ ipiece.part+'.lytex\"\n')
-    #            replacements_dict_lytex['includes_lytex']    =replacements_dict_lytex['includes_lytex']+'        ' + includes_lytex
-
-    #            # generate score for given piece and voice
-    #            mybookpart = bookpart(ipiece,path_voices,replacements_dict_lytex)
-    #            mybookpart.generate()
-
-                # markup (titleline, composerline, subtitle, ... )
-    #            replacements_dict_lytex['score_overall']=mybookpart.markupline+mybookpart.scoreline
-    #            replacements_dict_lytex['emptyline']    =''
-    #            replacements_dict_lytex['instrumentname']= ipiece.instrumentname
-
-    #            # write bookpart.lytex
-    #            mybookpart.write_bookpart(ipiece,path_lytex,replacements_dict_lytex)
+            mybookpart.write_bookpart()
 
     # write book
     ftemplate_book = open(os.path.join(path_templates,'book.lytex'),"r")

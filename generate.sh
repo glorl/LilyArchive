@@ -3,8 +3,14 @@ python3 +source/voicegen_oo.py
 
 cd +voices/ 
 
-jq -c -r '.Stuecke.voices[]' input.json | while read i; do
-    Voice=$i
+jq -c '.Stuecke.voices[]' input.json | while read -r i; do
+    if echo "$i" | jq -e 'type == "array"' > /dev/null; then
+        Voice="Partitur"
+    else
+        Voice=$(echo "$i" | jq -r '.')
+        #Voice=$i
+    fi
+    echo "Verarbeite $Voice"
     lilypond-book --pdf ${Voice}.lytex
     pdflatex -quiet ${Voice}.tex
 done
