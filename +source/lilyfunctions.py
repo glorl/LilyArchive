@@ -1,12 +1,12 @@
 import glob, re
 
-def parse_lilypond_assignments(file_path,voice):
+def parse_lilypond_assignments(file_path):
 # return all lilypond commands from a given folder
 # open point list
 # - merge all commands
 # - indent lines so that it is more clean in the bookpart.lytex
 
-    lilyfiles = glob.glob(file_path+'/*'+voice+'.ly')
+    lilyfiles = glob.glob(file_path+'/*.ly')
     assignments = {}
 
     for lilyfile in lilyfiles:
@@ -60,3 +60,39 @@ def replace_pattern(arg_rep,arg_string):
     out_pattern = re.compile("|".join(arg_rep.keys()))
     out_string = out_pattern.sub(lambda m: arg_rep[re.escape(m.group(0))], arg_string)
     return arg_rep, out_pattern, out_string
+
+'''
+def filter_pieces(pieces, criteria):
+    return [
+        piece for piece in pieces
+        if all(getattr(piece, key) == value for key, value in criteria.items())
+    ]
+'''
+
+def filter_pieces(pieces, criteria):
+    result = []
+    for piece in pieces:
+        match = True
+        for key, value in criteria.items():
+            attr = getattr(piece, key)
+
+            # Prüfen, ob das Kriterium eine Menge/Liste/Tuple ist
+            if isinstance(value, (list, set, tuple)):
+                if attr not in value:
+                    match = False
+                    break
+            else:
+                if attr != value:
+                    match = False
+                    break
+
+        if match:
+            result.append(piece)
+    return result
+
+def voice_count(voice):
+    if isinstance(voice, (list, tuple, set)):
+        return len(voice), voice
+    else:
+        # Strings und sonstige Nicht-Container zählen als 1 Eintrag
+        return 1, [voice]

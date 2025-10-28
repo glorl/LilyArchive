@@ -1,8 +1,8 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins","Zwei","Drei","Vier","Bass"],
-        "pieces": ["Bach_Sinfonia","Beethoven_PrestoFinale", "Haendel_OmbraMaiFu"]
+        "voices": ["Eins","Zwei",["Eins","Drei"]],
+        "folders": ["Bach_Sinfonia"]
     },
     "Abreu_TicoTico":
     {
