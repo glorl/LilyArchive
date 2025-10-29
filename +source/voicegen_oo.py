@@ -7,19 +7,18 @@ class piece:
     cwd = os.getcwd()
     path_templates  = os.path.join(cwd,'+templates')
 
-    def __init__(self,folder,composer,title,voice,part,partnumber,part_long,padding,basicdistance,block):
-        self.folder         =folder
-        self.composer       =composer
-        self.title          =title
-        self.voice          =voice
-        self.part           =part
-        self.partnumber     =partnumber
-        self.part_long      =part_long
-        # self.instrumentname =instrumentname
-        self.padding        =padding
-        self.basicdistance  =basicdistance
-        self.block          =block
-
+    def __init__(self,folder,composer,title,voice,part,partnumber,part_long,instrumentname,padding,basicdistance,block):
+        self.folder         = folder
+        self.composer       = composer
+        self.title          = title
+        self.voice          = voice
+        self.part           = part
+        self.partnumber     = partnumber
+        self.part_long      = part_long
+        self.instrumentname = instrumentname
+        self.padding        = padding
+        self.basicdistance  = basicdistance
+        self.block          = block
 
 class bookpart:
     def __init__(self,piecelist,replacements_dict_lytex,path_lytex,lytex_name_voice):
@@ -56,7 +55,7 @@ class bookpart:
             self.generate_composerline()
             self.markupline = '    \\markup{\n        \\column{ \n'+self.titleline+' \n'+self.composerline+' \n        } \n    }\n'
         else:
-            if ipart==0:
+            if self.piecelist[0].partnumber==0:
                 self.generate_titleline()
                 self.generate_composerline()
                 self.generate_partsline()
@@ -136,7 +135,7 @@ for voice in voicelist:
                     part_long = []
                 if ((part in name) and (voice in name)) :
                     my_piece = []
-                    my_piece = piece(folder,composer,title,voice,part,partnumber,part_long,padding,basicdistance,block)
+                    my_piece = piece(folder,composer,title,voice,part,partnumber,part_long,instrumentname,padding,basicdistance,block)
                     my_piece_list.append(my_piece)
 
 # write output (bookpart.lytex, book.lytex)
@@ -155,6 +154,10 @@ for voice in voicelist_full:
         # generate parts list 
         partlist = list({piece.part for piece in my_piece_list_filtered1})
         for ipart in partlist: 
+            if length_voice>1:
+                instrumentname_adapted = 'Partitur'
+            else:
+                instrumentname_adapted = my_piece_list_filtered1[0].instrumentname
 
             filter_criteria= {'folder': folder, 'part': ipart}
             my_piece_list_filtered2  = filter_pieces(my_piece_list, filter_criteria)            
@@ -171,9 +174,9 @@ for voice in voicelist_full:
             mybookpart.generate()
 
             # markup (titleline, composerline, subtitle, ... )
-            replacements_dict_lytex['score_overall']=mybookpart.markupline+mybookpart.scoreline
-            replacements_dict_lytex['emptyline']    =''
-            replacements_dict_lytex['instrumentname']= lytex_name_voice
+            replacements_dict_lytex['score_overall']  = mybookpart.markupline+mybookpart.scoreline
+            replacements_dict_lytex['emptyline']      = ''
+            replacements_dict_lytex['instrumentname'] = instrumentname_adapted
             mybookpart.replacements_dict_lytex = replacements_dict_lytex
 
             mybookpart.write_bookpart()

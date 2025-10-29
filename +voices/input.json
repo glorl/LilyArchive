@@ -1,7 +1,7 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins","Zwei",["Eins","Drei"]],
+        "voices": ["Eins","Zwei",["Eins","Drei","Bass"]],
         "folders": ["Bach_Sinfonia"]
     },
     "Abreu_TicoTico":
