@@ -1,8 +1,13 @@
 */Handschriftl/
 */Handschriftlich/
 # +voices/
+Scan/*
+venv/*
 *.pdf
 *.midi
+*.mxl
+*.omr
 +lilypond/*/*.lytex
 # *.json
 .gitignore
+
