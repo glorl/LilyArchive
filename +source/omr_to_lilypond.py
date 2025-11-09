@@ -2,8 +2,7 @@ import subprocess
 import os
 import sys
 from pathlib import Path
-from PyPDF2 import PdfReader, PdfWriter
-from pdf2image import convert_from_path
+import shutil
 
 def find_audiveris_path():
     candidates = [
@@ -50,6 +49,17 @@ def find_lilypond_file(dir_scan):
                 return os.path.join(root, file)
     return None
 
+def make_ly_folder(ly_file):
+    composer = input("Nachname vom Komponist: ")
+    title = input("Kurztitel vom Stück: ")
+    voice = input("Stimme: ")
+
+    folder = Path(os.path.join('+lilypond',composer+'_'+title))
+    folder.mkdir(parents=True, exist_ok=True)
+    print(f"Ordnername: {folder}")
+    print(f"lyfile: {ly_file}")
+    shutil.move(ly_file, folder)
+    return True
 
 
 def main():
@@ -68,9 +78,8 @@ def main():
     # Audiveris-Installation auf PC finden
     audiveris_lib = find_audiveris_path()
 
-
     # Audiveris
-    result_folder = run_audiveris(path_file, audiveris_lib, dir_scan)
+    # result_folder = run_audiveris(path_file, audiveris_lib, dir_scan)
     # Result paths
     path_mxl = os.path.join(dir_scan,filename+'.mxl')
     path_ly  = os.path.join(dir_scan,filename+'.ly')
@@ -87,10 +96,6 @@ def main():
     for file in Path(dir_scan).glob("*.log"):
         file.unlink()
 
-    # Lilypond an der richtigen Stelle einsortieren
-
-    # SQLite Datenbank pflegen
-
     # Lilypond (inhaltlich) aufräumen
     to_remove = [
         r"\stemUp",
@@ -102,6 +107,10 @@ def main():
         text = text.replace(s, "")
     path_ly_Path.write_text(text, encoding="utf-8")
 
+    # Lilypond an der richtigen Stelle einsortieren
+    stderr = make_ly_folder(ly_file)
+
+    # SQLite Datenbank pflegen
 
 if __name__ == "__main__":
     main()
