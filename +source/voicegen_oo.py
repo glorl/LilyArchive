@@ -7,10 +7,11 @@ class piece:
     cwd = os.getcwd()
     path_templates  = os.path.join(cwd,'+templates')
 
-    def __init__(self,folder,composer,title,voice,part,partnumber,part_long,instrumentname,padding,basicdistance,block):
+    def __init__(self,folder,composer,title,subtitle,voice,part,partnumber,part_long,instrumentname,padding,basicdistance,block):
         self.folder         = folder
         self.composer       = composer
         self.title          = title
+        self.subtitle       = subtitle
         self.voice          = voice
         self.part           = part
         self.partnumber     = partnumber
@@ -43,7 +44,11 @@ class bookpart:
         self.generate_markup()
 
     def generate_titleline(self):
-        self.titleline   = '            \\fill-line {\\line{\\abs-fontsize #18 { \\sans {'+self.piecelist[0].title+'} }} }'
+        if self.piecelist[0].subtitle is not None:
+            self.titleline   = '            \\fill-line {\\line{\\abs-fontsize #18 { \\sans {'+self.piecelist[0].title+'} }} }' \
+                +'            \\fill-line {\\line{\\abs-fontsize #16 { \\sans {'+self.piecelist[0].subtitle+'} }} }'
+        else: 
+            self.titleline   = '            \\fill-line {\\line{\\abs-fontsize #18 { \\sans {'+self.piecelist[0].title+'} }} }'
     def generate_partsline(self):
         if self.piecelist[0].part_long:
             self.partsline='           \\fill-line {\\line{\\abs-fontsize #14 { \\sans {' + self.piecelist[0].part_long + '} } } \\line { } } \n'
@@ -116,6 +121,7 @@ for voice in voicelist:
         df = pd.read_sql_query("SELECT * FROM pieces WHERE foldername = ?",conn,params=(folder,))
 
         title       = df.at[0,'title']
+        subtitle    = df.at[0,'subtitle']
         composer    = df.at[0,'composer']
         parts       = df['parts'].apply(lambda x: json.loads(x) if pd.notna(x) else [])[0]
         parts_long  = df['parts_long'].apply(lambda x: json.loads(x) if pd.notna(x) else [])[0]
@@ -135,7 +141,7 @@ for voice in voicelist:
                     part_long = []
                 if ((part in name) and (voice in name)) :
                     my_piece = []
-                    my_piece = piece(folder,composer,title,voice,part,partnumber,part_long,instrumentname,padding,basicdistance,block)
+                    my_piece = piece(folder,composer,title,subtitle,voice,part,partnumber,part_long,instrumentname,padding,basicdistance,block)
                     my_piece_list.append(my_piece)
 
 # write output (bookpart.lytex, book.lytex)
