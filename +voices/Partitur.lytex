@@ -31,7 +31,7 @@
 \begin{lilypond}
 
     \book{
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Bach_Sinfonia/Bach_Sinfonia_Partitur_Sinfonia.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Bach_Weihnachtsoratorium/Bach_Weihnachtsoratorium_Partitur_Coro.lytex"
 
     }
 

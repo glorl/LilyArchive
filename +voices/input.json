@@ -1,8 +1,8 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins","Zwei",["Eins","Drei","Bass"]],
-        "folders": ["Bach_Sinfonia"]
+        "voices": [["Eins","Zwei"]],
+        "folders": ["Bach_Weihnachtsoratorium"]
     },
     "Abreu_TicoTico":
     {
@@ -202,34 +202,6 @@
             "instrumentname":"Partitur"
         }
     },
-    "Bach_Weihnachtsoratorium":
-    {
-        "base":{
-            "title": "Weihnachtsoratorium",
-            "title_long": "Weihnachts-Oratorium", 
-            "subtitle": "1. Teil / Am 1. Weihnachtstag / Jauchzet, frohlocket, auf, preiset die Tage", 
-            "subpieces": ["Coro"], 
-            "subpieces_long": ["1. Coro"], 
-            "composer": "Bach",
-            "composer_long": "Johann Sebastian Bach"
-        },
-        "Eins":{
-            "padding": "3.2",
-            "basicdistance": "2",
-            "instrumentname":"Klarinette 1"
-        },
-        "Zwei":{
-            "padding": "3.2",
-            "basicdistance": "2",
-            "instrumentname":"Klarinette 2"
-        },
-        "Partitur":{
-            "padding": "5",
-            "basicdistance": "0.1",
-            "partvoices":["Eins","Zwei"],
-            "instrumentname":"Partitur"
-        }
-    },    
     "Beethoven_EhreGottes":
     {
         "base":{

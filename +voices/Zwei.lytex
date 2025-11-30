@@ -13,7 +13,7 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt} % no line in header area
 \rhead{\large\textbf{\thepage}}
-\chead{ \textsf{ Klarinette 1 } }
+\chead{ \textsf{ Oboe 1/2 in Bb } }
 
 \usepackage{titling}
 
@@ -31,7 +31,7 @@
 \begin{lilypond}
 
     \book{
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Bach_Sinfonia/Bach_Sinfonia_Zwei_Sinfonia.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Bach_Weihnachtsoratorium/Bach_Weihnachtsoratorium_Zwei_Coro.lytex"
 
     }
 
