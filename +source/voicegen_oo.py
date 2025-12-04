@@ -158,7 +158,10 @@ for voice in voicelist_full:
         my_piece_list_filtered1 = filter_pieces(my_piece_list, filter_criteria)
 
         # generate parts list 
-        partlist = list({piece.part for piece in my_piece_list_filtered1})
+        df = pd.read_sql_query("SELECT * FROM pieces WHERE foldername = ?",conn,params=(folder,))
+        partlist = df['parts'].apply(lambda x:json.loads(x) if pd.notna(x) else [])[0]
+
+        # partlist = list({piece.part for piece in my_piece_list_filtered1})
         for ipart in partlist: 
             if length_voice>1:
                 instrumentname_adapted = 'Partitur'
