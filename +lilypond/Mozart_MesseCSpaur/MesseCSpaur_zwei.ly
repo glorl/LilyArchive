@@ -118,7 +118,7 @@ c4 r4 r2 | % 49
 c,4 g'2 d'8 [ b8 ] |
 c2. b4 | % 51
 b4 s2. | % 52
-c4^! b4^! c4 r4 \bar "|."
+c4-! b4-! c4 r4 \bar "|."
 \break | % 53
 }}
 
@@ -134,10 +134,10 @@ d'4 f8 [ e8 d8 c8] | % 58
 b2. | % 59
 c4 d4 c4 \break | 
 a8 f e4 d | % 61
-g8 ( [ c8 ) ] b4 ^! g8 _! g_! | % 62
+g8 ( [ c8 ) ] b4 -! g8 -! g-! | % 62
 e'4 ( f4 e4 ) | % 63
 d4 c4 b4 | % 64
-c4 b4 g8 _! [ g8 _! ] | % 65
+c4 b4 g8 -! [ g8 -! ] | % 65
 d'2 c4~ | % 66
 c4 e4 d4 \break | % 67
 c4 a2 ~ | % 68
@@ -154,13 +154,13 @@ a4 a'4 g4 | % 78
 g4 ^\trill fis4 r4 | % 79
 fis,2 a4 |
 g2 b4 | % 81
-b4 (d4) b4_! | % 82
-a4 ( fis'4 ) a,4_! \break | % 83
+b4 (d4) b4-! | % 82
+a4 ( fis'4 ) a,4-! \break | % 83
 g2. ~ | % 84
 g4 d'4 e4 | % 85
 d8 d4 gis,8 a4 | % 86
 g2 fis4 | % 87
-g4 _! g4 ( b4 ) | % 88
+g4 -! g4 ( b4 ) | % 88
 r4 g4 ( d'4 ) | % 89
 c2. ~ \break | 
 c2. ~ | % 91
@@ -188,10 +188,10 @@ c4 r4 r4 ^\fermata \bar "||" \break
 R1*3^\markup{\bold{\small{Adagio}}} | % 111
 <<{b'1\rest} 
 \new CueVoice{g,16^\markup{Vl. I}\f c\p (b c) b (a) f' (d) c4. \grace e16  (d8)}>>
-r4 e,4 ~ \p e8. ( c16 ) e8_! r | % 113
+r4 e,4 ~ \p e8. ( c16 ) e8-! r | % 113
 r4 g4 ~ g8. ( [ e16 ) ] g8 _. r8 | % 114
-r4 fis4 ( f8. ) ( [ d16 ) ] f8_! r8 \break | % 115
-r4 a4 ~ a8. (fis16 ) a8_! r  | % 116
+r4 fis4 ( f8. ) ( [ d16 ) ] f8-! r8 \break | % 115
+r4 a4 ~ a8. (fis16 ) a8-! r  | % 116
 r4 cis4 (d4 es4 ) | % 117
 bes4 ( a4 ) g4 _. r4 ^\fermata \bar"||"
 \time 3/4 c4 ^\markup{ \bold\small {Allegro} } d4 e4 | % 119
@@ -205,7 +205,7 @@ f'2. ~ | % 126
 f2. | % 127
 e4 d4 c4 | % 128
 a8 [ f8 ] e4 d4 \break | % 129
-g8 ( [ c8 ) ] b4 ^! g8 _! [
+g8 ( [ c8 ) ] b4 -! g8 -! [
 g8 _. ] | 
 e'4 f4 e4 | % 131
 d4 c4 b4 | % 132
@@ -227,13 +227,13 @@ a4 cis2 \fp | % 147
 d8 [ f8 ] b,2 | % 148
 c!4 cis2 \fp | % 149
 d8 [ f8 ] b,2 \break | 
-a4 c!4^! bes4^! | % 151
-a4_! r4 r4 | % 152
+a4 c!4-! bes4-! | % 151
+a4-! r4 r4 | % 152
 R2. | % 153
 r4 f4 ( \p g4 ) | % 154
 a4 c2 ~ | % 155
 c4 r4 r4 | % 156
-R2. \pageBreak | % 157
+R2. \break| % 157
 r4 g4 ( b!4 ) | % 158
 c2 ( d4 ) | % 159
 e4 r4 r4 | 
@@ -255,7 +255,7 @@ d4 f2 ~ | % 175
 f2. | % 176
 e4 d4 c4 | % 177
 a4 f4 e4 | % 178
-g8( c8) b4 g8 _! [ g8 _! ] | % 179
+g8( c8) b4 g8 -! [ g8 -! ] | % 179
 f'2 e4 \break | 
 d4 c4 b4 | % 181
 c4 e,4 g4 | % 182
@@ -264,8 +264,8 @@ g2 g,4 | % 184
 g4 ^\trill f4 r4 | % 185
 R2. *3 | % 186
 r4 b4 ( d4 ) \break | % 187
-c4 ^! b4 ^. r4 | % 188
-c4^! b4^! r4 | % 189
+c4 -! b4 ^. r4 | % 188
+c4-! b4-! r4 | % 189
 c4 d4 c4 |
 c4 ^\trill b4 c8 ( [ d8 ) ]
 | % 191
@@ -274,7 +274,7 @@ f2. | % 193
 e2 c4 \break | % 194
 f2. | % 195
 e8 [ c8 ] c4 ( b4 ) | % 196
-c4^! r4 r4 | % 197
+c4-! r4 r4 | % 197
 c2 ( b4 ) | % 198
 c4 r4 r4 \bar"|."
 }}
@@ -327,67 +327,78 @@ d2 ( \p c2 ) | % 236
 a2. c4
 c2\trill b4 r 
 R1 \break | % 239
-R1 s1 | % 241
-R1 s1 | % 243
+d,1 | % 241
+R1 | % 243
+b'1 |
+R1 |
 r4 fis2 ( \fp g4 ) | % 244
 a4 fis2 ( \fp g4 ) \break | % 245
 a4 fis2 ( \fp g4 ) | % 246
 a4 r4 r2 | % 247
-R1 | % 248
+R1*3 | % 248
 r2 r4 g4 | % 249
-g2 e'2 | \barNumberCheck #250
+g2 e'2 | 
 g2 ( fis2 ) | % 251
-g2 r4 a4 \f \break | % 252
-e'2 r4 fis4 _! | % 253
-g4 ( b4 ) r4 b4 | % 254
+g2 r4 a,4 \f \break | % 252
+e'2 r4 fis,4 -! | % 253
+g4 ( b4 ) r4 b4-! | % 254
 g2 fis2 | % 255
 g2 r2 | % 256
-R1 | % 257
-r4 d2 ( \p c4 ) | % 258
-c2 b4 r4 \break | % 259
-R1 s1*3 | % 263
+R1*3 | % 257
+r4 d'2 ( \p c4 ) | % 258
+c2\trill b4 r4 \break | % 259
+R1 |
+g1~ | 
+g1~ | 
+g1~ | 
 g4 d'2 ( c4 ) | % 264
 c2 ^\trill b4 r4 | % 265
 R1 \break | % 266
-R1 s1 | % 268
-R1 s1 | \barNumberCheck #270
+g1 | % 268
+R1 | 
+e1 | 
+R1 |
+c'1|
 r4 d2 ( \fp c4 ) | % 271
 b4 d2 ( \fp c4 ) \break | % 272
 b4 d2 ( \fp c4 ) | % 273
 b4 r4 r2 | % 274
-R1 | % 275
+R1*3 | % 275
 r4 c2 g4 | % 276
 a2 ( d2 ) | % 277
 c2 ( b2 ) | % 278
 c2. ( \f e4 ) \break | % 279
-\clef "None" f4 r4 r2 s1*2 | % 282
-a4 _! d2 ~ s4 | % 283
+f4 r4 r2 | % 282
+c,1 \p ~
+c1 ~
+c4 a'4 -! d2 ~ | % 283
 d8 ( [ cis8 d8 e8 ) ]
 f8 ( [ d8 ) f8 ( d8 ) ]
+c!2 b
 \break | % 284
-\clef "treble" c4 g4 \f d2. | % 285
-r4 g4 c4 | % 286
-r4 f4 a4 d4 | % 287
-r4 g4 b4 e4 ~ | % 288
+c4 g4 \f c,4 r | % 285
+r4 e4 g c | % 286
+r4 f,4 a4 d4 | % 287
+r4 g,4 b4 e4 ~ | % 288
 e4 c2 d8 ( [ e8 ) ] \break | % 289
-f4 f4 ( e4 ) d8 ( [
-c8 ) b8 ( a8 ) ] | \barNumberCheck
-#290
-<g c>4 ( s4 b4 ) | % 291
+f4 f8 ( e ) d8 ( [c8 ) b8 ( a8 ) ] | 
+g4 c2 ( b4 ) | % 291
 c2 d2 | % 292
 c2 b2 | % 293
 c2 d2 | % 294
 c2 b2 | % 295
 c2 r2 \bar "|."
-\pageBreak | % 296
-\time 4/4 e,2 \f ^\markup{ \bold\tiny {Adagio} } g8
-( [ e8 ) ] r4 | % 297
-r4 r8 e,8 _! f4 ( e8 ) r8
-| % 298
-r4 r8 c8 ^! b4 ( c8 ) [
-g8 ] | % 299
-a2 f8 _! [ e8 ] g8 [ g8 ] |
-\barNumberCheck #300
+}}
+
+
+MesseCSpaurZweiAgnusDei = {\new Voice \relative c' {
+\compressEmptyMeasures 
+\time 4/4 
+\key c \major
+e2 \f ^\markup{ \bold\small {Adagio} } g8( [ e8 ) ] r4 | % 297
+r4 r8 e8 -! f4 ( e8 ) r8 | % 298
+r4 r8 c'8 -! b4 ( c8 ) [g8-! ] | % 299
+a2 f8 -! [ e8-! ] g8 [ g8 ] |
 g8 r8 r4 r2 | % 301
 R1 \break | % 302
 g4. ( d8 ) e4. ( c'8 ) | % 303
@@ -395,33 +406,34 @@ b4 ( fis4 ) g2 ~ | % 304
 g8 r8 r4 r2 | % 305
 r2 r8 b4 b8 | % 306
 b2 g8 ( [ d8 ) ] r4 | % 307
-r4 r8 e,8 _! fis4 ( g8 ) r8 \break | % 308
-r4 r8 g8 _! fis4 ( g8 ) [
-bes8 _! ] | % 309
-a4. ( cis8 ) cis8 ^! [ b8 ^! ]
-gis8 _! [ gis8 _! ] | \barNumberCheck #310
+r4 r8 e8 -! fis4 ( g8 ) r8 \break | % 308
+r4 r8 g8 -! fis4 ( g8 ) [bes8 -! ] | % 309
+a4. ( c!8 ) c -! [ b!8 -! ] gis8 -! [ gis8 -! ] |
 gis4 r4 r2 | % 311
-b2. \p f4 | % 312
-e2 \f g8 ( [ e8 ) ] r4 | % 313
-r4 r8 e,8 f4 ( e8 ) r8
+b2. \p (f4) | % 312
+e2 \f g!8 ( [ e8 ) ] r4 | % 313
+r4 r8 e8-! f4 ( e8 ) r8
 \break | % 314
-r4 r8 g8 _! d'4 ( c4 ) | % 315
+r4 r8 g8 -! d'4 ( c4 ) | % 315
 c2 g'4 e,4 ( | % 316
 f8 ) r8 r4 r2 | % 317
 R1 | % 318
-c2 ~ c16 ( [ b16 a16 g16 ]
+c'2 ~ c16 ( [ b!16 a16 g16 ]
 f16 [ e16 d16 f16 ) ] \break | % 319
-e4 ( d8 ) [ b'8 _! ] c2 ~ |
-\barNumberCheck #320
+e4 ( d8 ) [ b'8 -! ] c2 ~ | 
 c8 r8 r4 r2 | % 321
 r2 r8 g4 g8 | % 322
 g4 r4 r2 | % 323
 r8 c8 ( [ \p bes8 ) ] r8 r8
 a8 ( [ e8 ) ] r8 | % 324
 r8 a8 ( [ bes8 ) ] r8 r8 a8 ( [ e'8 ) ] r8 \break | % 325
-c,4 c8 [ \f c8 ] c'16 ( [
-b16 c16 d16 ) ] c16 ( [
+c,1~|
+c4 c8-! [ \f c8-! ] c'16 ( [ b!16 c16 d16 ) ] c16 ( [
 bes16 a16 ) g16 ] | % 326
 a16 ( [ g16 a16 bes16 ) ] a16
 ( [ g16 f16 e16 ) ] f8 [ c8
-] c'16 ( [ e16 f16 g16 ) ]}}
+] c'16 ( [ e16 f16 g16 ) ]
+f1 
+e1
+\bar"|."
+}}
