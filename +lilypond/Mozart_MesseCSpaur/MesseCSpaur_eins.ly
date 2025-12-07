@@ -1,658 +1,436 @@
-MesseCEinsKyrie = \new Voice \transpose bes c' \relative c'' {
-\time 3/4
+MesseCSpaurEinsKyrie = {\relative c''{
+\compressEmptyMeasures
 \key c \major
-e2. \f^\markup{\large {Andante maestoso}}
-~e2.
-a2.\fermata
-R2.
-c2.\p
-~c2.
-~c4 a,\f a8 b
-c4 c d
-c4 b fis'
-g2.\fermata \bar"||" \time 4/4
-c,4.^\markup{\large Allegro } e8 d4 c
-b8 d4 d8 e f e d
-c4. e8 d4 c
-b8 d4 f8 e f e d
-c8 (e) g\p g g2~
-g1
-~g4 r8 cis,\f d8 (cis d cis)
-d8 a'4 g8 f e d c!
-c8\trill b r4 r2
-R1
-r2 d\p
-e2 f8 e f g
-f4 (e8) e\f d4 c
-b8 d4 f8 e f e d
-c8 (e) g\p g g2
-~g1
-~g4 r8 cis,\f d (cis d cis)
-d8 a'4 g8 f e d c
-c8\trill b r4 r2
-R1
-r2 d\p
-e2 f8 e f g
-f4 (e8) e\f d4 c
-b8 d4 f8 e f e d
-c4 g'2 f4
-e4 d8 \tuplet 3/2{e16 [d c]} b8 c4 b8
-c4 d e f
-g4\tuplet 3/2{a16 [g f]} \tuplet 3/2{e16 [d c]} b8 c4 b8
-c8 e d4 e8 c'4 b8
-c4 r r2\fermata\bar"|."
-}
+\time 3/4 | % 1
+c2. ^\markup{ \small {Allegro} } | % 2
+d2. | % 3
+e4 ( d4 c4 ) | % 4
+R2.*5 | % 5
+e4 ( f2 ) | % 6
+e4 ( \p d4 c4 ) | % 7
+d4 ( \f es2 ) \break | % 8
+d4 ( \p c4 b4 ) | % 9
+bes'2. ~ \f | bes2. ~ | % 11
+bes2. | % 12
+a4 r4 r4 | % 13
+R2.*4 | % 14
+d,4. b8 [ e8 d8 ] \break | % 15
+cis8 ( [ d16 e16 ) ]
+a,4. b8 | % 16
+c!4. a8 [ d8 c8 ] | % 17
+b8 ( [ c16 d16 ) ] g,4.
+a16 [ b16 ] | % 18
+c4 e2 | % 19
+fis2 g4 | 
+a4 g4 fis4 \break | 
+g4 r4 r4 | % 21
+d4 ( g2 ) | % 22
+bes4 ( a4 ) r4 | % 23
+e4 ( a2 ) | % 24
+c4 ( b!4 ) r4 | % 25
+R2. | % 26
+e,4. gis8 ( [ a8 b8 ) ]
+\break | % 27
+c4 r4 r4 | % 28
+b2 ( a4 ) | % 29
+f4 ( e4 gis4 ) | 
+a4 r4 r4 | % 31
+R2.*4 
+es2.~ | % 32
+es2. ~\break | % 33
+es2.  | % 34
+d4 r4 r4 | % 35
+R2.*4 | % 36
+f2. | % 37
+b2 (c4) | % 38
+f4 e d | % 39
+c4 r4 r4 \break | 
+R2.*2
+g2 ( \p f4 ) | % 41
+f4 ( e4 )\trill d4 | % 42
+r4 r4 c4 ~ \f | % 43
+c8 [ a8 d8 c8 ] b8
+( [ c16 d16 ) ] | % 44
+g,4. ( a8 ) bes4 ~ \break | % 45
+bes8 [ g8 c8 bes8 ] a8 ( [
+bes16 c16 ) ] | % 46
+f,4 f'2 | % 47
+b!2 ( c4 ) | % 48
+f,4 e4 d4 | % 49
+c4 d2 | e4 d2 | % 51
+c4 r4 r4 \bar "|."
+}}
 
-
-MesseCEinsGloria = \new Voice \transpose bes c' \relative c'{
-\time 4/4
-\key c \major
-e1 \f^\markup{\large {Allegro assai}}
-~e2 f
-~f1
-~f2 g
-~g1
-~g2 a
-f'2. e4
-d2 c4 r
-g'1\p^\markup{1}
-~g1^\markup{2}
-~g1^\markup{3}
-~g1^\markup{4}
-R1*3
-r2 g,8\f a16 b c d e fis
-g4 d2 d4
-c1
-~c1
-b2 r
-d2. dis4
-dis4. (e8) e4 \grace d!16 (c4)
-\grace b16 (a4) a'2 g4
-fis4 d,2 d4
-fis'1
-g4 d,2 d4
-fis'1
-cis1
-d4. g8 a4. fis8
-b4. g8 a4. fis8
-g1
-~g2. fis4
-g4 r r2
-R1*4
-r2 c \p
-b2 a
-g2 fis
-g4 r r2
-R1*4
-g1
-gis2 a4 b
-a2 gis
-a4 r r2
-R1*5
-c2\p bes
-a2 g
-f4 r f2\f
-g2 g4 a
-bes1
-a4 r r2
+MesseCSpaurEinsGloria = {\relative c'' {
+\compressEmptyMeasures
+\time 4/4 
+g2 \f ^\markup{ \bold\small {Allegro} }b4 c4 | % 53
+e4. c8 b4 c4 | % 54
+a2 g4 c4 | % 55
+d8 [ e8  ] f4 e4 d16 [ e16 f8 ~ ] | % 56
+f8 e d4 \trill c8 e g e | % 57
+c4 r4 r2 \break | % 58
+R1*3 | % 59
+r8 d4 d8 d4 fis4 |
+g4 d4 fis,4 g4 | % 61
+d'2 fis4 g4 | % 62
+d2 e2 ~ | % 63
+e2 d2 ~ \break | % 64
+d4 g8 b8 c8 [ b8 ] a4 \trill  % 65
+g4 r8 d8 c2 | % 66
+b4 r4 r2 | % 67
+R1*3 | % 68
+c4 ( \p b4 a4 b4 ) | % 69
+c4 ( b4 ) fis'4 ( g4 )\break | 
+d4 ( c4 b4 c4 ) | % 71
+R1*3 | % 72
+r2 r8 e4 \f e8 ~ | % 73
+e8 a4 a8 d,8 ( [
+f8 ) b,8 ( e8 ) ] | % 74
+a,2 c2 | % 75
+e2 a 
+gis4 r4 r2 \break | % 76
+R1 | % 77
+r8 e4 e8 a,8 a'4
+a8 | % 78
+c,8 a4 d8 g,2 | % 79
+bes2 d2 | 
+g2 fis4 r4 | % 82
 R1*2
-r4 c, f c'
-c2 ~c4 r
-es,2\p d
-d2\f g
-a2 a4 b!
-c1
-bes4 r r2
-R1*2
-r4 f!2 gis8 a
-f2 (e4) r
-f2\p e
-e4\f c'2 d,4
-~d4 bes'2 c,4
-c1
-f1
-as2\p g
-as2 g
-g2\f e,
-~e2 f2
-~f1
-~f2 g2
-~g1
-~g2 a
-f'2. e4
-d2 c4 r
-c'2\p b
-c2 b
-g4\f r r2
-d1
-g2 f
-~f2 e
-e2 d4 f
-e2 f4 fis
-g4 gis a f!
-e2 d
-c4 r r2
-g'1\p
-~g1
-~g1
-~g4 r c8\f (g) e(c)
-e1
-f2. d4
-e2 d
-c4 g'2 f4
-e4 g2 d4
-c4 r r2
-c'1
-~c4 r r2^\fermata \bar"|."
-}
+r8 d4 d8 g,8 g'4 g8 | % 83
+bes,8 g4 c8 s1. | % 85
+as2 c2 | % 86
+f2 e4 r4 | % 87
+R1 | % 88
+r2 r8 d4 d8 | % 89
+d4 r4 r8 c'4 c8 |
+c,4 r8 b4 b8 s4 \break | % 91
+b4 ( d4 ) r8 b'4
+b8 | % 92
+b4 ( d,4 ) r8 e4 e8 | % 93
+g4 ( c4 ) f,2 | % 94
+e4 r4 r2 | % 95
+R1*5 | % 96
+g,2 b4 ( c4 ) | % 97
+g4 g'4 f4 e4 \break | % 98
+d4 c4 f8 e d4\trill | % 99
+c4 g'2 f4 | e4 r4 r2 | % 101
+g,4 g'2 f4 | % 102
+e2 d2 | % 103
+e2 d2 | % 104
+c4 -! d4 -! e4 r4 \bar "|."
+}}
 
-MesseCEinsCredo = \new Voice \transpose bes c' \relative c''{
-\time 3/4
-\key c \major
-g4-! \f^\markup{\large {Molto allegro}} e-! r
-a4-! g4-! r
-b'4\p (c) r
-fis,4 (g) r
-g2.\f
-b2.
-c4 a e
-e4(d) c
-c'2 bes4
-a4 (f) r
-c'2 a4
-g4 (e) r
-c'4 a f
-e2 d4
-c'4 b a
-g4 fis r
-g2.
-~g2.
-f2.
-~f2.
-e2\p (f4)
-e2 f8 (d)
-c2 d8 (b)
-c4 r f
-e2 (f4)
-e2 f8 (d)
-c2 d8 (b)
-c8 c\f c b16 c \grace d16 (c8) b16 a
-g4-! e-! r
-a4-! g-! r
-fis'4\p (g) r
-cis,4 (d) d8-!\f d-!
-d2. ^\markup{1}
-~d2. ^\markup{2}
-~d2. ^\markup{3}
-~d2. ^\markup{4}
-~d2. ^\markup{5}
-~d2 r4
-fis2.
-g2.
-~g2.
-~g2.
-e2 fis8 g
-a4 d,4. c8
-b2 c4
-b4 a8 d d d
-d2. ^\markup{1}
-~d2. ^\markup{2}
-~d2. ^\markup{3}
-~d2. ^\markup{4}
-~d4 d (g)
-r4 g (b)
-r4 c, (e)
-r4 fis (a)
-g4 fis g
-e2 d4
-c4 b a
-g4 b' c
-b4 (g) r
-g2 c4
-b4 (g) r
-e4 g (f!)
-e2.
-~e4 d c
-c4 b r
-R2.*4
-g'2.\p
-~g2.
-~g2 c4
-b2 c8 (a)
-g8 g\f g fis16 g \grace a16 (g8) fis16 e
-d4-! b-! r
-e4-! d-! r
-gis!4 \p (a) r
-dis,4 (e) r
-r2.\bar"||" \time 6/8
-e2.\p^\markup{\large Andante}
-~e4. f
-e8 r r r4 r8
-c4. f4.
-a,4. (b)
-a4 r8 r4 r8
-r4 r8 g4.
-g'4. f4 (e8)
-e8. (f16) g8-! b,4 r8
-R2.*2
-r4 r8 r4 d8
-e4 f16 (d) c4 r8
-r4 g'8 [(f]) r r
-r4 f8 [(e]) r r
-r4 bes'8 (a g f)
-e4 f16 (d) c8 r4
-R2.
-r8 d4\f e8\p fis4 \f
-g2.\p
-f!8 \f (g a ) d,4.\trill
-c4 r8 r4 r8
-R2.*1
-r4 g'8 \p c4 (e,8)
-d8. (e16) f8-! e8. (f16) d8-!
-c'2.\fp
-b4.\fp (bes)
-a4.\fp (as)
-g8 r r r4 r8
-R2.
-r4 r8 r8 g8\f g
-c2.\fp
-b4.\fp (bes)
-a4.\fp (as)
-g8 r r r4 r8
-r4 r8 r4 g,8\p
-g'4 (f16 es) d8 r g,8\f
-g'4. f
-es4. e
-f4 (es8) des4 (c8)
-c4 (a!8) a4 a8
-bes4 (d8) d4 b8
-c4 es8 f4 d8
-es4. g4.
-c2.
-R2.*3
-c4.\p (bes)
-a4. (as) \bar"||" \time 3/4
-g8^\markup{\large{Molto allegro}} c,\f c b16 c \grace d (c8) b16 a
-g4-! e-! r
-a4-! g-! r
-b'4\p (c) r
-fis,4 (g) r
-g2.\f
-b2.
-c4 a e
-e4 (d) c
-c'2 bes4
-a4 (f) r
-c'2 a4
-g4 (e) r
-c'4 a f
-e2 d4
-c'4 b a
-g4 fis r
-g2.
-~g2.
-f2.
-~f2.
-e2\p (f4)
-e2 f8 (d)
-c2 d8 (b)
-c4 r f
-e2 (f4)
-e2 f8 (d)
-c2 d8 (b)
-c8 c\f c b16 c\grace d (c8) b16 a
-g4-! e-! r
-a4-! g-! r
-g'4\p (a) r
-b4 (c) c,8-!\f c-!
-c'2.^\markup{1}
-~c2.^\markup{2}
-~c2.^\markup{3}
-~c2.^\markup{4}
-e,4 f g
-a2 r4
-e2.
-f2.
-~f2.
-~f2 r4
-R2.*2
-r4 c' c
-c2.^\markup{1}
-~c2.^\markup{2}
-~c2.^\markup{3}
-~c2.^\markup{4}
-~c4 c, (f)
-r f (a)
-r bes, (d)
-r e (g)
-f4 e f
-d2 (c4)
-bes4 a g
-f8 f' f e16 d c8 bes
-a4 d r
-gis4 a r
-dis,!4\p (e) r
-ais4 (b) r
-R2.*8
-b,2. \p
-e2.
-~e2 dis4
-e4 r r
-R2.*4
-cis4\f (d) r
-d4 (cis) r
-R2.*9
-a2.\p
-d2.
-~d2 cis4
-d4 r r
-R2.*4
-b!4 \f (c) r
-c4 (b) r
-e!2. \f
-g2.
-bes4. (a8) a4
-f2.
-c4. c'8 b! a
-a4. (g8) g4
-e2 f4
-e4 r r
-e2 d4
-c4 r r
-a'4 c bes
-a2.
-g2.
-fis2.
-~fis2.
-g4 g,8-! a-! b-! c-!
-b8 (a) b-! c-! d-! e-!
-f!2.
-e2\p (f4)
-e2 f8 (d)
-c2 d8 (b)
-c4 r r
-e2 (a4)
-g2 a8 (f)
-e2 f8 (d)
-c8 c\f (b c d e)
-f4 f f
-e4 f8 e d c
-b8. c16 d4 f
-e4 f8 e d c
-g'2.
-~g4 fis2
-g4 g, g
-g'2.^\markup{1}
-~g2.^\markup{2}
-~g2.^\markup{3}
-~g2.^\markup{4}
-~g4 g (c)
-r4 e, (g)
-r4 d (a')
-r4 d, (b')
-c8 e, d2
-c8 c c b16 c \grace d (c8) b16 a
-g4-! e-! r
-a4-! g-! r
-b'4\p (c) r
-fis,4 (g) r
-g2\f b,4
-c4 r r
-g'2 b,4
-c4 r r
-g'2 b,4
-c4 r d
-e r r\fermata \bar"|."
-}
+MesseCSpaurEinsCredo = {\relative c'' {
+\compressEmptyMeasures
+\time 3/4 
+\key c\major 
+e2. ~ \f ^\markup{ \bold\tiny {Allegro} } | % 106
+e2. ~ | % 107
+e2. | % 108
+a,2. | % 109
+f'2. ~ | f4 d4 g8 [ f8 ] | % 111
+e4 f4 e4 \break | % 112
+d4 c4 b4 | % 113
+c8 (e) d4-! g8-! g-! | % 114
+g2. | % 115
+f4 e4 d4 | % 116
+c8 (e) d4 -! g,8 -! g-!| % 117
+f'2 e4 | % 118
+a4 g4 b,4 \break | % 119
+c4 e2 | 
+fis2. |
+g2. | % 121
+a2. | % 122
+d,4. g8 fis8 e | % 123
+d4 a4 fis'4 | % 124
+g4 ( a4 ) c,4 | % 125
+c4\trill b4 r4 \break | % 126
+g'2 a4 | % 127
+g4 e4 d4 | % 128
+fis4 c' b
+b4\trill a4 r4 | % 129
+a,2 c4 | 
+b2 d4 | % 131
+g4 ( b4 ) d,4 -! | % 132
+c4 ( a'4 ) c,4 -! \break | % 133
+b4 d4 e4 | % 134
+d8 ( [ g8 ) ] g2 | % 135
+g4 b4 d,8 [ c8 ] | % 136
+b4 a2 | % 137
+g4 -! b4 ( d4 ) | % 138
+r4 d4 ( f4 ) | % 139
+e2. ~ \break | e2. ~ | % 141
+e2 f8 [ g8 ] | % 142
+a8 [ a,8 f'8 e8 d8
+c8 ] | % 143
+b4 r4 r4 | % 144
+b4 ( d4 f4 ) | % 145
+e4 f4 e4 | % 146
+d4 c4 b4 \break | % 147
+c4 e4 g4 | % 148
+bes2. ~ | % 149
+bes4 g4 bes,4 | 
+a4 c4 f4 | % 151
+a2. ~| % 152
+a4 d,4 c4 | % 153
+b4 d4 b'4 \break | % 154
+c8 [ c,8 e8 d8 c8
+b8 ] | % 155
+a4 c8 [ b8 a8 g8 ] | % 156
+f4 a8 [ g8 f8 e8 ] | % 157
+d4 f'4 e4 | % 158
+d2. | % 159
+c4 r4 r4 \fermata \bar "||"\break | 
+\time 4/4 
+R1*3 ^\markup{ \bold\tiny {Adagio} } | % 161
+<<{b'1\rest} 
+\new CueVoice{g,16^\markup{Vl. I}\f c\p (b c) b (a) f' (d) c4. \grace e16  (d8)}>>
+r4 g,4 ~ \p g8. ( [ e16 ) ] g8-! r8 | % 164
+r4 bes4 ~ bes8. [ g16 ] bes8 r8 | % 165
+r4 a4 a8. ( [ f!16 ) ] d'8 r8 \break | % 166
+r4 c4 ~ c8. ( [ a16 ) ]
+c8 -! r8 | % 167
+r4 g'4. bes8 ( a g ) | % 168
+g4 ( fis4 ) g4 -! r4 -\fermata
+\bar "||"
+\time 3/4 c,4 \f d4 e4 |
+f4 d8 e f g | % 171
+a4 f8 [ g8 a8 b8 ] \break | % 172
+c4 e,4 e4 | % 173
+e2. ~ | % 174
+e2. | % 175
+a4. g8 f e | % 176
+d4 f8 [ e8 d8 c8 ] | % 177
+b4 d4 b'4 | % 178
+c4 f,4 e4 | % 179
+d4 c4 b4 \break | 
+c8 (e) d4 -! g8-! g-! | % 181
+g2. | % 182
+f4 e4 d4 | % 183
+c4 c4 e4 | % 184
+g2. | % 185
+g4 g,4 g4 | % 186
+g2 g'4 \break | % 187
+f4 a,4 a4 | % 188
+a2. | % 189
+d2. | a'2. | % 191
+gis4 b,4 ~ -. b4 -. | % 192
+b4 r4 r4 | % 193
+R2. \break | % 194
+r4 gis'2 \fp | % 195
+a8 ( e8 ) e2 | % 196
+d4 c b | % 197
+a4 a'2 ~ \fp | % 198
+a2 gis4 | % 199
+a4 a2 ~ \fp | a2 gis4 \break | % 201
+a4 c,!4 -! e4 -! | % 202
+f4 -! r4 r4 | % 203
+R2. | % 204
+r4 c4 ( \p e4 ) | % 205
+f2 ( g4 ) | % 206
+a4 r4 r4 | % 207
+R2. \break
+r4 g2 ~ | % 208
+g2. ~ | % 209
+g4 r4 r4 | 
+R2. | % 211
+r4 e4 ( gis4 ) | % 212
+a4 e2 | % 213
+c4 e4 ( fis4 ) | % 214
+g4 d2 ~ \break | % 215
+d4 r4 r4 | % 216
+R2. | % 217
+r4 d4 ( e4 ) | % 218
+f!2 (e4)
+e4\trill d4 r4 | 
+e2. ~ \f | % 221
+e2. ~ | % 222
+e2. \break | % 223
+a4. g8 f e | % 224
+f4. e8 d c | % 225
+b4 d4 b'4 | % 226
+c4 f,4 e4 | % 227
+d4 c4 b4 | % 228
+c8 ( e ) d4  g8-! g-!| % 229
+g2. \break | 
+f4 e4 d4 | % 231
+c4 g4 c4 | % 232
+e2 g4 | % 233
+bes2 bes,4 | % 234
+bes4\trill a4 r4 | % 235
+R2.*3 | % 236
+r4 d4 ( f4 ) \break | % 237
+e4 -! f4 -! r4 | % 238
+e4 f4 -! r4 | % 239
+e4 f4 e4 | 
+e4\trill d4 e8  (f8) | % 241
+g2. ~ | % 242
+g2. ~ | % 243
+g2. ~ \break | % 244
+g2. | % 245
+g8 e d2 | % 246
+c4 -! r4 r4 | % 247
+e4 d2 | % 248
+e4 r4 r4 | % 249
+c'2 (b4) | 
+c4 r4 r4 \bar "|."
+}}
 
-MesseCEinsSanctus = \new Voice \transpose bes c' \relative c''{
-\time 4/4
-\key c \major
-e2\f^\markup{\large Allegretto} d
-f2 e4 r
-e4 \p f8 g gis (a) a4
-d,4. e16 f f8. (e16) e4
-e2\f d
-f2 e4 r
-R1*1
-r2 r8 g d b
-b2 a
-fis'2 g4 r
-r8 d4 d8 d (e) e4
-r8 e4 e8 e (f) f4
-g,4 f' e8  g e d
-r e c b r c a g
-b4 f' e d \bar"||"
-c4^\markup{\large{Molto allegro}} r8 e f4 e
-d8 r r e f4 e
-e8 d r4 r2
-R1
-r4 r8 g,8 g' f4\ff (g8)
-f8 e4\ff (f8) e4 d \trill
-c8 g4\ff (b8) c8 g'4\ff (f8)
-e8 r r4 r8 g4 \ff (f8)
-e8 r r4 r8 g4\ff (f8)
-e4 r r8 f4\ff (e8)
-r8 f4\ff (e8) r8 f4\ff (e8)
-r8 f4\ff (e8) f8 e d4\trill
-c4 e d2
-f2 e4 d
-c4 r r2\fermata \bar"|."
-}
+MesseCSpaurEinsSanctus = {\relative c''' {
+\compressEmptyMeasures
+\time 4/4 \key c \major 
+c1 \f ^\markup{\small{\bold{Andante maestoso}}}~| % 253
+c1~ | 
+c4 g2. | % 254
+f4 (e4 ) b'4 ( c4 ) 
+fis,2 g4 r \bar "||"
+\time 2/2 R1^\markup{\small{\bold{Allegro}}} \break | % 256
+g1 ~| % 258
+g1 ~| % 258
+g2 f2 | % 259
+e2 \trill d4 r4 | 
+R1*8 | % 262
+<<{b'1\rest\break b1\rest } 
+\new CueVoice{<c, c,>2^\markup{Clar. I,II} <c c,>4 <c c,>4
+ <d g,>2  <c g>4  g4}>>
+r4 g4 c4 e4 | % 265
+r4 a,4 d4 f4 | % 266
+r4 b,4 e4 g4 | % 267
+c,4 e2 f4 ( \break | % 268
+a4 a8 g ) f (e) d (c)| % 269
+b4 e4 d2 | c4 e4 f2 | % 271
+c4 e4 f2 | % 272
+e2 d | 
+c4 e f2 |
+e2 d |
+c2 r2 \bar "|."
+}}
 
-MesseCEinsBenedictus = \new Voice \transpose bes c' \relative c'''{
-\time 4/4
-\key f \major
-<<
-    { b,,1\rest^\markup{\large Allegro} }
-  \new CueVoice {
-    \stemUp c'4_"Vl. I" c c8 (f4) es8
-  }
->>
-r2 r8 d\p (bes a )
-g4 r c c
-c1
-~c4 c'2\cresc c4
-c4.\f bes16 (d,) f8 (e) r4
-R1
-r2 r8 d\p (bes a )
-g4 r c c
-c1
-~c1
-c'4 e, f4. d8
-a8-! r g-! r f4 r
-a'8 (bes) r4 b8 (c) r4
-R1
-a8 (bes!) r4 b8 (c) r4
-R1
-r2 r4 e,8. e16
-e8 (f) f8. f16 fis8 (g) r4
-r4 e8 (a) g ([f!]) f r
-r8 a (g f) f4 (e8) r
-r8 g (f e) e8.\trill (d32 e ) d8 r
-c'2 b
-c2 b
-c2 b
-c2 g4 r
-f!4 e16 (d c b ) c8 r r4
-R1*1
-g'1
-~g2 f4 e8 (a)
-c,4 (d) c8 r \acciaccatura f16 e8 d16 c
-b16 (d) c (e) d (f) e (g) \acciaccatura g f8 e16 d \acciaccatura f16 e8 d16 c
-b16 (d) c (e) d (f) e (g) \acciaccatura g f8 e16 d \acciaccatura f16 e8 d16 c
-b16 (d) c (e) d (f) e (g) \acciaccatura g f8 e16 d \acciaccatura f16 e8 d16 c
-a'1
-c1
-g4 f!16\cresc (e) d(c) d2\trill
-c4\f r e8 (f) r4
-fis8 (g) r4 r2
-R1
-r2 e8 (f) r4
-fis8 (g) r4 r2
-R1
-r4 e8 \p e e4 (f8) g-!
-gis8. (a16) a8 f f4 (g8 ) a-!
-a8. (bes!16) bes8-! r r2
-R1
-r2 r8 d, (bes a)
-g4 r c c
-c1~
-c1
-c'4 e, f4. (d8)
-a8-! r g-! r f4 r
-a'8 (bes) r4 b8 (c) r4
-r1
-a8 (bes!) r4 b8 (c) r4
-r1
-r2 r4 e,8. e16
-e8 (f) f8. f16 fis8 (g) r4
-r4 e8 (a) g (f!) f r
-r8 a (g f) f (e) f r
-r4 bes8\f(g) f (e) e-! r
-bes'1\p
-~bes1
-~bes1
-b2 c4 r
-bes,4 a16 (g f e) f8 r \acciaccatura bes'16 a8 g16 f
-e16 (g) f(a) g(bes) a(c) \acciaccatura c bes8 a16 g\acciaccatura bes a8 g16 f
-e16 (g) f(a) g(bes) a(c) \acciaccatura c bes8 a16 g\acciaccatura bes a8 g16 f
-e16 (g) f(a) g(bes) a(c) bes4 (a8) g-!
-f4 (g) f8 r r4
-r4 d8 d d (g) r bes-!
-a2 \f g\bar"||"\key c \major
-f8^\markup{\large{Molto allegro}} r r4 a4 g
-f8 d4 b8 g'4 f
-e8 g4 c8 f,4 e
-e8 d r4 r2
-R1
-r4 r8 g,8 g' f4\ff (g8)
-f8 e4 \ff (f8) e4 d\trill
-c8 g4\ff (b8) c g'4\ff (f8)
-e8 r r4 r8 g4\ff (f8)
-e8 r r4 r8 g4\ff (f8)
-e4 r r8 f4\ff (e8)
-r8 f4\ff (e8) r8 f4\ff (e8)
-r8 f4\ff (e8) f8 e d4\trill
-c4 e d2
-f2 e4 d
-c4 r r2\fermata \bar"|."
+MesseCSpaurEinsBenedictus = {\relative c'' {
+\compressEmptyMeasures
+\time 2/2 \key c \major 
+c2 \f ^\markup{ \bold\small {Allegro} } r4 b4 | % 274
+c4 (e4 ) r4 b4 | % 275
+c4 ( e4 ) r4 g4 | % 276
+a2 d,2 | % 277
+c2 r2 | % 278
+R1*4 | % 279
+f2 ( \p e2 ) \break | a4 ( f4 ) e4 ( d4 ) | % 281
+g4 ( e4 ) d4 -! r4 | % 282
+R1 *5 | % 283
+f2 ( \p e2 ) | % 284
+d4 ( f4 a4 ) e4 -! | % 285
+e2\trill d4 r4 | % 286
+R1 \break | % 287
+d1 | % 289
+R1 |
+b'1 | % 291
+R1 |
+g1 |
+r4 a,2 ( \fp b4 ) | % 292
+c4 a2 ( \fp b4 ) \break | % 293
+c4 a2 ( \fp b4 ) | % 294
+c4 r4 r2 | % 295
+R1*3 | % 296
+r2 r4 d4 | % 297
+e2 g4 ( c4 ) | % 298
+b2 ( a2 ) | % 299
+g2 r4 fis4 \f \break | 
+g4 ( b4 ) r4 a,4 -! | % 301
+d2 r4 d4 -! | % 302
+e2 a,2 | % 303
+g2 r2 | % 304
+R1*3 | % 305
+r4 f'!2 ( \p e4 ) | % 306
+e2 \trill d4 r4 \break | % 307
+R1 |
+g1 ~| % 311
+g1 ~| % 311
+g1 ~| % 311
+g4 f2 ( e4 ) | % 312
+e2 \trill d4 r4 | % 313
+R1 \break | % 314
+g1 |
+R1 |
+e1 | % 316
+R1 |
+c'1 | % 318
+r4 f,2 ( \fp e4 ) | % 319
+d4 f2 ( \fp e4 ) \break |
+d4 f2 ( \fp e4 ) | % 321
+d4 r4 r2 | % 322
+R1*3 | % 323
+r4 e4 ( g4 e4 ) | % 324
+d2 ( f2 ) | % 325
+e2 ( d2 ) | % 326
+c4 -! e4 ( \f f4 bes4 )
+\break | % 327
+a4 r4 r2 
+c,1 ~|
+c1 ~| 
+c4 r4 r4 gis'4 | % 331
+a2 ~ a8 ( [ f8 ) a8 (f8 ) ] | % 332
+e2 d2 \break | % 333
+c4 g4 \f c,4 r4 | % 334
+r4 g'4 c4 e4 | % 335
+r4 a,4 d4 f4 | % 336
+r4 b,4 e4 g4 | % 337
+c,4 e2 f8 ( [ g8 ) ] \break
+| % 338
+a4 a8 ( [ g8 ) ] f8 ( [
+e8 ) d8 ( c8 ) ] | % 339
+b4 e4 d2 | c4 e4 f2 | % 341
+e2 d2 | % 342
+c4 e4 f2 | % 343
+e2 d2 | % 344
+c2 r2 \bar "|."
+}}
+MesseCSpaurEinsAgnusDei = {\relative c'' {
+\compressEmptyMeasures
+\time 4/4 c4 \f ^\markup{ \bold\tiny {Adagio} } g4 e'8 ( [ c8 ) ] r4 | % 346
+r4 r8 c8 -! b4 ( c8 ) r8 | % 347
+r4 r8 e8-! f4 ( e8 ) [c8-! ] | % 348
+a16 ( [ b16 c16 cis16 ) ] d16 ( [ e16 ) f16 ( d16 ) ] b8 -! [ c8 -! ] e8 [ e8 ]
+\break | % 349
+e8 r8 r4 r2 | r2 r4 a,16 ( [ b16 c16 cis16 ) ] | % 351
+d16 ( [ fis16 g16 fis16 ) ] e16 ( [ d16 c16 b16 ) ] a16 ( [ c16 e16 d16 ) ] d16 ( [ c16 b16 a16 ) ] | % 352 
+g16 ( [ b16 d16 e16 ) ] d16 [ c16 b16 a16 ] g8 ( [ c8 ) b8 ( e8 ) ] \break | % 353
+d8 r8 r4 r2 | % 354
+r2 r8 g4 g8 | % 355
+g4 d4 b8 ( [ g8 ) ] r4 | % 356
+r4 r8 b8 -! a4 ( g8 ) r8 | % 357
+r4 r8 b8 -! c4 ( b8 ) [ cis8 -! ] \break | % 358
+d16 ( [ cis16 d16 cis16 ) ] d8 (a') a8 -! gis8 -! b,8 -! b-! | % 359
+b4 r4 r2 | 
+gis'4 \p (g) f (b,) 
+c4 \f g4 e'8 ( [ c8 ) ] r4 | % 361
+r4 r8 c8 -! b4 ( c8 ) r8 | % 362
+r4 r8 c8 f4 ( e4 ) \break
+| % 363
+f16 ( [ e16 ) f16 ( e16 ) ]
+f16 ( [ e16 d16 c16 ) ]
+bes'4 bes,4 ( | % 364
+a8 ) r8 r4 r2 | % 365
+r2 r4 d16 ( [ e16 f16
+fis16 ) ] | % 366
+g16 ( [ f16 e16 d16 ) ]
+c16 ( [ bes16 a16 gis16 ) ]
+a16 ( [ b16 c16 cis16 ) ]
+d16 ( [ e16 f16 d16 ) ]
+\break | % 367
+c16 ( [ e16 g16 e16 ) ]
+g16 ( [ f16 d16 b16 ) ]
+c8 ( [ f8 ) ] e8 ( [ a8 ) ]| % 368
+g8 -! r8 r4 r2 | % 369
+r2 r8 e4 e8 | e4 r4 r2 | % 371
+r8 a8 ( [ \p g8 ) ] r8 r8 c,8 ( [ bes8 ) ] r8 \break | % 372
+r8 c8 ( [ e8 ) ] r8 r8 f8 ( [ bes8 ) ] r8  | % 375
+c,1 ~|
+c1~ |
+c4 c8-! [ \f c8 -! ] c16 ( [ b!16 c16 d16 ) ] c16 [
+bes'16 ( a16 g16 ) ] 
+a1| 
+g1\bar"|."
 }
-
-MesseCEinsAgnusdei = \new Voice \transpose bes c' \relative c'{
-\time 3/4
-\key c \major
-c4\f^\markup{\large {Andante maestoso}} e g
-c4\p e g
-g4\f f8 (e d e)
-g8 (f) f-! f16. e32 d16. c!32 b16. a32
-g4 b d
-g,4\p b d
-f4\f e8 (d c d)
-f8 (e) e4 r
-R2.*2
-f2 e4
-e8 f16 (a) e4 b
-c4 r r
-R2.
-r4 e2\p
-~e4 f4. (d8)
-d4 (c8 ) a\f (c e)
-es8 (d) cis (c) b (g')
-b2 a4
-g4 r r
-R2.
-e4\p d8 c b a
-g4 r r
-d'2.
-~d2.
-~d4 r8 d4\f d8
-dis2.
-e4 (a g)
-fis2.\p
-~fis8 (g) g4.\f (gis8)
-a2.
-~a8 bes bes2
-~bes2 \p g4
-a4 r r
-R2.
-r4 c,2
-cis2 ~cis8 (e)
-g4 (a8) d, \f (f a)
-as8 (g) fis (f) e (a)
-c2 b4
-c4 e, g
-g2.\p
-g4\f f8 (e d e)
-g8 (f) f-! f16. e32 d16. c!32 b16. a32
-g4 b d
-f2. \p
-f4\f e8 (d c d)
-f8 (es) es4-! r
-c'2.\p^\markup{1}
-~c2.^\markup{2}
-~c2.^\markup{3}
-~c2.^\markup{4}
-fis,2\f c'8 fis,
-g16 (es g es ) d2
-~d4 \p f!2\bar"||"\time 4/4
-e4^\markup{\large{Allegro vivace}} r r2
-R1
-g1\p
-~g1
-~g4 ~g8 r a8\f (c b a)
-g8 (e ) f (g) a (c b a )
-g8 (e) f (g) f2
-e2 d4 c'
-b4 c b c
-b4 c b c
-b8 r r4 r2
-f16\p (e f e f8) r r2
-f16 (e f e f8) r r2
-f16 (e f e f8) r f2\f
-e2 d4 b
-c8-! g-! e-! c-! r2
-f'16\p (e f e f8) r r2
-f16 (e f e f8) r r2
-f16 (e f e f8) r f2\f
-e2 d4 b
-c4 r r2
-c2\p c'4 a
-~a4 f2 d4
-b8\fp (c d e) g8\fp (f e d)
-e8 r r4 r2
-R1
-g1\p \cresc
-~g1
-e2 \f d2
-c4 r r2
-c2\p c'4 a
-~a4 f2 d4
-b8\fp (c d e) g\fp (f e d)
-e8 r r4 r2
-R1
-g1\p\cresc
-~g1
-e2\f d
-c8 r a' (b c) r a (b
-c8 ) r a(b ) c2
-~c4 b c8 r a (b
-c8) r a (b c) r a (b)
-c2. b4
-c8-! e, ( f g ) a (c b a)
-g8 (e ) f (g) a( c b a)
-g8-! r r4 r2
-f16\p (e f e) f8 r r2
-f16 (e f e) f8 r r2
-f16 (e f e) f8 r f2\f
-e2 d4 b
-c8 e g c f,2
-e2 d4 b
-c4 e d2
-e4 c'2 b4
-c4 r r2
-R1
-g1\p
-~g2. f4
-f2 (e8) r r2\fermata \bar"|."
 }

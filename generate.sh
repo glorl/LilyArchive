@@ -12,7 +12,7 @@ jq -c '.Stuecke.voices[]' input.json | while read -r i; do
     fi
     echo "Verarbeite $Voice"
     lilypond-book --pdf ${Voice}.lytex
-    pdflatex -quiet ${Voice}.tex
+    pdflatex ${Voice}.tex > /dev/null 2>&1
 done
 
 rm -r */
