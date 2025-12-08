@@ -31,7 +31,12 @@
 \begin{lilypond}
 
     \book{
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Bach_Weihnachtsoratorium/Bach_Weihnachtsoratorium_Partitur_Coro.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseCSpaur/Mozart_MesseCSpaur_Partitur_Kyrie.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseCSpaur/Mozart_MesseCSpaur_Partitur_Gloria.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseCSpaur/Mozart_MesseCSpaur_Partitur_Credo.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseCSpaur/Mozart_MesseCSpaur_Partitur_Sanctus.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseCSpaur/Mozart_MesseCSpaur_Partitur_Benedictus.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseCSpaur/Mozart_MesseCSpaur_Partitur_AgnusDei.lytex"
 
     }
 

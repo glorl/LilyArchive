@@ -1,7 +1,7 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins"],
+        "voices": [["Eins","Zwei"]],
         "folders": ["Mozart_MesseCSpaur"]
     },
     "Abreu_TicoTico":
