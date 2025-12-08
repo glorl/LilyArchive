@@ -1,4 +1,5 @@
-MesseCSpaurEinsKyrie = {\relative c''{
+MesseCSpaurEinsKyrie = {\new Voice \transpose bes c'
+\relative c''{
 \compressEmptyMeasures
 \key c \major
 \time 3/4 % 1
@@ -61,8 +62,9 @@ c4 d2 | e4 d2 | % 51
 c4 r4 r4 \bar "|."
 }}
 
-MesseCSpaurEinsGloria = {\relative c'' {
+MesseCSpaurEinsGloria = {\new Voice \transpose bes c' \relative c'' {
 \compressEmptyMeasures
+\key c \major 
 \time 4/4 
 g2 \f ^\markup{ \bold\small {Allegro} }b4 c4 | % 53
 e4. c8 b4 c4 | % 54
@@ -121,7 +123,7 @@ e2 d2 | % 104
 c4 -! d4 -! e4 r4 \bar "|."
 }}
 
-MesseCSpaurEinsCredo = {\relative c'' {
+MesseCSpaurEinsCredo = {\new Voice \transpose bes c' \relative c'' {
 \compressEmptyMeasures
 \time 3/4 
 \key c\major 
@@ -277,7 +279,7 @@ c'2 (b4) |
 c4 r4 r4 \bar "|."
 }}
 
-MesseCSpaurEinsSanctus = {\relative c''' {
+MesseCSpaurEinsSanctus = {\new Voice \transpose bes c' \relative c''' {
 \compressEmptyMeasures
 \time 4/4 \key c \major 
 c1 \f ^\markup{\small{\bold{Andante maestoso}}}~| % 253
@@ -307,7 +309,7 @@ e2 d |
 c2 r2 \bar "|."
 }}
 
-MesseCSpaurEinsBenedictus = {\relative c'' {
+MesseCSpaurEinsBenedictus = {\new Voice \transpose bes c' \relative c'' {
 \compressEmptyMeasures
 \time 2/2 \key c \major 
 c2 \f ^\markup{ \bold\small {Allegro} } r4 b4 | % 274
@@ -386,7 +388,7 @@ c4 e4 f2 | % 343
 e2 d2 | % 344
 c2 r2 \bar "|."
 }}
-MesseCSpaurEinsAgnusDei = {\relative c'' {
+MesseCSpaurEinsAgnusDei = {\new Voice \transpose bes c' \relative c'' {
 \compressEmptyMeasures
 \time 4/4 c4 \f ^\markup{ \bold\tiny {Adagio} } g4 e'8 ( [ c8 ) ] r4 | % 346
 r4 r8 c8 -! b4 ( c8 ) r8 | % 347
@@ -426,7 +428,7 @@ g8 -! r8 r4 r2 | % 369
 r2 r8 e4 e8 | e4 r4 r2 | % 371
 r8 a8 ( [ \p g8 ) ] r8 r8 c,8 ( [ bes8 ) ] r8  | % 372
 r8 c8 ( [ e8 ) ] r8 r8 f8 ( [ bes8 ) ] r8  | % 375
-c,1 ~|
+c,1\p  ~|
 c1~ |
 c4 c8-! [ \f c8 -! ] c16 ( [ b!16 c16 d16 ) ] c16 [
 bes'16 ( a16 g16 ) ] 

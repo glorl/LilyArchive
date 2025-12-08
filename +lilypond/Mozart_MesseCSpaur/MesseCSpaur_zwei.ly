@@ -1,4 +1,4 @@
-MesseCSpaurZweiKyrie = {\new Voice \relative c' {
+MesseCSpaurZweiKyrie = {\new Voice \transpose bes c'\relative c' {
  \compressEmptyMeasures 
 \time 3/4
 \key c \major
@@ -62,7 +62,7 @@ c2 b4 | % 49
 c4 r4 r4 \bar "|."
 }}
 
-MesseCSpaurZweiGloria = {\new Voice \relative c' {
+MesseCSpaurZweiGloria = {\new Voice \transpose bes c'\relative c' {
 \compressEmptyMeasures 
 \time 4/4
 \key c \major
@@ -123,7 +123,7 @@ c4-! b4-! c4 r4 \bar "|."
  | % 53
 }}
 
-MesseCSpaurZweiCredo = {\new Voice \relative c'' {
+MesseCSpaurZweiCredo = {\new Voice \transpose bes c'\relative c'' {
 \compressEmptyMeasures 
 \time 3/4
 \key c \major
@@ -283,7 +283,7 @@ c4 r r \bar"|."
 }}
 
 
-MesseCSpaurZweiSanctus = {\new Voice \relative c'' {
+MesseCSpaurZweiSanctus = {\new Voice \transpose bes c'\relative c'' {
 \compressEmptyMeasures 
 \time 4/4
 \key c \major
@@ -313,7 +313,7 @@ c2 b2 | % 224
 c2 r2 \bar "|." | % 225
 }}
 
-MesseCSpaurZweiBenedictus = {\new Voice \relative c' {
+MesseCSpaurZweiBenedictus = {\new Voice \transpose bes c'\relative c' {
 \compressEmptyMeasures 
 \time 2/2 \key c \major
 e2 \f ^\markup{ \bold\small {Allegro} } r4 d4 | % 226
@@ -395,7 +395,7 @@ c2 r2 \bar "|."
 }}
 
 
-MesseCSpaurZweiAgnusDei = {\new Voice \relative c' {
+MesseCSpaurZweiAgnusDei = {\new Voice \transpose bes c'\relative c' {
 \compressEmptyMeasures 
 \time 4/4 
 \key c \major

@@ -7,7 +7,7 @@ class piece:
     cwd = os.getcwd()
     path_templates  = os.path.join(cwd,'+templates')
 
-    def __init__(self,folder,composer,title,subtitle,voice,part,partnumber,part_long,instrumentname,padding,basicdistance,block):
+    def __init__(self,folder,composer,title,subtitle,voice,part,partnumber,part_long,padding,basicdistance,block):
         self.folder         = folder
         self.composer       = composer
         self.title          = title
@@ -16,7 +16,6 @@ class piece:
         self.part           = part
         self.partnumber     = partnumber
         self.part_long      = part_long
-        self.instrumentname = instrumentname
         self.padding        = padding
         self.basicdistance  = basicdistance
         self.block          = block
@@ -141,7 +140,7 @@ for voice in voicelist:
                     part_long = []
                 if ((part in name) and (voice in name)) :
                     my_piece = []
-                    my_piece = piece(folder,composer,title,subtitle,voice,part,partnumber,part_long,instrumentname,padding,basicdistance,block)
+                    my_piece = piece(folder,composer,title,subtitle,voice,part,partnumber,part_long,padding,basicdistance,block)
                     my_piece_list.append(my_piece)
 
 # write output (bookpart.lytex, book.lytex)
@@ -161,12 +160,13 @@ for voice in voicelist_full:
         df = pd.read_sql_query("SELECT * FROM pieces WHERE foldername = ?",conn,params=(folder,))
         partlist = df['parts'].apply(lambda x:json.loads(x) if pd.notna(x) else [])[0]
 
+        if length_voice>1:
+            instrumentname_adapted = 'Partitur'
+        else:
+            instrumentname_adapted = json.loads(df.at[0,'instrumentname'])[voice] ; 
+
         # partlist = list({piece.part for piece in my_piece_list_filtered1})
         for ipart in partlist: 
-            if length_voice>1:
-                instrumentname_adapted = 'Partitur'
-            else:
-                instrumentname_adapted = my_piece_list_filtered1[0].instrumentname
 
             filter_criteria= {'folder': folder, 'part': ipart}
             my_piece_list_filtered2  = filter_pieces(my_piece_list, filter_criteria)            

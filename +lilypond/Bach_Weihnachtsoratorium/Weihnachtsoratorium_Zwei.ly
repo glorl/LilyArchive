@@ -1,7 +1,8 @@
 WeihnachtsoratoriumZweiCoro = {
-  \set Score.markFormatter = #format-mark-alphabet
+  \time 3/8
   \compressEmptyMeasures
-  \transpose bes c' \relative c {
+  \set Score.markFormatter = #format-mark-alphabet
+  \transpose bes c \relative c' {
   \key d \major
     <<
       { \override MultiMeasureRest.staff-position = #-6 R4.
