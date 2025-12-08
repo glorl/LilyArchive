@@ -104,7 +104,7 @@ c4 b4 c4 r4 | % 35
 R1 | % 36
 r2 r8 b4 b8 | % 37
 b4 r4 r8 a'4 a8 | % 38
-a4 a,4 r8 d,4 d8  | % 39
+a4 (a,4) r8 d,4 d8  | % 39
 d4 (b'4) r8 d4 d8 |
 d4 (b4) r8 c4 c8 | % 41
 c4 ( g4 ) d'2 | % 42
@@ -118,9 +118,8 @@ c4 g2 d'8 ( [ b8 ) ] | % 48
 c4 r4 r2 | % 49
 c,4 g'2 d'8 [ b8 ] |
 c2. b4 | % 51
-b4 s2. | % 52
+c2. b4 | % 52
 c4-! b4-! c4 r4 \bar "|."
- | % 53
 }}
 
 MesseCSpaurZweiCredo = {\new Voice \transpose bes c'\relative c'' {
@@ -187,7 +186,7 @@ c2 b4 | % 109
 c4 r4 r4 ^\fermata \bar "||"  
 \time 4/4 
 R1*3^\markup{\bold{\small{Adagio}}} | % 111
-<<{b'1\rest} 
+<<{g'1\rest} 
 \new CueVoice{g,16^\markup{Vl. I}\f c\p (b c) b (a) f' (d) c4. \grace e16  (d8)}>>
 r4 e,4 ~ \p e8. ( c16 ) e8-! r | % 113
 r4 g4 ~ g8. ( [ e16 ) ] g8 _. r8 | % 114
@@ -298,8 +297,8 @@ g1~|
 g2 d'2 | % 211
 c2 \trill b4 r4 | % 212
 R1*8 |
-<<b'1\rest b1 \rest 
-\new CueVoice{c,4.^"Vl. I"c8 c4 c b8 (c d b) c4 g}>> | % 213
+<<f,1\rest f1 \rest 
+\new CueVoice{c''4.^"Vl. I"c8 c4 c b8 (c d b) c4 g}>> | % 213
 r4 e4 g4 c4 | % 215
 r4 f,4 a4 d4 | % 216
 r4 g,4 b4 e4 ~ | % 217

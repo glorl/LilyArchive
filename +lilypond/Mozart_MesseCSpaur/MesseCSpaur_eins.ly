@@ -106,7 +106,7 @@ f2 e4 r4 | % 87
 R1 | % 88
 r2 r8 d4 d8 | % 89
 d4 r4 r8 c'4 c8 |
-c,4 r8 b4 b8 s4  | % 91
+c4 (c,4) r8 b4 b8 | % 91
 b4 ( d4 ) r8 b'4
 b8 | % 92
 b4 ( d,4 ) r8 e4 e8 | % 93
@@ -127,7 +127,7 @@ MesseCSpaurEinsCredo = {\new Voice \transpose bes c' \relative c'' {
 \compressEmptyMeasures
 \time 3/4 
 \key c\major 
-e2. ~ \f ^\markup{ \bold\tiny {Allegro} } | % 106
+e2. ~ \f ^\markup{ \bold\small {Allegro} } | % 106
 e2. ~ | % 107
 e2. | % 108
 a,2. | % 109
@@ -185,8 +185,8 @@ d4 f'4 e4 | % 158
 d2. | % 159
 c4 r4 r4 \fermata \bar "||" | 
 \time 4/4 
-R1*3 ^\markup{ \bold\tiny {Adagio} } | % 161
-<<{b'1\rest} 
+R1*3 ^\markup{ \bold\small {Adagio} } | % 161
+<<{g'1\rest} 
 \new CueVoice{g,16^\markup{Vl. I}\f c\p (b c) b (a) f' (d) c4. \grace e16  (d8)}>>
 r4 g,4 ~ \p g8. ( [ e16 ) ] g8-! r8 | % 164
 r4 bes4 ~ bes8. [ g16 ] bes8 r8 | % 165
@@ -293,8 +293,8 @@ g1 ~| % 258
 g2 f2 | % 259
 e2 \trill d4 r4 | 
 R1*8 | % 262
-<<{b'1\rest b1\rest } 
-\new CueVoice{<c, c,>2^\markup{Clar. I,II} <c c,>4 <c c,>4
+<<{f,,1\rest f1\rest } 
+\new CueVoice{<c'' c,>2^\markup{Clar. I,II} <c c,>4 <c c,>4
  <d g,>2  <c g>4  g4}>>
 r4 g4 c4 e4 | % 265
 r4 a,4 d4 f4 | % 266
@@ -390,7 +390,7 @@ c2 r2 \bar "|."
 }}
 MesseCSpaurEinsAgnusDei = {\new Voice \transpose bes c' \relative c'' {
 \compressEmptyMeasures
-\time 4/4 c4 \f ^\markup{ \bold\tiny {Adagio} } g4 e'8 ( [ c8 ) ] r4 | % 346
+\time 4/4 c4 \f ^\markup{ \bold\small {Adagio} } g4 e'8 ( [ c8 ) ] r4 | % 346
 r4 r8 c8 -! b4 ( c8 ) r8 | % 347
 r4 r8 e8-! f4 ( e8 ) [c8-! ] | % 348
 a16 ( [ b16 c16 cis16 ) ] d16 ( [ e16 ) f16 ( d16 ) ] b8 -! [ c8 -! ] e8 [ e8 ]

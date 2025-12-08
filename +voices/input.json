@@ -1,8 +1,8 @@
 {
     "Stuecke":
     {
-        "voices": ["Eins","Zwei"],
-        "folders": ["Mozart_MesseCSpaur"]
+        "voices": ["Eins","Zwei",["Eins","Zwei"]],
+        "folders": ["Mozart_MesseCSpaur","Bach_Weihnachtsoratorium"]
     },
     "Abreu_TicoTico":
     {
