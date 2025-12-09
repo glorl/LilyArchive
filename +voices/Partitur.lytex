@@ -37,7 +37,6 @@
         \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseCSpaur/Mozart_MesseCSpaur_Partitur_Sanctus.lytex"
         \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseCSpaur/Mozart_MesseCSpaur_Partitur_Benedictus.lytex"
         \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseCSpaur/Mozart_MesseCSpaur_Partitur_AgnusDei.lytex"
-        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Bach_Weihnachtsoratorium/Bach_Weihnachtsoratorium_Partitur_Coro.lytex"
 
     }
 

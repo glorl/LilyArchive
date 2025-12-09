@@ -44,10 +44,10 @@ d4 r4 r4 | % 35
 R2.*4 | % 36
 f2. | % 37
 b2 (c4) | % 38
-f4 e d | % 39
+f,4 e d | % 39
 c4 r4 r4  | 
 R2.*2
-g2 ( \p f4 ) | % 41
+g'2 ( \p f4 ) | % 41
 f4 ( e4 )\trill d4 | % 42
 r4 r4 c4 ~ \f | % 43
 c8 [ a8 d8 c8 ] b8
@@ -189,10 +189,9 @@ R1*3 ^\markup{ \bold\small {Adagio} } | % 161
 <<{g'1\rest} 
 \new CueVoice{g,16^\markup{Vl. I}\f c\p (b c) b (a) f' (d) c4. \grace e16  (d8)}>>
 r4 g,4 ~ \p g8. ( [ e16 ) ] g8-! r8 | % 164
-r4 bes4 ~ bes8. [ g16 ] bes8 r8 | % 165
-r4 a4 a8. ( [ f!16 ) ] d'8 r8  | % 166
-r4 c4 ~ c8. ( [ a16 ) ]
-c8 -! r8 | % 167
+r4 bes4 ~ bes8. ([ g16 ]) bes8-! r8 | % 165
+r4 a4 ~ a8. ( [ f!16 ) ] d'8-! r8  | % 166
+r4 c4 ~ c8. ( [ a16 ) ] c8 -! r8 | % 167
 r4 g'4. bes8 ( a g ) | % 168
 g4 ( fis4 ) g4 -! r4 -\fermata
 \bar "||"
@@ -369,7 +368,7 @@ e2 ( d2 ) | % 326
 c4 -! e4 ( \f f4 bes4 )
  | % 327
 a4 r4 r2 
-c,1 ~|
+c,1 ~\p |
 c1 ~| 
 c4 r4 r4 gis'4 | % 331
 a2 ~ a8 ( [ f8 ) a8 (f8 ) ] | % 332
@@ -390,13 +389,14 @@ c2 r2 \bar "|."
 }}
 MesseCSpaurEinsAgnusDei = {\new Voice \transpose bes c' \relative c'' {
 \compressEmptyMeasures
+\key c \major
 \time 4/4 c4 \f ^\markup{ \bold\small {Adagio} } g4 e'8 ( [ c8 ) ] r4 | % 346
 r4 r8 c8 -! b4 ( c8 ) r8 | % 347
 r4 r8 e8-! f4 ( e8 ) [c8-! ] | % 348
 a16 ( [ b16 c16 cis16 ) ] d16 ( [ e16 ) f16 ( d16 ) ] b8 -! [ c8 -! ] e8 [ e8 ]
  | % 349
 e8 r8 r4 r2 | r2 r4 a,16 ( [ b16 c16 cis16 ) ] | % 351
-d16 ( [ fis16 g16 fis16 ) ] e16 ( [ d16 c16 b16 ) ] a16 ( [ c16 e16 d16 ) ] d16 ( [ c16 b16 a16 ) ] | % 352 
+d16 ( [ fis16 g16 fis16 ) ] e16 ( [ d16 c!16 b16 ) ] a16 ( [ c16 e16 d16 ) ] d16 ( [ c16 b16 a16 ) ] | % 352
 g16 ( [ b16 d16 e16 ) ] d16 [ c16 b16 a16 ] g8 ( [ c8 ) b8 ( e8 ) ]  | % 353
 d8 r8 r4 r2 | % 354
 r2 r8 g4 g8 | % 355
