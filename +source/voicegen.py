@@ -2,30 +2,28 @@ import os,json, re, sqlite3
 import pandas as pd
 from lilyfunctions import parse_lilypond_assignments, replace_pattern, filter_pieces, voice_count
 from itertools import chain
+from dataclasses import dataclass
 
+@dataclass
 class piece:
-    cwd = os.getcwd()
-    path_templates  = os.path.join(cwd,'+templates')
+    folder: str
+    composer: str
+    title: str
+    subtitle: str
+    voice: str
+    part: str
+    partnumber: int
+    part_long: str
+    padding: str
+    basicdistance: str
+    block: str
 
-    def __init__(self,folder,composer,title,subtitle,voice,part,partnumber,part_long,padding,basicdistance,block):
-        self.folder         = folder
-        self.composer       = composer
-        self.title          = title
-        self.subtitle       = subtitle
-        self.voice          = voice
-        self.part           = part
-        self.partnumber     = partnumber
-        self.part_long      = part_long
-        self.padding        = padding
-        self.basicdistance  = basicdistance
-        self.block          = block
-
+@dataclass
 class bookpart:
-    def __init__(self,piecelist,replacements_dict_lytex,path_lytex,lytex_name_voice):
-        self.piecelist              = piecelist
-        self.replacements_dict_lytex= replacements_dict_lytex
-        self.path_lytex             = path_lytex
-        self.lytex_name_voice       = lytex_name_voice
+    piecelist: list
+    replacements_dict_lytex: dict
+    path_lytex: str
+    lytex_name_voice: str
 
     def generate(self):
         staffblock = ''

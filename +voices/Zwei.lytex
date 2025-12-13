@@ -37,6 +37,7 @@
         \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseCSpaur/Mozart_MesseCSpaur_Zwei_Sanctus.lytex"
         \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseCSpaur/Mozart_MesseCSpaur_Zwei_Benedictus.lytex"
         \include "/home/georg/Dokumente/LilyArchive/+lilypond/Mozart_MesseCSpaur/Mozart_MesseCSpaur_Zwei_AgnusDei.lytex"
+        \include "/home/georg/Dokumente/LilyArchive/+lilypond/Bach_Weihnachtsoratorium/Bach_Weihnachtsoratorium_Zwei_Coro.lytex"
 
     }
 

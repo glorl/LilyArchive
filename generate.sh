@@ -1,5 +1,5 @@
 # generate voice 
-python3 +source/voicegen_oo.py
+python3 +source/voicegen.py
 
 cd +voices/ 
 
@@ -11,7 +11,7 @@ jq -c '.Stuecke.voices[]' input.json | while read -r i; do
         #Voice=$i
     fi
     echo "Verarbeite $Voice"
-    lilypond-book --pdf ${Voice}.lytex
+    lilypond-book --pdf "${Voice}.lytex" >/dev/null 2>&1
     pdflatex ${Voice}.tex > /dev/null 2>&1
 done
 
