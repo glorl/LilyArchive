@@ -1,3 +1,5 @@
+# activate virtual environment
+source venv/bin/activate
 # generate voice 
 python3 +source/voicegen.py
 
