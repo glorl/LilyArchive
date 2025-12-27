@@ -80,24 +80,25 @@ class bookpart:
         fcopy_bookpart.close()
         ftemplate_bookpart.close()
 
-def prepare_piece_list(df_all, voicelist, foldernames, path_lilypond):
+def prepare_piece_list(conn, voicelist, foldernames, path_lilypond):
     my_piece_list = []
     for folder in foldernames:
         # filter dataframe instead of querying again
-        df = df_all[df_all['foldername'] == folder].copy()
+        df = pd.read_sql_query(f"SELECT * FROM pieces WHERE foldername = '{folder}'", conn)
         for voice in voicelist:
             # extract data from sqlite database
-            title       = df.iloc[0]['title']
-            subtitle    = df.iloc[0]['subtitle']
-            composer    = df.iloc[0]['composer']
-            parts       = df['parts'].apply(lambda x: json.loads(x) if pd.notna(x) else []).iloc[0]
-            parts_long  = df['parts_long'].apply(lambda x: json.loads(x) if pd.notna(x) else []).iloc[0]
-
+            title       = df.at[0,'title'] 
+            subtitle    = df.at[0,'subtitle']
+            composer    = df.at[0,'composer']
+            parts       = df['parts'].apply(lambda x: json.loads(x) if pd.notna(x) else [])[0]
+            parts_long  = df['parts_long'].apply(lambda x: json.loads(x) if pd.notna(x) else [])[0]
+            
             path_lytex  = os.path.join(path_lilypond, folder)
             # extract json fields from sqlite database
-            padding       = json.loads(df.iloc[0]['padding'])[voice]
-            basicdistance = json.loads(df.iloc[0]['basicdistance'])[voice]
-
+            instrumentname= json.loads(df.at[0,'instrumentname'])[voice]
+            padding       = json.loads(df.at[0,'padding'])[voice]
+            basicdistance = json.loads(df.at[0,'basicdistance'])[voice]
+            
             ly_sourcecode = parse_lilypond_assignments(path_lytex)
             for name, block in ly_sourcecode.items():
                 for partnumber, part in enumerate(parts):
@@ -110,7 +111,7 @@ def prepare_piece_list(df_all, voicelist, foldernames, path_lilypond):
                         my_piece_list.append(my_piece)
     return my_piece_list
 
-def write_output(df_all, my_piece_list, voicelist_full, foldernames, replacements_dict_lytex, path_lilypond, path_voices, path_templates):
+def write_output(conn, my_piece_list, voicelist_full, foldernames, replacements_dict_lytex, path_lilypond, path_voices, path_templates):
     # write output (bookpart.lytex, book.lytex)
     for voice in voicelist_full:
         replacements_dict_lytex['includes_lytex'] = ''
@@ -122,8 +123,8 @@ def write_output(df_all, my_piece_list, voicelist_full, foldernames, replacement
 
         for folder in foldernames:
             # filter dataframe instead of querying again
-            df = df_all[df_all['foldername'] == folder].copy()
-            partlist = df['parts'].apply(lambda x: json.loads(x) if pd.notna(x) else []).iloc[0]
+            df = pd.read_sql_query("SELECT * FROM pieces WHERE foldername = ?",conn,params=(folder,))
+            partlist = df['parts'].apply(lambda x:json.loads(x) if pd.notna(x) else [])[0]
 
             if length_voice > 1:
                 instrumentname_adapted = 'Partitur'
@@ -185,7 +186,6 @@ data   = json.loads(finput.read())
 finput.close()
 
 conn = sqlite3.connect("+voices/pieces.sqlite")
-df_all = pd.read_sql_query("SELECT * FROM pieces", conn) 
 
 
 my_piece_list = []
@@ -199,10 +199,10 @@ voicelist_reduced = list(dict.fromkeys(voicelist_flat))  # bewahrt Reihenfolge
 foldernames=data['Stuecke']['folders']
 
 # prepare piece objects
-my_piece_list = prepare_piece_list(df_all, voicelist_reduced, foldernames, path_lilypond)
+my_piece_list = prepare_piece_list(conn, voicelist_reduced, foldernames, path_lilypond)
 
 # write final output 
-write_output(df_all, my_piece_list, voicelist_structured, foldernames, replacements_dict_lytex, path_lilypond, path_voices, path_templates)
+write_output(conn, my_piece_list, voicelist_structured, foldernames, replacements_dict_lytex, path_lilypond, path_voices, path_templates)
 
 conn.close()
 

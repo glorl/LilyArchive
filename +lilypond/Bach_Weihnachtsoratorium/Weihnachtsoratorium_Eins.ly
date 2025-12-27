@@ -176,9 +176,7 @@ WeihnachtsoratoriumEinsCoro = {
     b,8 g' r
     d8 d d
     d8 cis16 b cis8
-    R4.*3   
-    r4.
-    r4.
+    R4.*5
     r8 r16 b cis! d
     e8-. cis'-. e,-.
     e8\trill d-. r

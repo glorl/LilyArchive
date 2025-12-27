@@ -166,9 +166,7 @@ WeihnachtsoratoriumZweiCoro = {
     g8 b r
     b8 b b
     b8 ais16 gis ais8
-    R4.*3   
-    r4.
-    r4.
+    R4.*5 
     r8 r16 d, e fis
     g8-. e'-. cis-.
     cis8\trill b-. r
