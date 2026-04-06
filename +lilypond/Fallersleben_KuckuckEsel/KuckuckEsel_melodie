@@ -1,0 +1,26 @@
+KuckuckEselMelodie = \new Voice \relative c'' {
+    \partial 8 a8 
+    fis8 a fis a 
+    g8 g r g
+    e8 g e g 
+    fis4 r8 a16 (g)
+    fis8 fis fis fis 
+    g8 g r g16 (fis)
+    e8 e e e 
+    fis8 fis r d8 
+    d8 e fis g 
+    a8. (b16 a8) g 
+    fis8 fis e e
+    d4 r8\bar"|." 
+  }
+KuckuckEselText = \lyricmode {
+    Der  
+    Kuck uck und der  
+    E sel, die 
+    hat ten ei nen 
+    Streit. Wer 
+    wohl am bes ten sän ge Wer 
+    wohl am bes ten sän ge Zur 
+    schö nen Mai en Zeit Zur 
+    schö nen Mai en Zeit 
+  }

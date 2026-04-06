@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\section*{Mein erstes Liedblatt}
+Hier steht ein einleitender Text zum Lied.
+
+\begin{lilypond}
+\relative c' {
+  \key g \major
+  \time 4/4
+  % Noten und Akkorde hier
+  g4 a b c | d2 d |
+}
+\addlyrics {
+  Dies ist ein Test- lied.
+}
+\end{lilypond}
+\begin{flushleft}
+Alle meine Entchen \\
+Schwimmen auf dem see\\
+Schwimmen auf dem see\\
+Koepfchen in das wasser\\
+Schwaenzchen in die hoeh
+\end{flushleft}
+
+\end{document}

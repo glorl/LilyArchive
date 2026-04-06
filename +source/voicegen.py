@@ -80,11 +80,28 @@ class bookpart:
         fcopy_bookpart.close()
         ftemplate_bookpart.close()
 
+@dataclass
+class songsheet:
+    piecelist: list
+    replacements_dict_lytex: dict
+    path_lytex: str
+    lytex_name_voice: str
+  
+    def generate(self):
+        # Kombiniere Melodie, Lyrics, Chords aus der DB
+        self.melody_block = parse_lilypond_assignments(...)  # Noten laden
+        self.lyrics = json.loads(self.piecelist[0].lyrics)
+        self.chords = json.loads(self.piecelist[0].chords)
+        self.additional_verses = "\n".join(json.loads(self.piece.additional_verses))
+        # Ersetze Platzhalter in songsheet.lytex
+
+
 def prepare_piece_list(conn, voicelist, foldernames, path_lilypond):
     my_piece_list = []
     for folder in foldernames:
         # filter dataframe instead of querying again
         df = pd.read_sql_query(f"SELECT * FROM pieces WHERE foldername = '{folder}'", conn)
+        
         for voice in voicelist:
             # extract data from sqlite database
             title       = df.at[0,'title'] 
@@ -112,7 +129,7 @@ def prepare_piece_list(conn, voicelist, foldernames, path_lilypond):
     return my_piece_list
 
 def write_output(conn, my_piece_list, voicelist_full, foldernames, replacements_dict_lytex, path_lilypond, path_voices, path_templates):
-    # write output (bookpart.lytex, book.lytex)
+    # write output (bookpart.lytex, book.lytex) for bookparts
     for voice in voicelist_full:
         replacements_dict_lytex['includes_lytex'] = ''
         length_voice, ivoicelist = voice_count(voice)
@@ -123,44 +140,78 @@ def write_output(conn, my_piece_list, voicelist_full, foldernames, replacements_
 
         for folder in foldernames:
             # filter dataframe instead of querying again
-            df = pd.read_sql_query("SELECT * FROM pieces WHERE foldername = ?",conn,params=(folder,))
-            partlist = df['parts'].apply(lambda x:json.loads(x) if pd.notna(x) else [])[0]
+            df = pd.read_sql_query("SELECT * FROM pieces WHERE foldername = ?",conn,params=(folder,))        
+            df_bookparts = df[df['piece_type'] == 'bookpart']
+            df_songsheets = df[df['piece_type'] == 'songsheet']
+            
+            # Handle bookparts
+            if not df_bookparts.empty:
+                partlist = df_bookparts['parts'].apply(lambda x:json.loads(x) if pd.notna(x) else []).iloc[0]
+                if length_voice > 1:
+                    instrumentname_adapted = 'Partitur'
+                else:
+                    instrumentname_adapted = json.loads(df_bookparts.iloc[0]['instrumentname'])[voice]
 
-            if length_voice > 1:
-                instrumentname_adapted = 'Partitur'
-            else:
-                instrumentname_adapted = json.loads(df.iloc[0]['instrumentname'])[voice]
+                for ipart in partlist:
+                    filter_criteria = {'folder': folder, 'part': ipart, 'voice': ivoicelist}
+                    my_piece_list_filtered3 = filter_pieces(my_piece_list, filter_criteria)
 
-            for ipart in partlist:
-                filter_criteria = {'folder': folder, 'part': ipart, 'voice': ivoicelist}
-                my_piece_list_filtered3 = filter_pieces(my_piece_list, filter_criteria)
+                    if my_piece_list_filtered3:
+                        path_lytex = os.path.join(path_lilypond, folder)
+                        ipiece = my_piece_list_filtered3[0]
+                        includes_lytex = f'\\include "{os.path.join(path_lytex, ipiece.folder + "_" + lytex_name_voice + "_" + ipiece.part + ".lytex")}"\n'
+                        replacements_dict_lytex['includes_lytex'] += f'        {includes_lytex}'
 
+                        mybookpart = bookpart(my_piece_list_filtered3, replacements_dict_lytex, path_lytex, lytex_name_voice)
+                        mybookpart.generate()
+
+                        # markup (titleline, composerline, subtitle, ... )
+                        replacements_dict_lytex['score_overall'] = mybookpart.markupline + mybookpart.scoreline
+                        replacements_dict_lytex['emptyline'] = ''
+                        replacements_dict_lytex['instrumentname'] = instrumentname_adapted
+                        mybookpart.replacements_dict_lytex = replacements_dict_lytex
+
+                        mybookpart.write_bookpart()
+
+        # write book for bookparts
+        if replacements_dict_lytex['includes_lytex']:
+            ftemplate_book = open(os.path.join(path_templates, 'book.lytex'), "r")
+            fcopy_book = open(os.path.join(path_voices, lytex_name_voice + '.lytex'), "wt")
+
+            for line in ftemplate_book:
+                replacements_dict_lytex, pattern, line = replace_pattern(replacements_dict_lytex, line)
+                fcopy_book.write(line)
+
+            ftemplate_book.close()
+            fcopy_book.close()
+
+    # Handle songsheets separately
+    for folder in foldernames:
+        df = pd.read_sql_query("SELECT * FROM pieces WHERE foldername = ?", conn, params=(folder,))
+        df_songsheets = df[df['piece_type'] == 'songsheet']
+        
+        if not df_songsheets.empty:
+            replacements_dict_lytex['includes_lytex'] = ''
+            for index, row in df_songsheets.iterrows():
+                # Assuming songsheets have their own lytex files or generate them here
+                # For now, include the songsheet lytex if it exists
                 path_lytex = os.path.join(path_lilypond, folder)
-                ipiece = my_piece_list_filtered3[0]
-                includes_lytex = f'\\include "{os.path.join(path_lytex, ipiece.folder + "_" + lytex_name_voice + "_" + ipiece.part + ".lytex")}"\n'
-                replacements_dict_lytex['includes_lytex'] += f'        {includes_lytex}'
+                songsheet_file = f"{folder}.lytex"  # Adjust based on your naming
+                if os.path.exists(os.path.join(path_lytex, songsheet_file)):
+                    includes_lytex = f'\\include "{os.path.join(path_lytex, songsheet_file)}"\n'
+                    replacements_dict_lytex['includes_lytex'] += f'        {includes_lytex}'
 
-                mybookpart = bookpart(my_piece_list_filtered3, replacements_dict_lytex, path_lytex, lytex_name_voice)
-                mybookpart.generate()
+            # write songbook
+            if replacements_dict_lytex['includes_lytex']:
+                ftemplate_songbook = open(os.path.join(path_templates, 'songbook.lytex'), "r")
+                fcopy_songbook = open(os.path.join(path_voices, folder + '_songbook.lytex'), "wt")
 
-                # markup (titleline, composerline, subtitle, ... )
-                replacements_dict_lytex['score_overall'] = mybookpart.markupline + mybookpart.scoreline
-                replacements_dict_lytex['emptyline'] = ''
-                replacements_dict_lytex['instrumentname'] = instrumentname_adapted
-                mybookpart.replacements_dict_lytex = replacements_dict_lytex
+                for line in ftemplate_songbook:
+                    replacements_dict_lytex, pattern, line = replace_pattern(replacements_dict_lytex, line)
+                    fcopy_songbook.write(line)
 
-                mybookpart.write_bookpart()
-
-        # write book
-        ftemplate_book = open(os.path.join(path_templates, 'book.lytex'), "r")
-        fcopy_book = open(os.path.join(path_voices, lytex_name_voice + '.lytex'), "wt")
-
-        for line in ftemplate_book:
-            replacements_dict_lytex, pattern, line = replace_pattern(replacements_dict_lytex, line)
-            fcopy_book.write(line)
-
-        ftemplate_book.close()
-        fcopy_book.close()
+                ftemplate_songbook.close()
+                fcopy_songbook.close()
 
 
 ########################################################

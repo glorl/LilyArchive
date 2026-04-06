@@ -6,7 +6,7 @@ def parse_lilypond_assignments(file_path):
 # - merge all commands
 # - indent lines so that it is more clean in the bookpart.lytex
 
-    lilyfiles = glob.glob(file_path+'/*.ly')
+    lilyfiles = glob.glob(file_path+'/*')
     assignments = {}
 
     for lilyfile in lilyfiles:
@@ -34,10 +34,14 @@ def parse_lilypond_assignments(file_path):
                     while i < length and content[i].isspace():
                         i += 1
 
-                    # Jetzt sollte eine öffnende Klammer folgen
-                    if i < length and content[i] == '{' :
+                    # Sammle alles bis zur öffnenden Klammer {
+                    start_block = i
+                    while i < length and content[i] != '{':
+                        i += 1
+
+                    if i < length and content[i] == '{':
                         brace_count = 1
-                        block_start = i
+                        block_start = start_block  # Beginne von vor der {
                         i += 1
                         while i < length and brace_count > 0:
                             if content[i] == '{':
