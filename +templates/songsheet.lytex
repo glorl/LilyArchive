@@ -1,0 +1,10 @@
+\section*{title}
+
+Hier steht ein einleitender Text zum Lied.\\
+\begin{lilypond}
+emptyline_music
+emptyline_lyrics
+\end{lilypond}
+\begin{flushleft}
+emptyline_additional_text
+\end{flushleft}

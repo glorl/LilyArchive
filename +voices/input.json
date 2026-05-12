@@ -1,7 +1,7 @@
 {
     "Stuecke":
     {
-        "voices": [["Eins","Zwei"]],
-        "folders": ["Bach_Weihnachtsoratorium", "Mozart_MesseCSpaur"]
+        "voices": ["Melodie"],
+        "folders": ["Fallersleben_KuckuckEsel"]
     }
 }

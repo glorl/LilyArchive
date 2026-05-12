@@ -26,10 +26,7 @@
 \renewcommand\cftsecafterpnum{\vskip40pt}
 
 \begin{document}
-    bookheader
-
-\begin{lilypond}
-includes_lyfiles
+	
 includes_lytex
-\end{lilypond}
+	
 \end{document}
