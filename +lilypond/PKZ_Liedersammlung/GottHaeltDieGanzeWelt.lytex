@@ -1,0 +1,44 @@
+\section*{Gott hält die ganze Welt}
+
+\begin{lilypond}
+<<
+  \chords { s2
+  f1 s1 
+  c1:7 s1  
+  f1 s1 
+  f2 c2:7 
+  f2 
+  }
+\new Staff \relative c''{
+  \time 4/4 \key f \major partial 2
+  r8 c c a8 
+  c4 c a8 (f4.)
+  r8 c'8 c d c c c a 
+  bes4 bes g8 (e4.) \break 
+  r8 c' c d c c c a 
+  c4 c a8 (f4.)
+  r8 c'8 c d c c c a 
+  c8 c c c bes g4 f8~
+  f2 \bar"|." 
+    }
+\addlyrics {
+Gott hält die gan- ze Welt 
+in sei- ner Hand, 
+Gott hält die gan- ze Welt 
+in sei- ner Hand, 
+Gott hält die gan- ze Welt 
+in sei- ner Hand, 
+Er hält die gan- ze Welt in sei- ner Hand. 
+  }
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\Large
+\textbf{2.} Er hält die Berge und die Täler ... \\[3mm]
+\textbf{3.} Er hält den Wind und den Regen ... \\[3mm]
+\textbf{4.} Er hält Fisch und den Vogel ... \\[3mm]
+\textbf{5.} Er hält das kleine Baby ... \\[3mm]
+\textbf{6.} Er hält auch dich und mich ... \\[3mm]
+
+\vspace*{2cm}

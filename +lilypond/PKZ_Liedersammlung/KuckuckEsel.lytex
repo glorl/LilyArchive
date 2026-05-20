@@ -1,0 +1,55 @@
+\section*{Der Kuckuck und der Esel}
+
+\begin{lilypond}
+<<
+  \chords { s8 
+  d2 a2 s2 d2 
+  s2 a2:7 s2 d2 
+  s2 a2 d4 a4 d4.}
+\new Staff \relative c''{
+  \time 2/4 \key d \major
+    \partial 8 a8 
+    fis8 a fis a 
+    g g r g 
+    e g e g 
+    fis r r a16 (g) 
+    fis8 fis fis fis 
+    g g r g16 (fis) 
+    e8 e e e 
+    fis fis r d 
+    d8 e fis g 
+    a8. (b16 a8) g 
+    fis8 fis e e 
+    d4. \bar"|." }
+\addlyrics {\set stanza = "1. "
+Der Kuck- uck und der E- sel, 
+die hat- ten ei- nen Streit, wer 
+wohl am best- ten sän- ge, wer 
+wohl am best- ten sän- ge zur 
+schö- nen Mai- en- zeit, zur schö- nen Mai- en- zeit. 
+  }
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\Large
+\textbf{2.} Der Kuckuck sprach: "Das kann ich!",\\ 
+und fing gleich an zu schrein. \\
+"Ich aber kann es besser! \\
+Ich aber kann es besser!",\\
+fiel gleich der Esel ein,\\ 
+fiel gleich der Esel ein.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\Large
+\textbf{3.} Das klang so schön und lieblich,\\
+so schön von fern und nah; \\
+sie sangen alle beide, \\
+sie sangen alle beide, \\
+"Kuckuck, kuckuck, i-a, \\
+kuckuck, kuckuck, i-a!".  
+\end{minipage}
+
+\vspace*{2cm}

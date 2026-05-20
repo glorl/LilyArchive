@@ -1,0 +1,42 @@
+\section*{Das rote Pferd}
+
+\begin{lilypond}
+<<
+  \chords {s4.
+  d1 
+  g1 
+  d1 
+  e2:7 a2:7 
+  d1
+  g1 
+  d1 
+  a2 d2 }
+\new Staff \relative c'{
+  \time 4/4 \key d \major \partial 4. fis8 eis fis 
+  eis4 fis8 d~d fis eis fis 
+  e!4 d8 b~b8 d e eis 
+  fis4 a, d fis 
+  fis8. e16 e8 dis e fis g gis \break 
+  a4 d,8 d~d fis g gis 
+  a4 d,8 d~d fis g gis \break
+  a4 a, d fis 
+  d8 cis b cis d
+  \bar"|."
+  }
+\addlyrics {\set stanza = "1. "
+Da hat das ro- te Pferd sich ein- fach um- ge- gehrt
+und hat mit sei- nem Schwanz die Flie- ge ab- ge- wehrt.
+Die Flie- ge war nicht dumm, sie mach- te summ, summ, summ, 
+und flog mit viel Ge- brumm ums ro- te Pferd he- rum. 
+}
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\Large
+\textbf{2.} Da war sie wieder da und machte viel Trara\\
+obwohl sie doch nur eine kleine Fliege war. \\
+Und sie sprach: ''Bitte sehr, ich find das gar nicht fair, \\
+wenn du nicht aufhörst, hol' ich meine Freunde her. \\[3mm]
+
+\vspace*{2cm}

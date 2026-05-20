@@ -1,0 +1,68 @@
+\section*{Wenn der Sommer kommt (Sommerlied)}
+
+\begin{lilypond}
+<<
+  \chords {
+    g1 c1 d1 g1 
+    g1 c1 d1 g1 g1 
+    g1 c1 d1 g1 
+    g1 c1 d1 d1:7 
+  }
+  \new Staff{ 
+    \new Voice="melody" {
+      \relative c''{
+        \time 4/4 \key g \major 
+        \repeat volta 2{b4 b b8 a g4 
+        e8 g4 g8~g4 r 
+        d4 d a' fis 
+        g8 b4 b8~b4 b8 a 
+        b4 b8 \parenthesize a b  a g4 
+        e8 g4 g8~g4 r 
+        d4 d a'8 fis~fis g~} 
+        \alternative{{g4 r r2}{g4 r b8 d4 c8~}}
+        c2 e,8 g4 fis8~
+        fis2 r4 g8 a
+        b4 b b8 a g b~
+        b2 b8 d4 c8~
+        c2 e,8 g4 fis8~
+        fis2 r4 fis8 g 
+        a4 a a a8 g
+        a8 b4 c8~ c2 
+        \bar"|."
+      }
+    }
+  }
+  \new Lyrics = "firstVerse" \lyricsto "melody" {
+  <<
+    {\set stanza = "1. "
+      Voll die Kof- fer und voll der Tank, 
+      kei- nen Cent mehr auf der Bank, 
+      a- ber reich- lich _ Hun- ger auf Son- nen- schein
+      Wenn der Som- mer kommt! kommt! 
+      Som- mer- zeit, Som- mer- zeit, und auf ein- mal ist es so- weit. 
+      Som- mer- zeit, Som- mer- zeit, und wir träu- men noch wenn es wie- der schneit. }
+    \new Lyrics = "secondVerse"
+      \with { alignBelowContext = "firstVerse" } {
+      \set associatedVoice = "melody" 
+        Gut ge- laut in den Ur- laub fahr'n 
+        Pick- nick auf der Au- to- bahn. 
+        Ir- gend- wo fin- det je- der sein Stück Na- tur! }
+  >>
+  }
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\Large
+\textbf{2.} Von Limonade und Eis am Stil und am Strand ein Fußballspiel\\
+und dann mit 18 Mann in ein Gummiboot! Wenn der Sommer kommt! \\
+Heiße Hits aus dem Radio, Breakdance-Fieber und Jojo! \\
+Alles nur nicht zur Schule gehn! Wenn der Sommer kommt! \\
+Sommerzeit, Sommerzeit... \\[3mm]
+\textbf{3.} Oma badet im Titisee. Opa lüftet sein Toupet. \\
+Und er kriegt nachts mal wieder kein Auge zu! Wenn der Sommer kommt! \\
+Sogar die Hasen im Stoppelfeld, pfeifen auf den Rest der Welt. \\
+Denn zum Glück wird mancher ein fauler Hund: ''Wuff!'' Wenn der Sommer kommt! \\
+Sommerzeit, Sommerzeit... und wir träumen noch wenn es weider schneit: von der Sommerzeit! \\[3mm]
+
+\vspace*{2cm}

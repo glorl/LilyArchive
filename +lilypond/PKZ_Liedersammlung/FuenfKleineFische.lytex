@@ -1,0 +1,50 @@
+\section*{Fünf kleine Fische}
+
+\begin{lilypond}
+<<
+  \chords {
+  g2 e2:m a2:m d2:7 s8 
+  g2 e2:m a2:m d2:7
+  g2 e2:m a2:m d2:7
+  }
+\new Staff {
+  \new Voice="melody" {
+    \relative c''{
+      \repeat volta 2{
+        \time 4/4 \key g \major 
+        g8 \parenthesize g g g e e~e e 
+        a \parenthesize a a d,~d d e fis 
+      }\break 
+      g8 g g g b4 b8 b 
+      c4 c8 c cis4 cis8 cis 
+      d4 d,8 d d d4 d8
+      e8 fis4 g8~g4 r \bar"|."
+    }
+  }
+}
+\new Lyrics = "firstVerse" \lyricsto "melody" {
+      <<
+        {\set stanza = "1. "Fünf _ klei- ne Fi- sche die scham- men im Meer, blub, blub, blub, 
+        }
+        \new Lyrics = "secondVerse"
+          \with { alignBelowContext = "firstVerse" } {
+          \set associatedVoice = "melody" 
+          blub, da sagt der ei- ne: ''ich kann _ nicht mehr'' 
+          }
+      >>
+      blub, ich mag zu- rück in mei- nen klei- nen Teich
+      denn im Meer schwimmt ein Hai und der frisst mich gleich.
+    }
+>>
+\end{lilypond}\vspace{4mm}\\
+\Large
+\textbf{2.} Vier kleine Fische ... \\[3mm]
+\textbf{3.} Drei kleine Fische ... \\[3mm]
+\textbf{4.} Zwei kleine Fische ... \\[3mm]
+\textbf{5.} Ein kleiner Fisch ... \\[3mm]
+\textbf{6.} Ein kleiner Hai der schwamm im Meer, blub, blub, blub, blub, \\
+da sagt der Hai: ''nun mag ich auch nicht mehr! Blub, blub, blub, blub, \\
+Ich wär viel lieber bei dem kleinen Teich, \\
+denn dort sind die Fische, und die schnapp ich mir gleich!'' \\[3mm]
+
+\vspace*{2cm}

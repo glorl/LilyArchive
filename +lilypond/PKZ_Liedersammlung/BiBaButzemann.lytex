@@ -1,0 +1,73 @@
+\section*{Es tanzt ein Bi-Ba-Butzemann}
+
+\begin{lilypond}
+<<
+  \chords { s8 
+  g4 d4 
+  g4 e4:m
+  a4:m d4:7
+  g4 d4:7 
+  g4 d4 
+  g4 e4:m
+  a4:m d4:7
+  g2 
+  d2:7
+  g2 
+  d2:7
+  g2
+  g4 d4 
+  g4 e4:m
+  a4:m d4:7
+  g4. 
+  }
+\new Staff \relative c'{
+  \time 2/4 \key g \major
+    \partial 8 d8 
+    g g d' d 
+    b b g g 
+    a a d, d 
+    g g16 b d8 d, 
+    g g d' d 
+    b b g g 
+    a a d, d 
+    g4 r8 b
+    a8. b16 c8 a 
+    b8. c16 d8 b 
+    a8. b16 c8 a 
+    b8. c16 d8 d,
+    g g d' d 
+    b b g g 
+    a a d, d 
+    g4 r8 \bar"|." }
+\addlyrics {\set stanza = "1. "
+Es tanzt ein Bi- Ba- But- ze- mann in 
+un- serm Haus her- um di- del- dum. Es 
+tanzt ein Bi- Ba- But- ze- mann in 
+un- serm Haus her- um. Er 
+rüt- telt sich und schüt- telt sich, er
+wirft sein Säck- lein hin- ter sich. Es 
+tanzt ein Bi- Ba- But- ze- mann in 
+un- serm Haus her- um. }
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\Large
+\textbf{2.} Es tanzt ... \\ 
+Er wirft sein Säcklein her und hin,\\
+was ist wohl in dem Säcklein drin? \\[3mm]
+
+\textbf{3.} Es tanzt ... \\ 
+Er bringt zur Nacht dem guten Kind\\
+die Äpfel, die im Säcklein sind
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\Large
+\textbf{4.} Es tanzt ... \\
+Er wirft sein Säcklein hin und her,\\
+am Morgen ist es wieder leer. 
+\end{minipage}
+
+\vspace*{2cm}

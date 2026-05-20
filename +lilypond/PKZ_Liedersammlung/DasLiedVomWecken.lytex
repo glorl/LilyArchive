@@ -1,0 +1,67 @@
+\section*{Wenn ich zum Markt geh (Das Lied vom Wecken)}
+
+\begin{lilypond}
+<<
+  \chords {s4.
+  g1
+  d1:7 
+  s1
+  g1 
+  s1 
+  c1
+  d1:7
+  g2.
+  }
+\new Staff \relative c'{
+  \time 4/4 \key g \major \partial 4. d8 d d 
+  g4 g8 g a g fis e 
+  fis4 fis r4 d8 d 
+  fis4 fis8 g~g fis e fis 
+  e4 d r4 b8 c 
+  d4 g8 g b8. b16 a8 b 
+  c2 r4 g8 g 
+  fis4 d b' a 
+  g2. 
+  \bar"|."
+  }
+\addlyrics {\set stanza = "1. "
+Wenn ich zum Markt geh', dann kauf ich dir ein Hähn- chen,
+und das soll dich je- den Mor- gen weck- en. 
+Und das Hähn- chen macht Ki- ke- ri- ki- ki, 
+je- den Mor- gen schon ganz früh. }
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\Large
+\textbf{2.} Wenn ich zum Markt geh, dann kauf ich dir ein Glöckchen, \\
+und das soll dich jeden Morgen wecken.\\ 
+Und das Glöckchen macht ding-dong, \\
+und das Hähnchen macht Kikerikiki, jeden Morgen schon ganz früh\\[3mm]
+\textbf{3.} Wenn ich zum Markt geh, dann kauf ich dir 'nen Wecker, \\
+und der soll dich jeden Morgen wecken.\\ 
+Und der Wecker macht drrr, drrr, \\
+und das Glöckchen macht ding-dong, \\
+und das Hähnchen macht Kikerikiki, jeden Morgen schon ganz früh\\[3mm]
+\textbf{4.} Wenn ich zum Markt geh, dann kauf ich dir ein Schäfchen, \\
+und das soll dich jeden Morgen wecken.\\ 
+Und das Schäfchen macht määh, määh, \\
+und der Wecker macht drrr, drrr, \\
+und das Glöckchen macht ding-dong, \\
+und das Hähnchen macht Kikerikiki, jeden Morgen schon ganz früh\\[3mm]
+\textbf{5.} Wenn ich zum Markt geh, dann kauf ich dir ein Radio, \\
+und das soll dich jeden Morgen wecken.\\ 
+Und das Radio macht bla bla bla dudeliö dudeliö\\
+und das Schäfchen macht määh, määh, \\
+und der Wecker macht drrr, drrr, \\
+und das Glöckchen macht ding-dong, \\
+und das Hähnchen macht Kikerikiki, jeden Morgen schon ganz früh\\[3mm]
+\textbf{6.} Doch ach, herrje ich hab kein Geld einstecken, \\
+und komm vom Markt und muss dich alleine wecken.\\ 
+Ich mach bla bla bla dudeliö dudeliö\\
+ich mach määh, määh, \\
+ich mach drrr, drrr, \\
+ich mach ding-dong, \\
+und zum Schluss mach ich Kikerikiki, jeden Morgen schon ganz früh\\[3mm]
+
+\vspace*{2cm}

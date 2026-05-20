@@ -1,0 +1,45 @@
+\section*{Meine Oma fährt im Hühnerstall Motorrad}
+
+\begin{lilypond}
+<<
+  \chords { s4 
+  a2 d2 
+  a1 
+  e1:7
+  a1 
+  a2 d2 
+  a1 
+  e1:7
+  a1 
+  }
+\new Staff \relative c'{
+  \time 4/4 \key a \major 
+    \partial 4 e8 e 
+    cis'8 b a gis b a gis fis 
+    e2 cis4 e
+    d2 b4 fis' 
+    e2 cis4 e8 e
+    cis'8 b a gis b a gis fis 
+    e2 cis4 e8 e 
+    fis8 fis fis fis gis gis fis gis 
+    a2 r4 \bar"|." }
+\addlyrics {\set stanza = "1. "
+Mei- ne O- ma fährt im Hüh- ner- stall 
+Mo- tor- rad, Mo- tor- rad, Mo- tor- rad,
+Mei- ne O- ma fährt im Hüh- ner- stall 
+Mo- tor- rad, mei- ne O- ma ist 'ne ganz fa- mo- se Frau! 
+  }
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\Large
+\textbf{2.} Meine Oma hat im hohlen Zahn ein Radio ...\\
+\textbf{3.} Meine Oma hat hat 'ne Nachttopf mit Beleuchtung ...\\
+\textbf{4.} Meine Oma hat hat 'ne Glatze mit Geländer ...\\
+\textbf{5.} Meine Oma hat hat im Strumpfband 'nen Revolver ...\\
+\textbf{6.} Meine Oma hat hat 'nen Handstock mit 'nem Rücklicht ...\\
+\textbf{7.} Meine Oma hat hat Klosettpapier mit Rüschen ...\\
+\textbf{8.} Meine Oma hat hat 'ne Brille mit Gardine ... \\
+
+\vspace*{2cm}

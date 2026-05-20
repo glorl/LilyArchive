@@ -1,0 +1,56 @@
+\section*{Ich bin ein Bibelentdecker}
+
+\begin{lilypond}
+<<
+  \chords {s4
+  f2 c2 
+  f2 f2:7
+  bes2 c2 
+  f1
+  bes2 c2 
+  a2:7 d2:m
+  bes2 c2 
+  f1 
+  g2:m7 c2 
+  f1 
+  c1 
+  f2 d2:7 
+  f2.
+  }
+\new Staff \relative c'{
+  \time 4/4 \key g \major \partial 2 d2
+  e2 d
+  g8 g4 g8 e d4. 
+  g8 g g g e d4 d8 
+  a8 a4 a8 fis d e d
+  a8 a a fis d4 r8 d 
+  g8 g4 g8 e8 d4 d8 
+  g8 g4 g8 e8 d4 d8 
+  a8 a4 a8 a8 g fis g~
+  g2\fermata r4 r \bar"||"
+  g  
+
+  \bar"|."
+  }
+\addlyrics {\set stanza = "1. "
+Wenn ei- ner sagt: ''Ich mag dich, du, 
+ich find dich ehr- lich gut!'', 
+dann krieg ich ei- ne Gän- se- haut 
+und auch ein biss- chen Mut. 
+La la la la la la la la la la la la la la la la la la la la la la la la.}
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\Large
+\textbf{2.} Wenn einer sagt: ''Ich brauch dich, du, ich schaff es nicht allein!'',\\
+dann kribbelt es in meinem Bauch, ich fühl mich nicht mehr klein. \\
+La la la...\\[3mm]
+\textbf{3.} Wenn einer sagt: ''Komm, geh' mit mir, zusammen sind wir was!'',\\
+dann werd ich rot, weil ich mich freu, dann macht das Leben Spaß. \\
+La la la... \\[3mm]
+\textbf{4.} Gott sagt zu dir: ''Ich hab dich lieb, ich wär so gern dein Freund!\\
+Und das, was du allein nicht schaffst, das schaffen wir vereint''.\\
+La la la... \\[3mm]
+
+\vspace*{2cm}

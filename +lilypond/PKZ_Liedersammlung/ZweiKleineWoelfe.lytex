@@ -1,0 +1,47 @@
+\section*{Zwei kleine Wölfe}
+
+\begin{lilypond}
+<<
+  \chords {
+  g2 e2:m a2:m d2:7 s8 
+  g2 e2:m a2:m d2:7
+  g2 e2:m a2:m d2:7
+  g2 e2:m a2:m d2:7
+  g2 e2:m a2:m d2:7
+  }
+\new Staff {
+  \new Voice="melody" {
+    \relative c''{
+      \repeat volta 2{
+        \time 4/4 \key g \major 
+        g4 g8 fis e e e e 
+        a4 a8 d, d~d4}\alternative{{d8}{ais'8}}\break
+        \repeat volta 2{b8 b b b b b b b 
+        c4 c8 d~d4  r8 d} \break 
+        d8 c b c d4 r8 d8 
+        d8 c b c d4 r8 d8 \break 
+        d8 c b c d c b c 
+        d4 e8 d~d b a b \break 
+        \repeat volta 2{g4 r8 g e4 r8 e a4 r8 a d, d e fis}
+        }
+      }
+    }
+\new Lyrics = "firstVerse" \lyricsto "melody" {
+      <<
+        {Zwei klei- ne Wöl- fe gehn des Nachts im Dun- keln. Man _
+        rum gehn wir denn im- mer nur des Nachts he- rum? Man}
+        \new Lyrics = "secondVerse"
+          \with { alignBelowContext = "firstVerse" } {
+          \set associatedVoice = "melody" 
+          hört den _ ein- nen zu dem an- dern mun- keln: _ ''Wa 
+          tritt sich an den Wur- zeln ja die Pfo- ten krumm! Wenn's 
+          }
+      >>
+      nur schon hel- ler wär! _ _ _ _ _ _ Wenn 
+      nur der Wald mit Ster- nen- licht be- leuch- tet wär!'' 
+      Ba du, ba dum, ba dum, ba dum, ba du ba du, ba  
+    }
+>>
+\end{lilypond}\vspace{4mm}
+
+\vspace*{2cm}

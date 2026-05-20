@@ -1,0 +1,43 @@
+\section*{Meine Tante kam zurück}
+
+\begin{lilypond}
+<<
+  \chords { s2. 
+  c1 s1
+  g1 s1
+  g1 s1
+  c1 s1
+  }
+\new Staff \relative c''{
+  \time 4/4 \key c \major 
+    \partial 2. g8^\markup{Einer} g a a e e 
+    g4 g8^\markup{Alle} g a a e e \break
+    g4 g^\markup{Einer} a c 
+    b8 b^\markup{Alle} g4 a c\break 
+    b8 [b]^\markup{Einer} b b c c a4 
+    b4 b8^\markup{Alle} b c c a4 \break
+    b4 g8^\markup{Einer} g a a b4 
+    c8 [c]^\markup{Alle} g g a a b4 
+    c8 c 
+ \bar"|." }
+\addlyrics {\set stanza = "1. "
+Mei- ne Tan- te kam zu- rück, mei- ne Tan- te kam zu- rück,
+aus Len- zer- hei- de aus Len- zer- hei- de 
+und sie brach- te mir mit, und sie brach- te mir mit
+ei- nen Fä- cher aus Sei- de, ei- nen Fä- cher aus Sei- de.
+  }
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\Large
+\textbf{2.} Meine Tante kam zurück von der Kur aus Bad Scholz\\
+Und sie brachte mir mit einen Löffel aus Holz \\[3mm]
+\textbf{3.} Meine Tante kam zurück aus Katmandu\\
+Und sie brachte mir mit einen hölzernen Schuh\\[3mm]
+\textbf{4.} Meine Tante kam zurück aus Liverpool\\
+Und sie brachte mir mit einen Schaukelstuhl\\[3mm]
+\textbf{5.} Meine Tante kam zurück aus Timbuktu\\
+Und sie brachte mir mit einen Vogel wie du\\[3mm]
+
+\vspace*{2cm}

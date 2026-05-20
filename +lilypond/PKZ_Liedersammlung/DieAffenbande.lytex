@@ -1,0 +1,68 @@
+\section*{Die Affen rasen durch den Wald}
+
+\begin{lilypond}
+<<
+  \chords { s8 
+  a1 s s s e a 
+  d1 a e a d a e a 
+  }
+\new Staff \relative c'{
+  \time 4/4 \key a \major
+    \partial 8 e8 
+    e4 e fis fis 
+    e e8 fis~fis4 r8 fis 
+    e4 e fis fis 
+    e e8 fis~fis8 cis8 cis cis 
+    e4 e e e 
+    a,4 r r8 a' a fis 
+    a4 a8 a8~a8 a a fis 
+    a4 a8 a8~a8 cis,8 cis cis  
+    e4 e e e 
+    a4 fis8 a r8 a a fis 
+    a4 a8 a8~a8 a a fis 
+    a4 a8 a8~a8 cis,8 cis cis  
+    e4 e e e 
+    a,2 r4 r8 \bar"|." }
+\addlyrics {\set stanza = "1. "
+Die Af- fen ra- sen durch den Wald
+der ei- ne macht den an- dern kalt, 
+die gan- ze Af- fen- ban- de brüll:  
+Wo ist die Ko- kus- nuss, wo ist die Ko- kus- nuss, 
+wer hat die Ko- kus- nuss ge- klaut? _ _ 
+Wo ist die Ko- kus- nuss, wo ist die Ko- kus- nuss, 
+wer hat die Ko- kus- nuss ge- klaut? 
+  }
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\Large
+\textbf{2.} Die Affenmama sitzt am Fluss\\
+und angelt nach der Kokusnuss.\\
+Die ganze Affenbande brüllt: ... \\[3mm]
+\textbf{3.} Der Affenonkel, welch ein Graus, \\
+reißt alle Urwaldbäume aus. \\
+Die ganze Affenbande brüllt: ... \\[3mm]
+\textbf{4.} Die Affentante kommt von fern, \\
+Sie isst die Kokusnuss so gern. \\
+Die ganze Affenbande brüllt: ... \\[3mm]
+\textbf{5.} Der Affenmilchman, dieser Knilch, \\
+der wartet auf die Kokusmilch. \\
+Die ganze Affenbande brüllt: ... \\[3mm]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\Large
+\textbf{6.} Das Affenbaby, voll Genuss, \\
+hält in der Hand die Kokusnuss. \\
+Die ganze Affenbande brüllt: Da ist die Kokusnuss... \\[3mm]
+\textbf{7.} Die Affenmama, schreit ''Hurra! \\
+Die Kokusnuss ist wieder da!''. \\
+Die ganze Affenbande brüllt: Da ist die Kokusnuss... \\[3mm]
+\textbf{8.} Und die Moral von der Geschicht: \\
+Klau keine Kokusnüsse nicht. \\
+Die ganze Affenbande brüllt: Da ist die Kokusnuss... \\[3mm]
+\end{minipage}
+
+\vspace*{2cm}

@@ -1,0 +1,63 @@
+\section*{Katzentanz}
+
+\begin{lilypond}
+<<
+  \chords { s4 
+  f2 c2 
+  g2:7 c2
+  c1
+  g1:7
+  f2 c2 
+  g2:7 c2 
+  s1*2
+  f2 c2 
+  g2:7 c2
+  g2:7 c2
+  }
+\new Staff \relative c''{
+  \time 4/4 \key c \major 
+  \repeat volta 2{
+    \partial 4 g8 g 
+    a8 f a c g4 g8 g 
+    b8 g b g c4 }\break 
+    g8 e 
+    c8 [c c c] c c \breathe g' e
+    d [d d d] d d \bar"||" \break g g 
+    a8 f a c g4 g8 g 
+    b8 g b g c4 \bar"||" \break  
+    \improvisationOn
+    g8 g
+    g8 g g g g4 g8 g 
+    g8 g g g g4 \break
+    \improvisationOff
+    \repeat volta 2{
+    \partial 4 g8 g 
+    a8 f a c g4 g8 g 
+    b8 g b g c4 } 
+    g8 f 
+    e8 d c d c4\fermata\bar"|."
+    }
+\addlyrics {
+Guck die Kat- ze tanzt al- lein, tanzt und tanzt auf ei- nem Bein. 
+\set stanza = "1. " Kam der I- gel zu der Kat- ze:
+''Bit- te reich mir dei- ne Tat- ze!''
+''Mit dem I- gel tanz' ich nicht, ist mir viel zu sta- che- lig!''
+Doch der I- gel beugt sich vor, sagt der Kat- ze was ins Ohr. 
+Und dann tan- zen sie zu zweit, ü- ber Stock und ü- ber Stein 
+Und dann gin- gen bei- de heim. 
+  }
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\Large
+\textbf{2.} Kam der Hase zu der Katze: ''Bit- te reich mir dei- ne Tat- ze!''\\
+''Mit dem Hasen tanz' ich nicht, ist mir viel zu zappelig!'' \\[3mm]
+\textbf{3.} Kam der Hamster zu der Katze: ''Bit- te reich mir dei- ne Tat- ze!''\\
+''Mit dem Hamster tanz' ich nicht, ist mir viel zu pummelig!'' \\[3mm]
+\textbf{4.} Kam der Hofhund zu der Katze: ''Bit- te reich mir dei- ne Tat- ze!''\\
+''Mit dem Hofhund tanz' ich nicht, bellt mir viel zu fürchterlich!'' \\[3mm]
+\textbf{5.} Kam der Kater zu der Katze, leckte ihr ganz lieb die Tatze.\\
+Streichelt sie und küsst sie sacht, und schon hat sie mitgemacht. \\[3mm]
+
+\vspace*{2cm}

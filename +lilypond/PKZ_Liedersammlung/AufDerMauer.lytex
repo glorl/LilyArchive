@@ -1,0 +1,54 @@
+\section*{Auf der Mauer, auf der Lauer}
+
+\begin{lilypond}
+<<
+  \chords {
+  f2
+  d2:m7
+  g4:m c4:7 
+  f2
+  f2
+  d2:m7
+  g4:m c4:7 
+  f2
+  f2
+  bes2 
+  c2:7
+  f2
+  f2
+  d2:m7
+  g4:m c4:7 
+  f2
+  }
+\new Staff \relative c'{
+  \time 2/4 \key f \major 
+  f8 f f g 
+  a8 a a a 
+  g f g a 
+  f4 f \break
+  a8 a a bes 
+  c c c c 
+  bes a bes c 
+  a4 a \break
+  c8 c c c 
+  d8 d d4 
+  bes8 bes bes bes 
+  c c c4 \break
+  f,8 f f g 
+  a8 a a a 
+  g8 f g a 
+  f4 f \bar"|." }
+\addlyrics {
+Auf der Mau- er, auf der Lau- er 
+sitzt 'ne klei- ne Wan- ze.
+Auf der Mau- er, auf der Lau- er 
+sitzt 'ne klei- ne Wan- ze.
+Seht euch mal die Wan- ze an, 
+wie die Wan- ze tan- zen kann. 
+Auf der Mau- er, auf der Lau- er 
+sitzt 'ne klei- ne Wan- ze.
+  }
+>>
+\end{lilypond}\vspace{4mm}
+
+\vspace*{2cm}

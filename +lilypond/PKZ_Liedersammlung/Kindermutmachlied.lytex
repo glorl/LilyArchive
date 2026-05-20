@@ -1,0 +1,59 @@
+\section*{Wenn einer sagt "Ich mag dich, du" (Kindermutmachlied)}
+
+\begin{lilypond}
+<<
+  \chords {s4
+  f2 c2 
+  f2 f2:7
+  bes2 c2 
+  f1
+  bes2 c2 
+  a2:7 d2:m
+  bes2 c2 
+  f1 
+  g2:m7 c2 
+  f1 
+  c1 
+  f2 d2:7 
+  f2.
+  }
+\new Staff \relative c'{
+  \time 4/4 \key f \major \partial 4 c4
+  f4 f g g 
+  a a f f 
+  d' d c g
+  a2. f4 
+  d'4 d c g
+  a4 a f c 
+  d f g g 
+  f2 r8 c'8 bes a 
+  \repeat volta 2{
+  g4 d' r8 bes a g 
+  f4 c' r8 a g f 
+  e4 f g c,
+  }
+  \alternative{{f4 g a8 c bes a}{ f2.}}
+  \bar"|."
+  }
+\addlyrics {\set stanza = "1. "
+Wenn ei- ner sagt: ''Ich mag dich, du, 
+ich find dich ehr- lich gut!'', 
+dann krieg ich ei- ne Gän- se- haut 
+und auch ein biss- chen Mut. 
+La la la la la la la la la la la la la la la la la la la la la la la la.}
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\Large
+\textbf{2.} Wenn einer sagt: ''Ich brauch dich, du, ich schaff es nicht allein!'',\\
+dann kribbelt es in meinem Bauch, ich fühl mich nicht mehr klein. \\
+La la la...\\[3mm]
+\textbf{3.} Wenn einer sagt: ''Komm, geh' mit mir, zusammen sind wir was!'',\\
+dann werd ich rot, weil ich mich freu, dann macht das Leben Spaß. \\
+La la la... \\[3mm]
+\textbf{4.} Gott sagt zu dir: ''Ich hab dich lieb, ich wär so gern dein Freund!\\
+Und das, was du allein nicht schaffst, das schaffen wir vereint''.\\
+La la la... \\[3mm]
+
+\vspace*{2cm}

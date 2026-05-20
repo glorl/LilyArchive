@@ -1,0 +1,89 @@
+\section*{Herr von Taktstock}
+
+\begin{lilypond}
+<<
+  \chords { s4 
+  c1 
+  f1 
+  g1:7 
+  c1 
+  c1 
+  f1 
+  g1:7 
+  c1 
+  c1 
+  f1 
+  g1 
+  c1 
+  s1
+  s1
+  c1 
+  f1 
+  g1 
+  c1 
+  s1
+  s1
+  c1 
+  f1 
+  g1 
+  c1 
+  s1
+  s1
+  c1 
+  f1 
+  g1 
+  c1 
+  }
+\new Staff \relative c''{
+  \time 4/4 \key c \major 
+  \partial 4 \tuplet 3/2 {c4 b8} 
+  c4 g f e 
+  d a' r \tuplet 3/2{a4 c8}
+  \tuplet 3/2{b4 b8}  \tuplet 3/2{b4 b8} \tuplet 3/2{a4 a8} \tuplet 3/2{a4 a8}
+  g2 r4 \tuplet 3/2 {c4 b8} 
+  c4 g f e 
+  d a' r \tuplet 3/2{a4 a8}
+  \tuplet 3/2{g4 g8}  \tuplet 3/2{g4 a8} \tuplet 3/2{g4 e8} \tuplet 3/2{f4 d8}
+  c2 r2 \bar"||" \break 
+  e4 e8 e e4 e 
+  f4 f8 f f4 f 
+  g4 g8 g g4 g 
+  e2 r2 
+  \repeat volta 2{e4 e8 e e4 e^\markup{3x}}
+  r1 
+  \break 
+  e2 g 
+  f2 a 
+  g2 f 
+  e2  r 
+  \repeat volta 2{e2 e^\markup{3x} }
+  e2 r2 \bar"||"\break 
+  e4. e8 e4 e 
+  f4. f8 f4 f 
+  g4. g8 g4 g 
+  e2 r 
+  \repeat volta 2 {e4. e8 e4 4^\markup{3x} } 
+  r1 \bar"||"\break 
+  e8 e e e e e e e 
+  f8 f f f f f f f 
+  g8 g g g g g g f
+  e4 r r2 
+  \repeat volta 2 {e8 e e e e e e e^\markup{3x} }
+  e4 r r2  \bar"|." }
+\addlyrics {
+Herr von Takt- stock ist Pro- fes- sor
+für Mu- sik und für die In- stru- men- te all. 
+Er er- klärt uns ih- ren Rhyth- mus
+Auf- ge- passt der än- derts ab von Fall zu Fall. 
+Das Xy- lo- phon, ja das Xy- lo- phon ja das Xy- lo- phon klingt so: 
+_ _ _ _ _ 
+Das Me- tal- lo- phon klingt lang
+_ _ _ 
+Das Gloc- ken- spiel, das Gloc- ken- spiel hört, es klingt so schön
+_ _ _ _ 
+Ras- seln ras- seln im- mer- zu die Ras- seln ras- seln im- mer- zu die Ras- seln ras- seln im- mer- im- mer- zu 
+}
+>>
+\end{lilypond}
+
+\vspace*{2cm}

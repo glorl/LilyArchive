@@ -1,0 +1,94 @@
+\section*{Fliegerlied}
+
+\begin{lilypond}
+<<
+  \chords { s8
+  d1 s1 
+  a1 s1 
+  d1 s1 
+  e1 s1
+  d1 s1 
+  a1 s1 
+  d1 s1 
+  e1 s2 fis2:m
+  a1 s1 
+  e1 s1 
+  d1 s1
+  a1 e1 
+  e2 d2 a2 d2 
+  e2 d2 a2 d2 
+  e2 d2 a2 d2 
+  e2 d2 a2 d2 
+  e2 fis2:m
+  }
+\new Staff 
+  \new Voice="melody" {
+  \relative c'{
+    \time 4/4 \key a \major \partial 8
+    e8 
+    fis8 a a a~a2~ 
+    a8 a a a b a~a cis~
+    cis2 r2 
+    r1 \break 
+    a8 a a a a a~a4   
+    r4 a a8 e'~e cis~
+    cis2 r2 
+    r2 r8 cis cis b \break
+    a8 a a a~a2~
+    a8 a a a b a~a cis~
+    cis2 r2 
+    r2 r8 cis cis b
+    a8 a a a~a2~
+    a8 a a a b a~a cis~
+    cis2 r2 
+    r2 cis4 b \break
+    \repeat volta 2{ a4 r a r 
+    a4 a8 a cis b a a 
+    b4 r b r 
+    b4 b8 b cis b a b 
+    a4 r a r 
+    a8 a a a cis b b a  
+    cis4 r r cis8 d}
+    \alternative{{b8 r r4 cis4 b }{
+      \bar":|." b8 r e, e fis a a fis}}
+    \repeat volta 2 {\bar"|" 
+    a4 cis8 cis d cis~cis b~
+    b8 r e, e fis a a fis
+    a4 cis8 cis d cis~cis b~
+    b8 r e, e fis a a fis
+    a4 cis8 cis d cis~cis b~
+    b8 r e, e fis a a fis
+    a4 cis8 cis d cis~cis b~
+    b4 r cis4 b\bar"|."
+    }
+    }
+  }
+\new Lyrics = "firstVerse" \lyricsto "melody" {
+  Ich lieg' gern im Gras und schau' zum Him- mel rauf
+  schaun die gan- zen Wol- ken nicht lus- tig aus? 
+  und fligt 'n Flie- ger vor- bei, dann wink' ich zu ihm rauf
+  und bist du auch noch da- bei, dann bin ich su- per drauf! 
+  Und ich 
+  <<
+  {flieg, flieg, flieg wie ein Flie- ger
+  bin so stark, stark, stark wie ein Ti- ger 
+  und so groß, groß, groß  wie 'ne Gi- raf- _ fe, so hoch, wo- o- o. Und ich}   
+  \new Lyrics = "secondVerse"
+    \with { alignBelowContext = "firstVerse" } {
+    \set associatedVoice = "melody" 
+    spring, spring, spring im- mer wie- der 
+    und ich schwimm, schwimm, schwimm zu dir rü- ber 
+    und ich nehm, nehm, nehm dich bei der Hand weil ich dich mag, 
+    und ich 
+    }
+  >>
+  sag: Heut' ist so ein schö- ner Tag, la la la la la. 
+  Heut' ist so ein schö- ner Tag, la la la la la. 
+  Heut' ist so ein schö- ner Tag, la la la la la. 
+  Heut' ist so ein schö- ner Tag, la la la la la. 
+  Und ich 
+  }
+>>
+\end{lilypond}\vspace{4mm}
+
+\vspace*{2cm}

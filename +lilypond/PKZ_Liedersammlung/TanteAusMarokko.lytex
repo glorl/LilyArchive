@@ -1,0 +1,66 @@
+\section*{Die Tante aus Marokko}
+
+\begin{lilypond}
+<<
+  \chords { s4 
+  g1 
+  s1 
+  s1 
+  d1:7
+  g2 g2:7 
+  c2 a2:m 
+  d2 d2:7 
+  g1 
+  }
+\new Staff \relative c'{
+  \time 4/4 \key g \major 
+  \partial 4 d8 d 
+  g8 g g g e d b d 
+  g4 
+  \override NoteHead.style = #'cross g g 
+  \revert NoteHead.style
+  g8 a b8 b b b d d d b 
+  a4 
+  \override NoteHead.style = #'cross g g 
+  \revert NoteHead.style
+  d'8 d 
+  b8 b b b a g g g 
+  e8 e e e a g fis e 
+  d8 d d d b' a e fis 
+  g4 
+  \override NoteHead.style = #'cross g g 
+  \revert NoteHead.style 
+  \bar"|."
+    }
+\addlyrics {
+Hab 'ne Tan- te aus Ma- rok- ko und die kommt, Hipp, Hopp!
+Hab 'ne Tan- te aus Ma- rok- ko und die kommt, Hipp, Hopp!
+Hab 'ne Tan- te aus Ma- rok- ko, hab 'ne Tan- te aus Ma- rok- ko
+hab 'ne Tan- te aus Ma- rok- ko und die kommt, Hipp, Hopp!
+  }
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\Large
+\textbf{2.} Und sie kommt auf zwei Kamelen wenn sie kommt, Hippeldihopp ...\\
+Hipp, hopp! Hoppeldihopp! \\[3mm]
+\textbf{3.} Singen ja ja jippi jippi ja! ...\\[3mm]
+\textbf{4.} Und sie schießt mit zwei Pistolen wenn sie kommt, Piff-Paff! ...\\
+Hipp, hopp, Hoppeldihopp, Piff-paff! \\[3mm]
+\textbf{5.} Und trinken wir ne Flasche wenn sie kommt, gluck-gluck! ...\\
+Hipp, hopp, Hoppeldihopp, Piff-paff, gluck-gluck! \\[3mm]
+\textbf{6.} Singen ja ja jippi jippi ja! ...\\[3mm]
+\textbf{7.} Und dann backen wir 'nen Kuchen wenn sie kommt, knet-knet! ...\\
+Hipp, hopp, Hoppeldihopp, Piff-paff, gluck-gluck, knet-knet! \\[3mm]
+\textbf{8.} Und dann schrubben wir die Bude wenn sie kommt, schrubb-schrubb! ...\\
+Hipp, hopp, Hoppeldihopp, Piff-paff, gluck-gluck, knet-knet, schrubb-schrubb! \\[3mm]
+\textbf{9.} Singen ja ja jippi jippi ja! ...\\[3mm]
+\textbf{10.} Und dann kommt ne Nachricht dass sie doch nicht kommt, oh-weh! ...\\
+Hipp, hopp, Hoppeldihopp, Piff-paff, gluck-gluck, knet-knet, schrubb-schrubb, oh-weh! \\[3mm]
+\textbf{11.} Und dann kommt ne Nachricht, dass sie jetzt doch kommt, hurra! ...\\
+Hipp, hopp, Hoppeldihopp, Piff-paff, gluck-gluck, knet-knet, schrubb-schrubb, oh-weh, hurra! \\[3mm]
+\textbf{11.} Und dann läuten alle Glocken wenn sie kommt, bim-bam! ...\\
+Hipp, hopp, Hoppeldihopp, Piff-paff, gluck-gluck, knet-knet, schrubb-schrubb, oh-weh, hurra, bim-bam! \\[3mm]
+
+\vspace*{2cm}

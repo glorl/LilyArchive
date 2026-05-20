@@ -1,0 +1,51 @@
+\section*{Ich lieb den Frühling}
+
+\begin{lilypond}
+<<
+  \chords {
+  g2 e2:m a2:m d2:7
+  g2 e2:m a2:m d2:7
+  g2 e2:m a2:m d2:7
+  g2 e2:m a2:m d2:7
+  }
+\new Staff \relative c''{
+  \repeat volta 2{
+  \time 4/4 \key g \major 
+  g4 g8. fis16 e4 4 
+  r8. a16 a8. g16 fis8. e16 d4 \break
+  b'4 b8. a16 g4 g 
+  r8. c16 c8. b16 a8. b16 c4 \break
+  d4 d8. c16 b8. (a16) g4 
+  c8. b16 a8. g16 fis4 r \break
+  g8. g16 g8. g16 e8. e16 e8. e16 
+  a8. a16 a8. a16 d,8. d16 e8. fis16}
+  }
+\addlyrics {\set stanza = "1. "
+Ich lieb den Früh- ling, ich lieb den Son- nen- schein. 
+Wann wird es end- lich mal wie- der wär- mer sein? 
+Schnee, Eis und Käl- te müs- sen bald ver- gehn. 
+Dum, di da, di dum, di da, di dum, di da, di dum, di da, di
+  }
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\Large
+\textbf{2.} Ich lieb den Sommer ich lieb den Sand, das Meer, \\
+Sandburgen bauen und keinen Regen mehr, \\
+Eis essen, Sonnenschein, so soll's immer sein.\\ 
+Dum, di da... \\[3mm]
+\textbf{3.} Ich lieb die Herbstzeit, stürmt's auf dem Stoppelfeld,\\
+Drachen, die steigen hoch in das Himmelszelt,\\
+bunte Blätter fallen von dem Baum herab. \\ 
+Dum, di da... \\[3mm]
+\textbf{4.} Ich lieb den Winter, wenn es dann endlich schneit, \\
+hol ich den Schlitten, den es ist Winterzeit, \\
+Schneeman baun und Rodeln gehn, ja das find ich schön.  
+Dum, di da... \\[3mm]
+\textbf{Englisch} I like the flowers, I like the daffodils,\\ 
+I like the mountains, I like the rolling hills, \\
+I like the fireplace, when the light is low. \\
+Dum, di da... \\[3mm]
+
+\vspace*{2cm}

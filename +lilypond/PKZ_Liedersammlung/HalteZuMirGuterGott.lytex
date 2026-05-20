@@ -1,0 +1,61 @@
+\section*{Halte zu mir, guter Gott}
+
+\begin{lilypond}
+<<
+  \chords { s4
+  c1 
+  g2 c2 
+  s1 
+  g2 c2 
+  e2 c2 
+  f2 c2 
+  g2 c2 }
+\new Staff \relative c'{
+  \time 4/4 \key c \major
+    \partial 4 c8 d
+e8 e e e e4 r 
+d8 c d e c4 e8 f
+g8 g g g g4 r 
+f8 e f g e4 a8 b 
+c8 c b a g4 r 
+g8 f e d e4 a8 b 
+c8 c b a g4 r 
+g8 f e d c4 \bar"|." }
+\addlyrics {\set stanza = "1. "
+Hal- te zu mir, gu- ter Gott, 
+heut' den gan- zen Tag. 
+Halt' die Hän- de ü- ber mich, 
+was auch kom- men mag. Hal- te 
+zu mir gu- ter Gott
+heut' den gan- zen Tag. 
+Halt' die Hän- de ü- ber mich, 
+was auch kom- men mag. 
+  }
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\Large
+\textbf{2.} Du bist jederzeit bei mir. \\
+Wo ich geh' und steh'\\
+spür ich, wenn ich leise bin, \\
+dich in meiner Näh\\
+Halte zu mir guter Gott ...\\[4mm] 
+\textbf{4.} Meine Freude, meinen Dank, \\
+alles sag ich dir. \\
+Du hältst zu mir, guter Gott, \\
+Spür ich tief in mir. \\
+Halte zu mir guter Gott ...
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\Large
+\textbf{3.} Gibt es Ärger oder Streit, \\
+und noch mehr Verdruss.\\
+Weiß ich doch, du bist nicht weit, \\
+wenn ich weinen muss. \\
+Halte zu mir guter Gott ... 
+\end{minipage}
+
+\vspace*{2cm}

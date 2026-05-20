@@ -1,0 +1,68 @@
+\section*{Jetzt fahrn wir über'n See}
+
+\begin{lilypond}
+<<
+  \chords { s4 
+  es1
+  s1
+  f2:m7 bes2:7
+  s2.
+  es1
+  es2 c2:7 
+  f2:m bes2
+  f2:m bes2
+  es1
+  es2 c2:7 
+  f1:m
+  bes1:7
+  s2.
+  es1
+  }
+\new Staff \relative c'{
+  \time 4/4 \key es \major
+  \repeat volta 2{\partial 4 bes4 
+  g'4 g g as 
+  bes4 c8 bes bes4 g 
+  as4 as bes as}
+  \alternative{{r2 r4}{g2 r4}} \break
+  \repeat volta 2{
+  bes4 
+  c4 bes as g 
+  as2 f 
+  as4 f as f
+  bes4 (es) bes bes 
+  c bes as g 
+  as2 f4 bes 
+  bes bes bes bes 
+  }
+  \alternative{
+    {r2 r4} {es,2 r4}}     
+\bar"|." }
+\addlyrics {\set stanza = "1. "
+Jetzt fahrn wir ü- ber'n See ü- ber'n See, jetzt 
+fahr'n wir ü- ber'n See
+mit ei- ner höl- zern Wur- zel, Wur- zel, Wur- zel, Wur- zel, mit
+ei- ner höl- zern Wur- zel, kein Ru- der war nicht dran.}
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\Large
+\textbf{2.} Und als wir drüben warn, ... \\ 
+Da sangen alle Vöglein, ...\\
+der helle Tag brach an.\\[3mm]
+
+\textbf{3.} Der Jäger blies ins Horn, ... \\ 
+Da bliesen alle Jäger, ... \\
+ein jeder in sein Horn. 
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\Large
+\textbf{4.} Das Liedlein das ist aus, ... \\
+Und wer das Lied nicht singen kann, ... \\
+der fängt von vorne an. 
+\end{minipage}
+
+\vspace*{2cm}

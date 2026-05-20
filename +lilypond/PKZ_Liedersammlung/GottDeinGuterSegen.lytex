@@ -1,0 +1,59 @@
+\section*{Gott, dein guter Segen}
+
+\begin{lilypond}
+<<
+  \chords { 
+    d1 g1 a1 g1
+    d1 g1 a1 g1
+    d1 a1 a1:7 d1
+    d1 e1:m a1:7 d1
+    d1 g1 
+    e2:m a2
+    d2 b:m
+    g2 a2 
+    d1 
+    g2 a2 
+    d1 
+  }
+\new Staff \relative c'{
+  \time 4/4 \key d \major
+    d4 d e fis 
+    g4 b,2 d4 
+    cis4 cis d e 
+    fis2 r 
+    d4 e fis2 
+    g4 a b2 
+    a4 g fis e 
+    d2 r 
+    fis4 fis g8 fis e d 
+    e2 r 
+    g4 g a8 g fis e 
+    fis2 r 
+    a4 a a8 a g a 
+    b4 g2 r4 
+    g4 g g8 g fis g 
+    a4 fis2 r4 
+    fis4 fis g8 fis g a 
+    b2 r 
+    \repeat volta 2 {g4 fis e2 
+    a4 g fis2}\alternative{{
+      d4 d e e 
+      fis2 r2
+    }{d4 d e cis 
+    d2 r }} \bar"|." }
+\addlyrics {
+  Gott, dein gu- ter Se- gen 
+  ist wie ein gro- ßes Zelt 
+  hoch und weit, fest ge- spannt, 
+  ü- ber uns- re Welt. 
+  Gu- ter Gott, ich bit- te dich: 
+  schüt- ze und be- wah- re mich. 
+  Lass mich un- ter dei- nem Se- gen 
+  le- ben und ihn wei- ter ge- ben. 
+  Blei- be bei uns al- le Zeit, 
+  seg- ne uns, seg- ne uns, 
+  denn der Weg ist weit. 
+  denn der Weg ist weit. 
+  }
+>>
+\end{lilypond}

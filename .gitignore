@@ -8,6 +8,7 @@ venv/*
 *.mxl
 *.omr
 +lilypond/*/*.lytex
+!+lilypond/PKZ_Liedersammlung/*.lytex
 # *.json
 .gitignore
 

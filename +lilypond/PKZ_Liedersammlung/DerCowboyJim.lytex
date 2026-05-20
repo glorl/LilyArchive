@@ -1,0 +1,76 @@
+\section*{Der Cowboy Jim aus Texas}
+
+\begin{lilypond}
+<<
+  \chords { s4 
+  d2 s2 s2 a2:7
+  a2:7 s2 s2 d2
+  a2:7 s2 d2 s2 
+  d4 a4:7 d4 a4:7 
+  d2}
+\new Staff \relative c''{
+  \time 2/4 \key d \major
+    \partial 4 a4 
+    a8 a b a 
+    a fis4 a8 
+    a8 a b a 
+    a8 g4 a8 \break
+    a8 a b a 
+    cis4. b8 
+    a8 g fis e 
+    d4 a'8 a \break
+    cis2~ 
+    cis4 b8 a 
+    a (fis4.)~
+    fis4 a8 a 
+    a4 g 
+    fis e 
+    d2~d4 \bar"|." }
+\addlyrics {\set stanza = "1. "
+Der Cow- boy Jim aus Te- xas, der 
+tags auf sei- nem Pferd saß, hat 
+ei- nen Hut aus Stroh und da- rin saß ein Floh. Jip- pi- 
+jeh, jip- pi- jeh, jip- pi- 
+jeh, jeh, jeh, jeh, jeh! 
+  }
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\Large
+\textbf{2.} Der Floh tat Jim begleiten, \\
+er hatte Spaß am Reiten\\
+Und ging der Jim aufs Klo, \\
+dann dat das auch sein Floh. Jippijeh... \\[3mm]
+\textbf{3.} Oft macht das Reiten Mühe. \\
+Jim hütet hundert Kühe. \\
+Da kommt er oft in Schweiß \\
+und ruft: Ach, was'n Scheiß! Jippijeh... \\[3mm]
+\textbf{4.} Am Tschikitschobasee \\
+ruft Jim sein Jippijeh. \\
+Doch einst am Lagerfeuer, \\
+da war's ihm nicht geheuer. Jippijeh...\\[3mm] 
+\textbf{5.} Im ersten Morgengrauen, \\
+da wollt man Jim verhauen. \\
+Man schich zu Jimmy fix, \\
+der schlief und merkte nix. Jippijeh... 
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\Large
+\textbf{6.} Der Floh, der hört es trappeln, \\
+tat sich auch gleich berappeln\\
+und stach als echter Floh \\
+den Cowboy in den Po. Jippijeh... \\[3mm]
+\textbf{7.} Der Jim sprang auf und fluchte, \\
+als er das Weite suchte. \\
+So war's nichts mit Verhauen \\
+im ersten Morgengrauen. Jippijeh... \\[3mm]
+\textbf{8.} Der Cowboy Jim aus Texas, \\
+sitzt oft bei seiner Oma. \\
+Und beide schaunsich dann im Fernsehn \\
+Cowboyfilme an. Jippijeh... \\[3mm]
+\end{minipage}
+
+\vspace*{2cm}
