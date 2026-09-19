@@ -1,4 +1,7 @@
-WachetAufBass= \new Voice \relative c{
+WachetAufBassChoral= {\new Voice \relative c{
+\time 4/4
+\key f \major
+\compressEmptyMeasures
 \partial 8 r8 
 f4--\mp f-- f (a) 
 bes4 (c) f,4 ~f8 r
@@ -53,4 +56,4 @@ bes8 (a) g (f) e4-- g--
 c8\f (d) c( bes a) d (bes c) 
 d8 (e f) a, (bes) g (c)_\markup{\italic rit.} c-- 
 f,1\fermata \bar"|."
-}
+}}

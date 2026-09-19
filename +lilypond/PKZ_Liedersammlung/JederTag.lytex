@@ -1,0 +1,76 @@
+\section*{Jeder Tag geht mal zu Ende}
+
+\begin{lilypond}
+<<
+  \chords {s8
+  f1 
+  f1:maj7
+  g1:m 
+  s1 
+  c1 
+  f1 
+  bes2 c2
+  f1 
+  s1 
+  g1:m 
+  c1
+  f1
+  d1:m 
+  g1:m
+  c1 
+  f1 
+  c1 
+  f1 
+  }
+\new Staff \relative c'{
+  \new Voice="melody" {
+    \time 4/4 \key f \major \partial 8 
+    f8 
+    a8 a8~a8 g8~g4 f4 
+    g8 a~a2 a4 
+    g4 g~g8~g f d~
+    d4 r r r8 d8 
+    e4 e e8 d~d d~
+    d c~c4 r4 c 
+    d4 f e g 
+    f2 r2 \break
+    \repeat volta 2{
+    r4 f8 g a8 a g f 
+    g8 e r4 r2 
+    r4 e8 f g g f d 
+    c4 r r2
+    r4 f8 g a a g f 
+    g8 e r4 r2 \break }
+    \alternative{{r4 e8 f g g f g 
+    a4 r r2}{r4 e8 f g g f e
+    f4 r r2}}
+    \bar"|."
+    }
+  }
+\new Lyrics = "firstVerse" \lyricsto "melody" {
+  \set stanza = "1. "
+  Wir kom- men jetzt zur Ru- he und Stil- le kehrt ein
+  das Tan- zen hat ein En- de. Wir wol- len fried- lich sein. 
+  <<
+  {\set stanza = "Refrain. "Je- der Tag geht mal zu En- de, je- der Tag geht mal vor- bei. 
+  Bald be- ginnt das gro- ße Träu- men. } 
+  \new Lyrics = "secondVerse"
+    \with { alignBelowContext = "firstVerse" } {
+    \set associatedVoice = "melody" 
+    Je- der Tag geht mal zu En- de, komm wir rei- chen uns die Hand.
+    Und dann träu- men wir uns rü- ber }
+  >>
+  Al- le Kin- der sind da- bei.
+  in das Träu- me- mär- chen- land. 
+  }
+>>
+\end{lilypond}\vspace{4mm}
+
+\noindent
+\Large
+\textbf{2.} Wir sagen leise Danke für diesen schönen Tag\\ 
+Und freuen uns auf alles was morgen kommen mag \\[3mm]
+\textbf{Refrain.} Jeder Tag geht mal zu Ende... \\[3mm]
+\textbf{Refrain.} Jeder Tag geht mal zu Ende... \\[3mm]
+
+\vspace*{2cm}

@@ -1,0 +1,59 @@
+\section*{Der Waldspaziergang}
+
+\begin{lilypond}
+<<
+  \chords {s4 
+  c1
+  d1:m
+  g1 
+  c1 
+  c1 
+  g2 c2 
+  s1 
+  g2 c2 
+  s1 
+  d2 c 
+  f2 c2 
+  g2 c2 
+  }
+\new Staff {
+  \new Voice="melody" {
+    \relative c''{
+      \partial 4 g4 
+      e8 e4 f8 g4. g8 
+      f8 f4 e8 d4. f8 
+      d8 d4 e8 f f e d
+      e4 f g4. c8 
+      a8 a4 a8 g g4 g8 
+      f8 f4 f8 e4. e8 
+      f4 f8 f e4 e d8 d4 d8 c2 
+      a'2 g 
+      f2 e 
+      f2 g 
+      g4 f e\bar"|."
+    }
+  }
+}
+\addlyrics {\set stanza = "1. "
+Ich geh durch den Wald und schau- e um- her.
+  Ich se- he die Bäu- me und noch vie- les mehr. Die 
+  Blät- ter, die sin- gen im Wind leis ihr Lied, und 
+  lei- se, ganz lei- se sin- ge ich mit. 
+  Hm hm hm hm hm hm hm hm hm}
+>>
+\end{lilypond}\vspace{4mm}\\
+\Large
+\textbf{2.} Ich geh durch den Wald und schaue umher.\\
+Ich sehe die Tiere und noch vieles mehr.\\ 
+Die Vögel, die bauen in Zweigen ihr Nest, \\
+und von weitem höre ich klopfen den Specht. \\[3mm]
+\textbf{3.} Ich geh durch den Wald und schaue umher.\\
+Ich sehe den Fluss und noch vieles mehr. \\
+Das Wasser, das plätschert am Ufer entlang, \\
+die Fische und Frösche erfreu'n sich daran. \\[3mm]
+\textbf{4.} Ich geh durch den Wald und schaue umher.\\
+Ich sehe die Schönheit und freue mich sehr. \\
+Ich lache und tanze und singe ein Lied \\
+bin einfach glücklich, dass es alles gibt.\\
+
+\vspace*{2cm}

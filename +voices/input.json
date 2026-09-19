@@ -1,7 +1,7 @@
 {
     "Stuecke":
     {
-        "voices": ["Melodie"],
-        "folders": ["Fallersleben_KuckuckEsel"]
+        "voices": ["Bass",["Eins","Bass"]],
+        "folders": ["Bach_Passacaglia", "Bach_WachetAuf", "Haendel_Orgelkonzert", "Haendel_OmbraMaiFu"]
     }
 }

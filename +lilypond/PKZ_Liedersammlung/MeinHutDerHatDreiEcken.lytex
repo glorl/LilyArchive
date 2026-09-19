@@ -1,0 +1,27 @@
+\section*{Mein Hut, der Hat drei Ecken}
+
+\begin{lilypond}
+<<
+  \chords { s8 
+  c2. g2. g2. c2.
+  c2. g2. g2. c2 s8}
+\new Staff \relative c''{
+  \time 6/8
+    \partial 8 g8 
+    a8 r g f r e 
+    f d r r4 e8 
+    f8 r g a r g 
+    e4 r8 r4 g8 
+    a8 r g f r e 
+    f d r r4 e8 
+    f r g a r g 
+    c,4 r8 r4 \bar"|." }
+\addlyrics {\set stanza = "1. "
+Mein Hut, der hat drei E- cken
+drei E- cken hat mein Hut, 
+und hat er nicht drei E- cken 
+dann ist er nicht mein Hut.}
+>>
+\end{lilypond}\vspace{4mm}
+
+\vspace*{2cm}

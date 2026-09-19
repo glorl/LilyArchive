@@ -1,4 +1,7 @@
-PassacagliaBass= \new Voice \relative c'{
+PassacagliaBass= {\new Voice \relative c'{
+\time 3/4
+\key f \major
+\compressEmptyMeasures
 \partial 4 d4--\mf
 a'2-- f4--
 g2-- a4--
@@ -142,4 +145,4 @@ d2.\fermata \bar"|."
 \bar"||"
 d2.\fermata ^\markup { \fontsize #3.5 {\musicglyph #"scripts.coda" Coda alternativ} }
 \bar "|."
-}
+}}

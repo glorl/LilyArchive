@@ -1,4 +1,6 @@
-PassacagliaEins= \new Voice \relative c''{
+PassacagliaEins= {\new Voice \relative c''{
+\time 3/4
+\key f \major
 \partial 4 r4
 R2.*7
 r4 r4 r8 d~(\p
@@ -134,4 +136,4 @@ d2.\fermata \bar"|."
 \bar"||"
 d16^\markup { \fontsize #3.5 {\musicglyph #"scripts.coda" Coda alternativ} } e (d cis d) cis (d e d4--)\fermata
 \bar "|."
-}
+}}

@@ -1,4 +1,7 @@
-WachetAufEins= \new Voice \relative c'{
+WachetAufEinsChoral= {\new Voice \relative c'{
+\time 4/4
+\key f \major
+\compressEmptyMeasures
 \partial 8 c8--\mp 
 f16 (g) a8 a (g) bes (a) c, (bes) 
 a'16 (f) g8 bes, (a) e' (f) r c8-- 
@@ -53,4 +56,4 @@ bes16 \> (a bes8)\! r g8-- a16 (g f8~ f16 e f8
 ~bes16) e (f g f e d c f8-.) c8-- a'16 (g f e 
 f16 bes a g a8-.) c,-- d8. (e16 \tuplet 6/4 {e16_\markup{\italic rit.} f e f e f)}
 f1\fermata \bar"|."
-}
+}}

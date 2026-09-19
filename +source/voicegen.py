@@ -4,6 +4,11 @@ from lilyfunctions import parse_lilypond_assignments, replace_pattern, filter_pi
 from itertools import chain
 from dataclasses import dataclass
 
+def parse_json_list(value):
+    if pd.isna(value) or not str(value).strip():
+        return []
+    return json.loads(value)
+
 @dataclass
 class piece:
     folder: str
@@ -107,8 +112,8 @@ def prepare_piece_list(conn, voicelist, foldernames, path_lilypond):
             title       = df.at[0,'title'] 
             subtitle    = df.at[0,'subtitle']
             composer    = df.at[0,'composer']
-            parts       = df['parts'].apply(lambda x: json.loads(x) if pd.notna(x) else [])[0]
-            parts_long  = df['parts_long'].apply(lambda x: json.loads(x) if pd.notna(x) else [])[0]
+            parts       = df['parts'].apply(parse_json_list)[0]
+            parts_long  = df['parts_long'].apply(parse_json_list)[0]
             
             path_lytex  = os.path.join(path_lilypond, folder)
             # extract json fields from sqlite database
@@ -118,7 +123,10 @@ def prepare_piece_list(conn, voicelist, foldernames, path_lilypond):
             
             ly_sourcecode = parse_lilypond_assignments(path_lytex)
             for name, block in ly_sourcecode.items():
-                for partnumber, part in enumerate(parts):
+                parts_to_process = parts or [None]
+                for partnumber, part in enumerate(parts_to_process):
+                    if part is None:
+                        part = name.removesuffix(voice)
                     if parts_long:
                         part_long = parts_long[partnumber]
                     else:
@@ -146,7 +154,12 @@ def write_output(conn, my_piece_list, voicelist_full, foldernames, replacements_
             
             # Handle bookparts
             if not df_bookparts.empty:
-                partlist = df_bookparts['parts'].apply(lambda x:json.loads(x) if pd.notna(x) else []).iloc[0]
+                partlist = df_bookparts['parts'].apply(parse_json_list).iloc[0]
+                if not partlist:
+                    partlist = list(dict.fromkeys(
+                        ipiece.part for ipiece in my_piece_list
+                        if ipiece.folder == folder
+                    ))
                 if length_voice > 1:
                     instrumentname_adapted = 'Partitur'
                 else:

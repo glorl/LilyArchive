@@ -13,6 +13,8 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
+% \fancyhead[LE]{\large\textbf{\thepage}}
+% \fancyhead[RO]{\large\textbf{\thepage}}
 \renewcommand{\headrulewidth}{0pt} % no line in header area
 \rhead{\large\textbf{\thepage}}
 \chead{ \textsf{  } }
@@ -29,7 +31,17 @@
 
 \begin{document}
 
-\input{EinMopsKamInDieKueche.lytex}
+\begin{titlepage}
+\thispagestyle{empty}
+\vspace*{0.18\textheight}
+\begin{center}
+{\Huge\bfseries Papa-Kind-Zelten\\[0.8em] Liedersammlung\\[3cm]}
+{\huge Stand: Juni 2026
+}
+\end{center}
+\end{titlepage}
+
+\input{MeinHutDerHatDreiEcken.lytex}
 \input{MeineOmaFaehrt.lytex}
 \break
 \input{KuckuckEsel.lytex}
@@ -54,12 +66,12 @@
 \input{FuenfKleineFische.lytex}
 \break
 % \input{Bibelentdecker.lytex}
-\input{MeineTanteKamZurueck.lytex}
-\break
+% \input{MeineTanteKamZurueck.lytex}
+% \break
 \input{DieAffenbande.lytex}
 \break
-\input{HerrVonTaktstock.lytex}
-\break
+% \input{HerrVonTaktstock.lytex}
+% \break
 \input{Katzentanz.lytex}
 \break
 \input{TanteAusMarokko.lytex}
@@ -70,4 +82,7 @@
 \break
 \input{HalteZuMirGuterGott.lytex}
 \input{GottDeinGuterSegen.lytex}
+\input{Waldlied.lytex}
+\break
+\input{JederTag.lytex}
 \end{document}

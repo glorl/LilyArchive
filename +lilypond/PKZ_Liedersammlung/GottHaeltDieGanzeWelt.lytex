@@ -2,7 +2,8 @@
 
 \begin{lilypond}
 <<
-  \chords { s2
+  \chords { 
+  s2
   f1 s1 
   c1:7 s1  
   f1 s1 
@@ -10,8 +11,8 @@
   f2 
   }
 \new Staff \relative c''{
-  \time 4/4 \key f \major partial 2
-  r8 c c a8 
+  \time 4/4 \key f \major \partial 2
+  r8 c c a
   c4 c a8 (f4.)
   r8 c'8 c d c c c a 
   bes4 bes g8 (e4.) \break 
