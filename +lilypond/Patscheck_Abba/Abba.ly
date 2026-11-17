@@ -4,8 +4,8 @@ globalAbba= {
 \compressEmptyMeasures
 }
 
-\include "Abba_eins.ly"
-\include "Abba_zwei.ly"
-\include "Abba_drei.ly"
-\include "Abba_vier.ly"
-\include "Abba_bass.ly"
+\include "Abba_Eins.ly"
+\include "Abba_Zwei.ly"
+\include "Abba_Drei.ly"
+\include "Abba_Vier.ly"
+\include "Abba_Bass.ly"

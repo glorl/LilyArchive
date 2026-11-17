@@ -3,8 +3,8 @@ globalEllington= {
 
 \include "rhythmark.ly"
 
-\include "Ellington_eins.ly"
-\include "Ellington_zwei.ly"
-\include "Ellington_drei.ly"
-\include "Ellington_vier.ly"
-\include "Ellington_bass.ly"
+\include "Ellington_Eins.ly"
+\include "Ellington_Zwei.ly"
+\include "Ellington_Drei.ly"
+\include "Ellington_Vier.ly"
+\include "Ellington_Bass.ly"

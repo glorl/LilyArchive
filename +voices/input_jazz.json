@@ -1,0 +1,9 @@
+{
+    "Stuecke":
+    {
+        "voices": ["Eins","Bass"],
+        "folders": ["Abreu_TicoTico","Berlin_WhiteChristmas","Lemser_Klarinettenmuckl",
+        "Ory_MuscatRamble","Patscheck_Abba","Patscheck_GershwinSongs","Patscheck_GlennMillerStory",
+        "Patscheck_Monti","Patscheck_Opening"]
+    }
+}

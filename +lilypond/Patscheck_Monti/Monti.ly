@@ -3,8 +3,8 @@ globalMonti= {
 \key f \major
 }
 
-\include "Monti_eins.ly"
-\include "Monti_zwei.ly"
-\include "Monti_drei.ly"
-\include "Monti_vier.ly"
-\include "Monti_bass.ly"
+\include "Monti_Eins.ly"
+\include "Monti_Zwei.ly"
+\include "Monti_Drei.ly"
+\include "Monti_Vier.ly"
+\include "Monti_Bass.ly"

@@ -3,8 +3,8 @@ globalOpening= {
 \key f \major
 }
 
-\include "Opening_eins.ly"
-\include "Opening_zwei.ly"
-\include "Opening_drei.ly"
-\include "Opening_vier.ly"
-\include "Opening_bass.ly"
+\include "Opening_Eins.ly"
+\include "Opening_Zwei.ly"
+\include "Opening_Drei.ly"
+\include "Opening_Vier.ly"
+\include "Opening_Bass.ly"

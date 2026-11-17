@@ -3,8 +3,8 @@ globalGlennMillerStory= {
 \key c \major
 }
 
-\include "GlennMillerStory_eins.ly"
-\include "GlennMillerStory_zwei.ly"
-\include "GlennMillerStory_drei.ly"
-\include "GlennMillerStory_vier.ly"
-\include "GlennMillerStory_bass.ly"
+\include "GlennMillerStory_Eins.ly"
+\include "GlennMillerStory_Zwei.ly"
+\include "GlennMillerStory_Drei.ly"
+\include "GlennMillerStory_Vier.ly"
+\include "GlennMillerStory_Bass.ly"

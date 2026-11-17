@@ -3,7 +3,7 @@ source venv/bin/activate
 # generate voice 
 python3 +source/voicegen.py
 
-jsonfile='input.json'
+jsonfile='input_jazz.json'
 
 cd +voices/ 
 
@@ -18,7 +18,7 @@ if [ ! -z "$voicelist" ]; then
         fi
         if [ ! -z "$Voice" ] && [ -f "${Voice}.lytex" ]; then
             echo "Verarbeite $Voice"
-            lilypond-book --pdf "${Voice}.lytex" >/dev/null 2>&1
+            lilypond-book --pdf "${Voice}.lytex" # >/dev/null 2>&1
             pdflatex ${Voice}.tex > /dev/null 2>&1
         fi
     done

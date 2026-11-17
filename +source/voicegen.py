@@ -245,7 +245,7 @@ replacements_dict_lytex['bookheader']      = ""
 replacements_dict_lytex['includes_lyfiles']= ""
 
 # open json (basic info)
-finput = open (os.path.join(path_json,'input.json'), "r")
+finput = open (os.path.join(path_json,'input_jazz.json'), "r")
 data   = json.loads(finput.read())
 finput.close()
 
